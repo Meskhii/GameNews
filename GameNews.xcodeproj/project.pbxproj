@@ -13,12 +13,12 @@
 		8436D698266B972B001715B1 /* NewsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436D697266B972B001715B1 /* NewsCellModel.swift */; };
 		8436D69E266BA275001715B1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8436D69D266BA275001715B1 /* Kingfisher */; };
 		8436D6A6266BAE86001715B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8436D6A5266BAE86001715B1 /* Assets.xcassets */; };
-		843B3F0A266D4AB6009F7C19 /* SteamNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F09266D4AB6009F7C19 /* SteamNewsViewController.swift */; };
-		843B3F12266D4ADB009F7C19 /* SteamNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F11266D4ADB009F7C19 /* SteamNewsInteractor.swift */; };
-		843B3F17266D4AEA009F7C19 /* SteamNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F16266D4AEA009F7C19 /* SteamNewsPresenter.swift */; };
-		843B3F1C266D4AF9009F7C19 /* SteamNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F1B266D4AF9009F7C19 /* SteamNewsRouter.swift */; };
-		843B3F21266D4B06009F7C19 /* SteamNewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F20266D4B06009F7C19 /* SteamNewsWorker.swift */; };
-		843B3F26266D4B17009F7C19 /* SteamNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F25266D4B17009F7C19 /* SteamNewsViewController.storyboard */; };
+		843B3F0A266D4AB6009F7C19 /* SteamSearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F09266D4AB6009F7C19 /* SteamSearchGameViewController.swift */; };
+		843B3F12266D4ADB009F7C19 /* SteamSearchGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F11266D4ADB009F7C19 /* SteamSearchGameInteractor.swift */; };
+		843B3F17266D4AEA009F7C19 /* SteamSearchGamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F16266D4AEA009F7C19 /* SteamSearchGamePresenter.swift */; };
+		843B3F1C266D4AF9009F7C19 /* SteamSearchGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F1B266D4AF9009F7C19 /* SteamSearchGameRouter.swift */; };
+		843B3F21266D4B06009F7C19 /* SteamSearchGameWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F20266D4B06009F7C19 /* SteamSearchGameWorker.swift */; };
+		843B3F26266D4B17009F7C19 /* SteamSearchGameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F25266D4B17009F7C19 /* SteamSearchGameViewController.storyboard */; };
 		843B3F2C266D4BA2009F7C19 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F2B266D4BA2009F7C19 /* VideosViewController.swift */; };
 		843B3F31266D4BCE009F7C19 /* VideosInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F30266D4BCE009F7C19 /* VideosInteractor.swift */; };
 		843B3F36266D4BD8009F7C19 /* VideosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F35266D4BD8009F7C19 /* VideosPresenter.swift */; };
@@ -27,8 +27,8 @@
 		843B3F45266D4C06009F7C19 /* VideosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F44266D4C06009F7C19 /* VideosViewController.storyboard */; };
 		843B3F4C266D4DB8009F7C19 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F4A266D4DB8009F7C19 /* VideoCell.swift */; };
 		843B3F4D266D4DB8009F7C19 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F4B266D4DB8009F7C19 /* VideoCell.xib */; };
-		843B3F82266D7008009F7C19 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F80266D7008009F7C19 /* SearchCell.swift */; };
-		843B3F83266D7008009F7C19 /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F81266D7008009F7C19 /* SearchCell.xib */; };
+		843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F80266D7008009F7C19 /* SearchResultCell.swift */; };
+		843B3F83266D7008009F7C19 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F81266D7008009F7C19 /* SearchResultCell.xib */; };
 		843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* FirebaseFirestore */; };
 		843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* FirebaseInstallations */; };
 		843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* FirebaseDatabase */; };
@@ -115,12 +115,12 @@
 		8435B32F2647111E004CA045 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
 		8436D697266B972B001715B1 /* NewsCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellModel.swift; sourceTree = "<group>"; };
 		8436D6A5266BAE86001715B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		843B3F09266D4AB6009F7C19 /* SteamNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamNewsViewController.swift; sourceTree = "<group>"; };
-		843B3F11266D4ADB009F7C19 /* SteamNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamNewsInteractor.swift; sourceTree = "<group>"; };
-		843B3F16266D4AEA009F7C19 /* SteamNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamNewsPresenter.swift; sourceTree = "<group>"; };
-		843B3F1B266D4AF9009F7C19 /* SteamNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamNewsRouter.swift; sourceTree = "<group>"; };
-		843B3F20266D4B06009F7C19 /* SteamNewsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamNewsWorker.swift; sourceTree = "<group>"; };
-		843B3F25266D4B17009F7C19 /* SteamNewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SteamNewsViewController.storyboard; sourceTree = "<group>"; };
+		843B3F09266D4AB6009F7C19 /* SteamSearchGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamSearchGameViewController.swift; sourceTree = "<group>"; };
+		843B3F11266D4ADB009F7C19 /* SteamSearchGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamSearchGameInteractor.swift; sourceTree = "<group>"; };
+		843B3F16266D4AEA009F7C19 /* SteamSearchGamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamSearchGamePresenter.swift; sourceTree = "<group>"; };
+		843B3F1B266D4AF9009F7C19 /* SteamSearchGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamSearchGameRouter.swift; sourceTree = "<group>"; };
+		843B3F20266D4B06009F7C19 /* SteamSearchGameWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteamSearchGameWorker.swift; sourceTree = "<group>"; };
+		843B3F25266D4B17009F7C19 /* SteamSearchGameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SteamSearchGameViewController.storyboard; sourceTree = "<group>"; };
 		843B3F2B266D4BA2009F7C19 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		843B3F30266D4BCE009F7C19 /* VideosInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosInteractor.swift; sourceTree = "<group>"; };
 		843B3F35266D4BD8009F7C19 /* VideosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosPresenter.swift; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		843B3F44266D4C06009F7C19 /* VideosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideosViewController.storyboard; sourceTree = "<group>"; };
 		843B3F4A266D4DB8009F7C19 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		843B3F4B266D4DB8009F7C19 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
-		843B3F80266D7008009F7C19 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
-		843B3F81266D7008009F7C19 /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		843B3F80266D7008009F7C19 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		843B3F81266D7008009F7C19 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		843BE21B2660D943004099C1 /* GameNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843BE21C2660D943004099C1 /* GameNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844BF7AC26503F2D0099EADF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -254,18 +254,18 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		843B3F08266D4A88009F7C19 /* SteamNewsScene */ = {
+		843B3F08266D4A88009F7C19 /* SteamSearchGameScene */ = {
 			isa = PBXGroup;
 			children = (
 				843B3F7F266D6FD8009F7C19 /* SearchCell */,
-				843B3F09266D4AB6009F7C19 /* SteamNewsViewController.swift */,
-				843B3F11266D4ADB009F7C19 /* SteamNewsInteractor.swift */,
-				843B3F16266D4AEA009F7C19 /* SteamNewsPresenter.swift */,
-				843B3F1B266D4AF9009F7C19 /* SteamNewsRouter.swift */,
-				843B3F20266D4B06009F7C19 /* SteamNewsWorker.swift */,
-				843B3F25266D4B17009F7C19 /* SteamNewsViewController.storyboard */,
+				843B3F09266D4AB6009F7C19 /* SteamSearchGameViewController.swift */,
+				843B3F11266D4ADB009F7C19 /* SteamSearchGameInteractor.swift */,
+				843B3F16266D4AEA009F7C19 /* SteamSearchGamePresenter.swift */,
+				843B3F1B266D4AF9009F7C19 /* SteamSearchGameRouter.swift */,
+				843B3F20266D4B06009F7C19 /* SteamSearchGameWorker.swift */,
+				843B3F25266D4B17009F7C19 /* SteamSearchGameViewController.storyboard */,
 			);
-			path = SteamNewsScene;
+			path = SteamSearchGameScene;
 			sourceTree = "<group>";
 		};
 		843B3F2A266D4B1C009F7C19 /* VideosScene */ = {
@@ -294,8 +294,8 @@
 		843B3F7F266D6FD8009F7C19 /* SearchCell */ = {
 			isa = PBXGroup;
 			children = (
-				843B3F80266D7008009F7C19 /* SearchCell.swift */,
-				843B3F81266D7008009F7C19 /* SearchCell.xib */,
+				843B3F80266D7008009F7C19 /* SearchResultCell.swift */,
+				843B3F81266D7008009F7C19 /* SearchResultCell.xib */,
 			);
 			path = SearchCell;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				843B3F2A266D4B1C009F7C19 /* VideosScene */,
-				843B3F08266D4A88009F7C19 /* SteamNewsScene */,
+				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
 				847E5806266D295E00EA6D87 /* ProfileScene */,
 				847E57F8266D180D00EA6D87 /* ConfigureNewsScene */,
 				847062A4266BF92A003B40A3 /* TabBar */,
@@ -644,13 +644,13 @@
 				843B3F45266D4C06009F7C19 /* VideosViewController.storyboard in Resources */,
 				84E6DCB0264FBD4B0090226B /* SignUpViewController.storyboard in Resources */,
 				843391F626655057003089C3 /* NewsCell.xib in Resources */,
-				843B3F26266D4B17009F7C19 /* SteamNewsViewController.storyboard in Resources */,
+				843B3F26266D4B17009F7C19 /* SteamSearchGameViewController.storyboard in Resources */,
 				843B3F4D266D4DB8009F7C19 /* VideoCell.xib in Resources */,
 				84E6DCBC264FBE680090226B /* NewsViewController.storyboard in Resources */,
 				8436D6A6266BAE86001715B1 /* Assets.xcassets in Resources */,
 				84894D8C26473512000AF852 /* GoogleService-Info.plist in Resources */,
 				847E586C266D38F400EA6D87 /* ConfigureNewsCell.xib in Resources */,
-				843B3F83266D7008009F7C19 /* SearchCell.xib in Resources */,
+				843B3F83266D7008009F7C19 /* SearchResultCell.xib in Resources */,
 				84E6DCB6264FBD8A0090226B /* LoginViewController.storyboard in Resources */,
 				847E5822266D2CBC00EA6D87 /* TabBarController.storyboard in Resources */,
 				847E5850266D2FA100EA6D87 /* ConfigureNewsController.storyboard in Resources */,
@@ -702,7 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843B3F17266D4AEA009F7C19 /* SteamNewsPresenter.swift in Sources */,
+				843B3F17266D4AEA009F7C19 /* SteamSearchGamePresenter.swift in Sources */,
 				847E584B266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift in Sources */,
 				847E586B266D38F400EA6D87 /* ConfigureNewsCell.swift in Sources */,
 				849B5FC12646B2820095C3E9 /* LoginViewController.swift in Sources */,
@@ -710,12 +710,12 @@
 				843B3F40266D4BF7009F7C19 /* VideosRouter.swift in Sources */,
 				84C8987326641C64006B8C91 /* UITableViewCell+Extension.swift in Sources */,
 				849B5F902646ABB70095C3E9 /* GameNews.xcdatamodeld in Sources */,
-				843B3F1C266D4AF9009F7C19 /* SteamNewsRouter.swift in Sources */,
+				843B3F1C266D4AF9009F7C19 /* SteamSearchGameRouter.swift in Sources */,
 				84F63E9B26518D94006ED049 /* SignUpWorker.swift in Sources */,
 				84C8987826641C75006B8C91 /* UICollectionView+Extension.swift in Sources */,
 				844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */,
 				849B5F8A2646ABB70095C3E9 /* WelcomeViewController.swift in Sources */,
-				843B3F82266D7008009F7C19 /* SearchCell.swift in Sources */,
+				843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */,
 				847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */,
 				849B5F862646ABB70095C3E9 /* AppDelegate.swift in Sources */,
 				847E580D266D2A3000EA6D87 /* ProfileInteractor.swift in Sources */,
@@ -730,7 +730,7 @@
 				84AB7465266A635A00DE05D0 /* NewsModel.swift in Sources */,
 				843B3F31266D4BCE009F7C19 /* VideosInteractor.swift in Sources */,
 				8475109F2650139C00E0D1B0 /* WelcomeRouter.swift in Sources */,
-				843B3F12266D4ADB009F7C19 /* SteamNewsInteractor.swift in Sources */,
+				843B3F12266D4ADB009F7C19 /* SteamSearchGameInteractor.swift in Sources */,
 				844BF7B226503FD20099EADF /* LoginInteractor.swift in Sources */,
 				847062B1266C2728003B40A3 /* TabBarController.swift in Sources */,
 				847E5841266D2F3300EA6D87 /* ConfigureNewsViewController.swift in Sources */,
@@ -741,9 +741,9 @@
 				847E5846266D2F4700EA6D87 /* ConfigureNewsInteractor.swift in Sources */,
 				84C9A9412652FBE200BBC1CD /* LoginWorker.swift in Sources */,
 				849B5FC62646B2900095C3E9 /* NewsViewController.swift in Sources */,
-				843B3F0A266D4AB6009F7C19 /* SteamNewsViewController.swift in Sources */,
+				843B3F0A266D4AB6009F7C19 /* SteamSearchGameViewController.swift in Sources */,
 				84706273266BE6B5003B40A3 /* IgnManager.swift in Sources */,
-				843B3F21266D4B06009F7C19 /* SteamNewsWorker.swift in Sources */,
+				843B3F21266D4B06009F7C19 /* SteamSearchGameWorker.swift in Sources */,
 				847E5808266D297800EA6D87 /* ProfileViewController.swift in Sources */,
 				84C8986E26641C52006B8C91 /* UITableView+Extension.swift in Sources */,
 				8435B3302647111E004CA045 /* FieldValidator.swift in Sources */,

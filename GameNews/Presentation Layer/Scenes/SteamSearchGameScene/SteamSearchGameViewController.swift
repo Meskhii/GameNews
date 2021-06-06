@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SteamNewsViewController: UIViewController {
+class SteamSearchGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

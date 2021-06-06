@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Steam News View Controller-->
+        <!--Steam Search Game View Controller-->
         <scene sceneID="czx-kr-FeI">
             <objects>
-                <viewController storyboardIdentifier="SteamNewsViewController" id="3YY-X0-HSc" customClass="SteamNewsViewController" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SteamSearchGameViewController" id="3YY-X0-HSc" customClass="SteamSearchGameViewController" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NRZ-BN-7eG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
