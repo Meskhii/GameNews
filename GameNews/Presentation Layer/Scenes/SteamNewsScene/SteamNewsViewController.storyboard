@@ -16,8 +16,27 @@
                     <view key="view" contentMode="scaleToFill" id="NRZ-BN-7eG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search Game" translatesAutoresizingMaskIntoConstraints="NO" id="RdY-gT-FG3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="suu-Oi-54a">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TU5-bf-E99"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="suu-Oi-54a" firstAttribute="leading" secondItem="TU5-bf-E99" secondAttribute="leading" id="0wn-Gf-FGF"/>
+                            <constraint firstItem="RdY-gT-FG3" firstAttribute="leading" secondItem="TU5-bf-E99" secondAttribute="leading" id="2Tp-a2-Z8v"/>
+                            <constraint firstItem="RdY-gT-FG3" firstAttribute="top" secondItem="TU5-bf-E99" secondAttribute="top" id="3dy-xh-Aii"/>
+                            <constraint firstItem="TU5-bf-E99" firstAttribute="trailing" secondItem="suu-Oi-54a" secondAttribute="trailing" id="FpP-g1-6zi"/>
+                            <constraint firstItem="TU5-bf-E99" firstAttribute="bottom" secondItem="suu-Oi-54a" secondAttribute="bottom" id="Sxa-az-oP2"/>
+                            <constraint firstItem="RdY-gT-FG3" firstAttribute="trailing" secondItem="TU5-bf-E99" secondAttribute="trailing" id="bRj-iH-4NG"/>
+                            <constraint firstItem="suu-Oi-54a" firstAttribute="top" secondItem="RdY-gT-FG3" secondAttribute="bottom" constant="10" id="k3v-Vq-Tn5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpp-2V-Q2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
