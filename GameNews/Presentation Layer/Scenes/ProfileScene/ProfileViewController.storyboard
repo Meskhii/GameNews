@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="m3Q-Ng-gn8">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="opJ-Ue-zDK" customClass="ProfileViewController" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2hg-YX-D8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-10-fzr">
+                                <rect key="frame" x="107.5" y="60" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="czA-Bb-rBx"/>
+                                    <constraint firstAttribute="height" constant="160" id="xOk-Sx-Jko"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ig-99-5bp">
+                                <rect key="frame" x="20" y="246" width="335" height="69"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="77P-45-ets">
+                                <rect key="frame" x="20" y="335" width="335" height="312"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLX-az-ac0">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="52" id="wuQ-6e-kaa"/>
+                                        </constraints>
+                                        <state key="normal" title="Switch To Light Mode"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1W-ZE-dqd">
+                                        <rect key="frame" x="0.0" y="52" width="335" height="52"/>
+                                        <state key="normal" title="News Alerts"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-oj-g3c">
+                                        <rect key="frame" x="0.0" y="104" width="335" height="52"/>
+                                        <state key="normal" title="Request News Web Site"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-aW-ARw">
+                                        <rect key="frame" x="0.0" y="156" width="335" height="52"/>
+                                        <state key="normal" title="Request Feature"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-DG-87j">
+                                        <rect key="frame" x="0.0" y="208" width="335" height="52"/>
+                                        <state key="normal" title="Rate The App"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evi-dy-cAG">
+                                        <rect key="frame" x="0.0" y="260" width="335" height="52"/>
+                                        <state key="normal" title="Logout"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P8P-0o-XuE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P8P-0o-XuE" firstAttribute="bottom" secondItem="77P-45-ets" secondAttribute="bottom" constant="20" id="9yo-tm-Kjh"/>
+                            <constraint firstItem="77P-45-ets" firstAttribute="top" secondItem="9ig-99-5bp" secondAttribute="bottom" constant="20" id="Ccx-3s-8UX"/>
+                            <constraint firstItem="9ig-99-5bp" firstAttribute="top" secondItem="wKx-10-fzr" secondAttribute="bottom" constant="26" id="R4r-dZ-54V"/>
+                            <constraint firstItem="P8P-0o-XuE" firstAttribute="trailing" secondItem="9ig-99-5bp" secondAttribute="trailing" constant="20" id="SQx-Ko-Zc1"/>
+                            <constraint firstItem="P8P-0o-XuE" firstAttribute="trailing" secondItem="77P-45-ets" secondAttribute="trailing" constant="20" id="W6j-Bq-5PV"/>
+                            <constraint firstItem="9ig-99-5bp" firstAttribute="leading" secondItem="P8P-0o-XuE" secondAttribute="leading" constant="20" id="diT-yS-jRV"/>
+                            <constraint firstItem="wKx-10-fzr" firstAttribute="centerX" secondItem="2hg-YX-D8B" secondAttribute="centerX" id="hE8-q6-sin"/>
+                            <constraint firstItem="77P-45-ets" firstAttribute="leading" secondItem="P8P-0o-XuE" secondAttribute="leading" constant="20" id="m9l-KW-13M"/>
+                            <constraint firstItem="wKx-10-fzr" firstAttribute="top" secondItem="P8P-0o-XuE" secondAttribute="top" constant="60" id="p20-pM-gl1"/>
+                            <constraint firstItem="9ig-99-5bp" firstAttribute="centerX" secondItem="wKx-10-fzr" secondAttribute="centerX" id="v3t-aU-3VM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVt-GQ-lhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="-87"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -11,5 +11,5 @@ struct VCIds {
     static let mainVC = "MainViewController"
     static let signUpVC = "SignUpViewController"
     static let loginVC = "LoginViewController"
-    static let newsVC = "NewsViewController"
+    static let tabBarController = "TabBarController"
 }
