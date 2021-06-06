@@ -29,6 +29,14 @@
 		843B3F4D266D4DB8009F7C19 /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F4B266D4DB8009F7C19 /* VideoCell.xib */; };
 		843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F80266D7008009F7C19 /* SearchResultCell.swift */; };
 		843B3F83266D7008009F7C19 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3F81266D7008009F7C19 /* SearchResultCell.xib */; };
+		843B3F9E266D74F3009F7C19 /* SelectedGameNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F9D266D74F3009F7C19 /* SelectedGameNewsViewController.swift */; };
+		843B3FA3266D74FF009F7C19 /* SelectedGameNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FA2266D74FF009F7C19 /* SelectedGameNewsInteractor.swift */; };
+		843B3FA8266D750B009F7C19 /* SelectedGameNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FA7266D750B009F7C19 /* SelectedGameNewsPresenter.swift */; };
+		843B3FAD266D7519009F7C19 /* SelectedGameNewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FAC266D7519009F7C19 /* SelectedGameNewsWorker.swift */; };
+		843B3FB2266D7535009F7C19 /* SelectedGameNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FB1266D7535009F7C19 /* SelectedGameNewsRouter.swift */; };
+		843B3FB7266D753D009F7C19 /* SelectedGameNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FB6266D753D009F7C19 /* SelectedGameNewsViewController.storyboard */; };
+		843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FBC266D764A009F7C19 /* SelectedGameNewsCell.swift */; };
+		843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FBD266D764A009F7C19 /* SelectedGameNewsCell.xib */; };
 		843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* FirebaseFirestore */; };
 		843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* FirebaseInstallations */; };
 		843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* FirebaseDatabase */; };
@@ -131,6 +139,14 @@
 		843B3F4B266D4DB8009F7C19 /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		843B3F80266D7008009F7C19 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		843B3F81266D7008009F7C19 /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		843B3F9D266D74F3009F7C19 /* SelectedGameNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsViewController.swift; sourceTree = "<group>"; };
+		843B3FA2266D74FF009F7C19 /* SelectedGameNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsInteractor.swift; sourceTree = "<group>"; };
+		843B3FA7266D750B009F7C19 /* SelectedGameNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsPresenter.swift; sourceTree = "<group>"; };
+		843B3FAC266D7519009F7C19 /* SelectedGameNewsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsWorker.swift; sourceTree = "<group>"; };
+		843B3FB1266D7535009F7C19 /* SelectedGameNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsRouter.swift; sourceTree = "<group>"; };
+		843B3FB6266D753D009F7C19 /* SelectedGameNewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedGameNewsViewController.storyboard; sourceTree = "<group>"; };
+		843B3FBC266D764A009F7C19 /* SelectedGameNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedGameNewsCell.swift; sourceTree = "<group>"; };
+		843B3FBD266D764A009F7C19 /* SelectedGameNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedGameNewsCell.xib; sourceTree = "<group>"; };
 		843BE21B2660D943004099C1 /* GameNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		843BE21C2660D943004099C1 /* GameNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844BF7AC26503F2D0099EADF /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
@@ -300,6 +316,29 @@
 			path = SearchCell;
 			sourceTree = "<group>";
 		};
+		843B3F9C266D74BB009F7C19 /* SelectedGameNewsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				843B3FBB266D761D009F7C19 /* SelectedGameNewsCell */,
+				843B3F9D266D74F3009F7C19 /* SelectedGameNewsViewController.swift */,
+				843B3FA2266D74FF009F7C19 /* SelectedGameNewsInteractor.swift */,
+				843B3FA7266D750B009F7C19 /* SelectedGameNewsPresenter.swift */,
+				843B3FAC266D7519009F7C19 /* SelectedGameNewsWorker.swift */,
+				843B3FB1266D7535009F7C19 /* SelectedGameNewsRouter.swift */,
+				843B3FB6266D753D009F7C19 /* SelectedGameNewsViewController.storyboard */,
+			);
+			path = SelectedGameNewsViewController;
+			sourceTree = "<group>";
+		};
+		843B3FBB266D761D009F7C19 /* SelectedGameNewsCell */ = {
+			isa = PBXGroup;
+			children = (
+				843B3FBC266D764A009F7C19 /* SelectedGameNewsCell.swift */,
+				843B3FBD266D764A009F7C19 /* SelectedGameNewsCell.xib */,
+			);
+			path = SelectedGameNewsCell;
+			sourceTree = "<group>";
+		};
 		8462FFDB2646F35E0051280B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +426,7 @@
 		84813123264FB6FC00768A7F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				843B3F9C266D74BB009F7C19 /* SelectedGameNewsViewController */,
 				843B3F2A266D4B1C009F7C19 /* VideosScene */,
 				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
 				847E5806266D295E00EA6D87 /* ProfileScene */,
@@ -643,6 +683,7 @@
 				849B5F952646ABBB0095C3E9 /* LaunchScreen.storyboard in Resources */,
 				843B3F45266D4C06009F7C19 /* VideosViewController.storyboard in Resources */,
 				84E6DCB0264FBD4B0090226B /* SignUpViewController.storyboard in Resources */,
+				843B3FB7266D753D009F7C19 /* SelectedGameNewsViewController.storyboard in Resources */,
 				843391F626655057003089C3 /* NewsCell.xib in Resources */,
 				843B3F26266D4B17009F7C19 /* SteamSearchGameViewController.storyboard in Resources */,
 				843B3F4D266D4DB8009F7C19 /* VideoCell.xib in Resources */,
@@ -654,6 +695,7 @@
 				84E6DCB6264FBD8A0090226B /* LoginViewController.storyboard in Resources */,
 				847E5822266D2CBC00EA6D87 /* TabBarController.storyboard in Resources */,
 				847E5850266D2FA100EA6D87 /* ConfigureNewsController.storyboard in Resources */,
+				843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */,
 				849B5F8D2646ABB70095C3E9 /* MainViewController.storyboard in Resources */,
 				847E5817266D2B9300EA6D87 /* ProfileViewController.storyboard in Resources */,
 				849AECEA266C3700006A2722 /* SitesCell.xib in Resources */,
@@ -711,6 +753,7 @@
 				84C8987326641C64006B8C91 /* UITableViewCell+Extension.swift in Sources */,
 				849B5F902646ABB70095C3E9 /* GameNews.xcdatamodeld in Sources */,
 				843B3F1C266D4AF9009F7C19 /* SteamSearchGameRouter.swift in Sources */,
+				843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */,
 				84F63E9B26518D94006ED049 /* SignUpWorker.swift in Sources */,
 				84C8987826641C75006B8C91 /* UICollectionView+Extension.swift in Sources */,
 				844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */,
@@ -721,6 +764,7 @@
 				847E580D266D2A3000EA6D87 /* ProfileInteractor.swift in Sources */,
 				843391F526655057003089C3 /* NewsCell.swift in Sources */,
 				849AECE9266C3700006A2722 /* SitesCell.swift in Sources */,
+				843B3FAD266D7519009F7C19 /* SelectedGameNewsWorker.swift in Sources */,
 				847510AE265018F400E0D1B0 /* SignUpRouter.swift in Sources */,
 				847510A4265018D500E0D1B0 /* SignUpPresenter.swift in Sources */,
 				84C8987D26641C8A006B8C91 /* UICollectionViewCell+Extension.swift in Sources */,
@@ -730,6 +774,7 @@
 				84AB7465266A635A00DE05D0 /* NewsModel.swift in Sources */,
 				843B3F31266D4BCE009F7C19 /* VideosInteractor.swift in Sources */,
 				8475109F2650139C00E0D1B0 /* WelcomeRouter.swift in Sources */,
+				843B3FB2266D7535009F7C19 /* SelectedGameNewsRouter.swift in Sources */,
 				843B3F12266D4ADB009F7C19 /* SteamSearchGameInteractor.swift in Sources */,
 				844BF7B226503FD20099EADF /* LoginInteractor.swift in Sources */,
 				847062B1266C2728003B40A3 /* TabBarController.swift in Sources */,
@@ -738,6 +783,7 @@
 				84C9A93C2652FBCC00BBC1CD /* LoginModel.swift in Sources */,
 				843B3F2C266D4BA2009F7C19 /* VideosViewController.swift in Sources */,
 				844BF7AD26503F2D0099EADF /* LoginPresenter.swift in Sources */,
+				843B3FA3266D74FF009F7C19 /* SelectedGameNewsInteractor.swift in Sources */,
 				847E5846266D2F4700EA6D87 /* ConfigureNewsInteractor.swift in Sources */,
 				84C9A9412652FBE200BBC1CD /* LoginWorker.swift in Sources */,
 				849B5FC62646B2900095C3E9 /* NewsViewController.swift in Sources */,
@@ -751,10 +797,12 @@
 				844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */,
 				843B3F36266D4BD8009F7C19 /* VideosPresenter.swift in Sources */,
 				843B3F3B266D4BE4009F7C19 /* VideosWorker.swift in Sources */,
+				843B3F9E266D74F3009F7C19 /* SelectedGameNewsViewController.swift in Sources */,
 				849B5FBC2646B26A0095C3E9 /* SignUpViewController.swift in Sources */,
 				8462FFDD2646F3970051280B /* ButtonsDesign.swift in Sources */,
 				84F63E9626516070006ED049 /* SignUpModel.swift in Sources */,
 				847DA2BC2663ABE50069FF84 /* NewsRouter.swift in Sources */,
+				843B3FA8266D750B009F7C19 /* SelectedGameNewsPresenter.swift in Sources */,
 				847510A9265018E400E0D1B0 /* SignUpInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
