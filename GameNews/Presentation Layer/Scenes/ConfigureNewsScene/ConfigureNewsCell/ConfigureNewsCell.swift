@@ -13,7 +13,7 @@ class ConfigureNewsCell: UICollectionViewCell {
     @IBOutlet weak var checkMarkImage: UIImageView!
     @IBOutlet weak var webPageNameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
