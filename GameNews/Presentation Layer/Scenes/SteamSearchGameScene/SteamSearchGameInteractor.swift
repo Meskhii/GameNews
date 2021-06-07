@@ -6,3 +6,27 @@
 //
 
 import Foundation
+
+protocol SteamSearchGameBusinessLogic {
+    func fetchSearchedGame()
+}
+
+class SteamSearchGameInteractor {
+    // MARK: - Variables
+    var presenter: SteamSearchGamePresentationLogic?
+}
+
+// MARK: - Business logic
+extension SteamSearchGameInteractor: SteamSearchGameBusinessLogic {
+    func fetchSearchedGame() {
+        var fetchedSearchResults: SearchResultModel?
+
+        SteamSearchGameWorker.shared.searchForGames(searchWord: "detroit") {searchResult in
+            fetchedSearchResults = searchResult
+        }
+
+        if let searchResults = fetchedSearchResults {
+            presenter?.present(data: searchResults)
+        }
+    }
+}

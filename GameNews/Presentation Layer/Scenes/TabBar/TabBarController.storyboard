@@ -18,6 +18,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="rMY-So-pIQ" kind="relationship" relationship="viewControllers" id="Iwd-A8-Cu3"/>
+                        <segue destination="W44-B3-S4Y" kind="relationship" relationship="viewControllers" id="KUM-k4-edW"/>
+                        <segue destination="Za2-hh-6Oc" kind="relationship" relationship="viewControllers" id="1Q7-lK-UA0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFf-bq-xDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -33,6 +35,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GPN-pV-aWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-22" y="23"/>
+        </scene>
+        <!--VideosViewController-->
+        <scene sceneID="EzF-Uk-7ik">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideosViewController" referencedIdentifier="VideosViewController" id="W44-B3-S4Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="I17-5F-WUx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VxQ-SC-VoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-22" y="163"/>
+        </scene>
+        <!--SteamSearchGameViewController-->
+        <scene sceneID="Jht-ne-XmK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SteamSearchGameViewController" referencedIdentifier="SteamSearchGameViewController" id="Za2-hh-6Oc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0J4-4F-mGr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0t-id-Ug6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-21" y="285"/>
         </scene>
     </scenes>
 </document>

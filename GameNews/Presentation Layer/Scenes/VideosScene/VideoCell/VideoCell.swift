@@ -14,7 +14,7 @@ class VideoCell: UITableViewCell {
     @IBOutlet weak var webPageLogoImage: UIImageView!
     @IBOutlet weak var videoNameLabel: UILabel!
     @IBOutlet weak var webPageNameLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

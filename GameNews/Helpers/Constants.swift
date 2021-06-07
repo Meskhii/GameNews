@@ -12,4 +12,6 @@ struct VCIds {
     static let signUpVC = "SignUpViewController"
     static let loginVC = "LoginViewController"
     static let tabBarController = "TabBarController"
+    static let steamSearchGameVC = "SteamSearchGameViewController"
+    static let selectedGameNewsVC = "SelectedGameNewsViewController"
 }
