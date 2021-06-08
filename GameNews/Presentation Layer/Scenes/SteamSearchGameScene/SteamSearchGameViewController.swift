@@ -14,6 +14,7 @@ protocol SteamSearchGameDisplayLogic: AnyObject {
 class SteamSearchGameViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     // MARK: - Variables
     private var interactor: SteamSearchGameBusinessLogic?
@@ -45,7 +46,8 @@ class SteamSearchGameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        interactor?.fetchSearchedGame()
+        self.navigationController?.navigationBar.isHidden = true
+        self.searchBar.delegate = self
 
         configureTableView()
     }
@@ -79,5 +81,13 @@ extension SteamSearchGameViewController: UITableViewDataSource {
 }
 
 extension SteamSearchGameViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+}
 
+extension SteamSearchGameViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        interactor?.fetchSearchedGame(by: searchText)
+    }
 }

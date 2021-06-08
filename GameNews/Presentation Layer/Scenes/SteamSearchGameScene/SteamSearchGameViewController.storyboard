@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,15 +19,24 @@
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search Game" translatesAutoresizingMaskIntoConstraints="NO" id="RdY-gT-FG3">
                                 <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="barTintColor" name="TableViewBackground"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="searchField.textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="suu-Oi-54a">
                                 <rect key="frame" x="0.0" y="110" width="414" height="752"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="TableViewBackground"/>
+                                <color key="tintColor" name="TableViewBackground"/>
+                                <color key="separatorColor" name="TableViewBackground"/>
+                                <color key="sectionIndexBackgroundColor" name="TableViewBackground"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TU5-bf-E99"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ViewBackground"/>
                         <constraints>
                             <constraint firstItem="suu-Oi-54a" firstAttribute="leading" secondItem="TU5-bf-E99" secondAttribute="leading" id="0wn-Gf-FGF"/>
                             <constraint firstItem="RdY-gT-FG3" firstAttribute="leading" secondItem="TU5-bf-E99" secondAttribute="leading" id="2Tp-a2-Z8v"/>
@@ -39,6 +48,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="RdY-gT-FG3" id="kHl-cO-H2c"/>
                         <outlet property="tableView" destination="suu-Oi-54a" id="cWr-l8-2s2"/>
                     </connections>
                 </viewController>
@@ -48,8 +58,11 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="TableViewBackground">
+            <color red="0.1289999932050705" green="0.13699999451637268" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ViewBackground">
+            <color red="0.12200000137090683" green="0.11400000005960464" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

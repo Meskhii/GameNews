@@ -21,7 +21,7 @@ extension SteamSearchGamePresenter: SteamSearchGamePresentationLogic {
         var searchResultCellModel = [SearchResultCellModel]()
 
         for index in 0..<data.titles.count {
-            
+
             if index < 20 {
                 searchResultCellModel.append(SearchResultCellModel(title: data.titles[index],
                                                                    imgURL: data.imgURLs[index],

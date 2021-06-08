@@ -12,14 +12,7 @@ class SteamSearchGameWorker {
 
     static let shared = SteamSearchGameWorker()
 
-    private var titlesArray = [String]()
-    private var releasDateArray = [String]()
-    private var imgURLSArray = [String]()
-    private var appIdsArray = [String]()
-    private var gamePricesArray = [String]()
-
     func searchForGames(searchWord: String, completion: @escaping (SearchResultModel?) -> Void) {
-
         var searchResultModel: SearchResultModel!
         let steamSearchResultURLString = "https://store.steampowered.com/search/?term=\(searchWord)"
 
@@ -45,6 +38,12 @@ extension SteamSearchGameWorker {
 
     func fetchSearchResult(doc: Document) -> SearchResultModel? {
 
+        var titlesArray = [String]()
+        var releasDateArray = [String]()
+        var imgURLSArray = [String]()
+        var appIdsArray = [String]()
+        var gamePricesArray = [String]()
+
         do {
 
             let imgURLS = try doc.select("img")
@@ -65,7 +64,7 @@ extension SteamSearchGameWorker {
 
                 for img in imgURLS {
                     let url = try img.attr("src")
-                    
+
                     if url.contains("/apps") {
                         imgURLSArray.append(url)
                         let appId = getSteamGameAppId(from: url)

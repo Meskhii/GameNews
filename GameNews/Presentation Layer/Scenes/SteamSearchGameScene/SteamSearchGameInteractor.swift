@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SteamSearchGameBusinessLogic {
-    func fetchSearchedGame()
+    func fetchSearchedGame(by name: String)
 }
 
 class SteamSearchGameInteractor {
@@ -18,10 +18,10 @@ class SteamSearchGameInteractor {
 
 // MARK: - Business logic
 extension SteamSearchGameInteractor: SteamSearchGameBusinessLogic {
-    func fetchSearchedGame() {
+    func fetchSearchedGame(by name: String) {
         var fetchedSearchResults: SearchResultModel?
 
-        SteamSearchGameWorker.shared.searchForGames(searchWord: "detroit") {searchResult in
+        SteamSearchGameWorker.shared.searchForGames(searchWord: name) {searchResult in
             fetchedSearchResults = searchResult
         }
 
