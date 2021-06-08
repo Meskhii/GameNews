@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SelectedGameNewsCellDelegate: AnyObject {
+    func readFullArticleTappedFor(_ articleURL: String)
+}
+
 protocol SelectedGameNewsDisplayLogic: AnyObject {
     func display(data: [GameNewsModel])
 }
@@ -18,6 +22,7 @@ class SelectedGameNewsViewController: UIViewController {
     // MARK: - Variables
     private var interactor: SelectedGameNewsBusinessLogic?
     private var selectedGameNews = [GameNewsModel]()
+    private(set) var router: SelectedGameNewsRoutingLogic?
     var appId: String?
 
     // MARK: - Inits
@@ -35,9 +40,12 @@ class SelectedGameNewsViewController: UIViewController {
         let viewController = self
         let presenter = SelectedGameNewsPresenter()
         let interactor = SelectedGameNewsInteractor()
+        let router = SelectedGameNewsRouter()
         interactor.presenter = presenter
         presenter.selectedGameNewsViewController = viewController
         viewController.interactor = interactor
+        viewController.router = router
+        router.viewController = viewController
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +77,14 @@ extension SelectedGameNewsViewController: UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: SelectedGameNewsCell.self, for: indexPath)
         cell.configure(with: selectedGameNews[indexPath.row])
+        cell.delegate = self
         return cell
     }
 
+}
+
+extension SelectedGameNewsViewController: SelectedGameNewsCellDelegate {
+    func readFullArticleTappedFor(_ articleURL: String) {
+        router?.openSelectedGameNewsInSafariView(using: articleURL)
+    }
 }

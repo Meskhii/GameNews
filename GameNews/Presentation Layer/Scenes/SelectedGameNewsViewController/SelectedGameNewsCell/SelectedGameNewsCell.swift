@@ -10,12 +10,11 @@ import UIKit
 class SelectedGameNewsCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
-
     @IBOutlet weak var contentLabel: UILabel!
-
     @IBOutlet weak var authorLabel: UILabel!
 
     private var fullArticleHref: String?
+    weak var delegate: SelectedGameNewsCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +40,7 @@ class SelectedGameNewsCell: UITableViewCell {
     }
 
     @IBAction func readFullArticle(_ sender: Any) {
+        delegate?.readFullArticleTappedFor(fullArticleHref ?? "")
     }
 
 }

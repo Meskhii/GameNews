@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="073-i5-OOM">
-                        <rect key="frame" x="193" y="190" width="107" height="30"/>
+                        <rect key="frame" x="237" y="190" width="63" height="30"/>
                         <state key="normal" title="Read Full"/>
                         <connections>
                             <action selector="readFullArticle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BG0-kE-c24"/>
@@ -47,7 +47,6 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="073-i5-OOM" firstAttribute="leading" secondItem="Qfh-gz-DRJ" secondAttribute="trailing" constant="120" id="5sK-Rg-21W"/>
                     <constraint firstAttribute="trailing" secondItem="FHW-5g-N86" secondAttribute="trailing" constant="20" id="FcA-yg-nWl"/>
                     <constraint firstItem="Qfh-gz-DRJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="H28-Xu-cX9"/>
                     <constraint firstAttribute="trailing" secondItem="073-i5-OOM" secondAttribute="trailing" constant="20" id="H6R-QA-2Jt"/>
