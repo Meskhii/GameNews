@@ -28,9 +28,14 @@ class SelectedGameNewsCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configure(with data: GameNewsModel){
+    func configure(with data: GameNewsModel) {
+
         self.titleLabel.text = data.title
-        self.contentLabel.text = data.contents
+
+        let string = data.contents
+        let str = string?.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
+        self.contentLabel.text = str
+
         self.authorLabel.text = data.author
         self.fullArticleHref = data.url
     }
