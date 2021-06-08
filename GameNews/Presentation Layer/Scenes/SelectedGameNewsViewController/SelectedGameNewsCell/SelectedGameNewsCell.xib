@@ -33,15 +33,27 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="073-i5-OOM">
-                        <rect key="frame" x="237" y="190" width="63" height="30"/>
+                        <rect key="frame" x="193" y="190" width="107" height="30"/>
                         <state key="normal" title="Read Full"/>
+                        <connections>
+                            <action selector="readFullArticle:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="BG0-kE-c24"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfh-gz-DRJ">
+                        <rect key="frame" x="21" y="194.5" width="52" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="073-i5-OOM" firstAttribute="leading" secondItem="Qfh-gz-DRJ" secondAttribute="trailing" constant="120" id="5sK-Rg-21W"/>
                     <constraint firstAttribute="trailing" secondItem="FHW-5g-N86" secondAttribute="trailing" constant="20" id="FcA-yg-nWl"/>
+                    <constraint firstItem="Qfh-gz-DRJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="H28-Xu-cX9"/>
                     <constraint firstAttribute="trailing" secondItem="073-i5-OOM" secondAttribute="trailing" constant="20" id="H6R-QA-2Jt"/>
                     <constraint firstAttribute="bottom" secondItem="073-i5-OOM" secondAttribute="bottom" constant="20" id="QPo-M8-31U"/>
                     <constraint firstItem="FHW-5g-N86" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="UAh-De-feE"/>
+                    <constraint firstItem="Qfh-gz-DRJ" firstAttribute="centerY" secondItem="073-i5-OOM" secondAttribute="centerY" id="VRM-uX-Zi9"/>
                     <constraint firstItem="073-i5-OOM" firstAttribute="top" secondItem="zgc-50-vgr" secondAttribute="bottom" constant="19" id="WdO-dn-Z3n"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zgc-50-vgr" secondAttribute="trailing" constant="20" id="Y5Z-dE-kw4"/>
                     <constraint firstItem="zgc-50-vgr" firstAttribute="top" secondItem="FHW-5g-N86" secondAttribute="bottom" constant="10" id="Zgd-an-kW3"/>
@@ -50,6 +62,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="Qfh-gz-DRJ" id="BXY-AT-cNJ"/>
+                <outlet property="contentLabel" destination="zgc-50-vgr" id="rDB-kT-CgI"/>
+                <outlet property="titleLabel" destination="FHW-5g-N86" id="phF-tq-Sls"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="197.54464285714286"/>
         </tableViewCell>
     </objects>

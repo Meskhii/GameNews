@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+protocol SelectedGameNewsWorkerProtocol {
+    func fetchGameNews(appId: String, completion: @escaping ((GameNewsAppNewsModel) -> Void))
+}
+
+class SelectedGameNewsWorker {
+
+    func fetchGameNews(appId: String, completion: @escaping ((GameNewsAppNewsModel) -> Void)) {
+        let url = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=\(appId)"
+        NetworkManager.shared.get(url: url) { (result: Result<GameNewsAppNewsModel, Error>) in
+            switch result {
+            case .success(let gameNews):
+                completion(gameNews)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+}

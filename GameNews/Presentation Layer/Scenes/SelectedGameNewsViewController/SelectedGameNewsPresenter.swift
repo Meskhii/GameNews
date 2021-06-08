@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+protocol SelectedGameNewsPresentationLogic: AnyObject {
+    func present(data: [GameNewsModel])
+}
+
+class SelectedGameNewsPresenter {
+    weak var selectedGameNewsViewController: SelectedGameNewsDisplayLogic?
+}
+
+// MARK: - Presentation logic
+extension SelectedGameNewsPresenter: SelectedGameNewsPresentationLogic {
+    func present(data: [GameNewsModel]) {
+        selectedGameNewsViewController?.display(data: data)
+    }
+}

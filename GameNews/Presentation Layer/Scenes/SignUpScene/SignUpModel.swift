@@ -8,7 +8,6 @@
 import Foundation
 
 enum SignUp {
-  // MARK: Use cases
     struct Request {
         var firstName: String?
         var lastName: String?
