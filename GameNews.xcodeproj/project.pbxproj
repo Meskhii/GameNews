@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
 		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
+		842B0BAC267271C600FFD763 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BAB267271C600FFD763 /* PlayVideoViewController.swift */; };
+		842B0BB12672724400FFD763 /* PlayVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B0BB02672724400FFD763 /* PlayVideoViewController.storyboard */; };
+		842B0BC12672907900FFD763 /* ConfigureNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */; };
+		842B0BC72672948900FFD763 /* WebPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BC62672948900FFD763 /* WebPagesModel.swift */; };
+		842B0BD42672B1EF00FFD763 /* ConfigureNewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */; };
 		843391F526655057003089C3 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843391F326655057003089C3 /* NewsCell.swift */; };
 		843391F626655057003089C3 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843391F426655057003089C3 /* NewsCell.xib */; };
 		8435B3302647111E004CA045 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435B32F2647111E004CA045 /* FieldValidator.swift */; };
 		8436D698266B972B001715B1 /* NewsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436D697266B972B001715B1 /* NewsCellModel.swift */; };
-		8436D69E266BA275001715B1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 8436D69D266BA275001715B1 /* SwiftPackageProductDependency */; };
+		8436D69E266BA275001715B1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8436D69D266BA275001715B1 /* Kingfisher */; };
 		8436D6A6266BAE86001715B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8436D6A5266BAE86001715B1 /* Assets.xcassets */; };
 		843B3F0A266D4AB6009F7C19 /* SteamSearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F09266D4AB6009F7C19 /* SteamSearchGameViewController.swift */; };
 		843B3F12266D4ADB009F7C19 /* SteamSearchGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F11266D4ADB009F7C19 /* SteamSearchGameInteractor.swift */; };
@@ -38,14 +43,14 @@
 		843B3FB7266D753D009F7C19 /* SelectedGameNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FB6266D753D009F7C19 /* SelectedGameNewsViewController.storyboard */; };
 		843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FBC266D764A009F7C19 /* SelectedGameNewsCell.swift */; };
 		843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FBD266D764A009F7C19 /* SelectedGameNewsCell.xib */; };
-		843BE21F2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE2212660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE2232660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE2252660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE2272660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE2292660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE22B2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */; };
-		843BE22D2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* FirebaseFirestore */; };
+		843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* FirebaseInstallations */; };
+		843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* FirebaseDatabase */; };
+		843BE2252660DB1B004099C1 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */; };
+		843BE2272660DB1B004099C1 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */; };
+		843BE2292660DB1B004099C1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2282660DB1B004099C1 /* FirebaseStorage */; };
+		843BE22B2660DB1B004099C1 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22A2660DB1B004099C1 /* FirebaseFunctions */; };
+		843BE22D2660DB1B004099C1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22C2660DB1B004099C1 /* FirebaseAuth */; };
 		844BF7AD26503F2D0099EADF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7AC26503F2D0099EADF /* LoginPresenter.swift */; };
 		844BF7B226503FD20099EADF /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7B126503FD20099EADF /* LoginInteractor.swift */; };
 		844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7B62650400D0099EADF /* LoginRouter.swift */; };
@@ -61,7 +66,7 @@
 		847510AE265018F400E0D1B0 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847510AD265018F400E0D1B0 /* SignUpRouter.swift */; };
 		847DA2BC2663ABE50069FF84 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DA2BB2663ABE50069FF84 /* NewsRouter.swift */; };
 		847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DA2C52663AD6E0069FF84 /* NewsWorker.swift */; };
-		847DA2CC2663AE560069FF84 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */; };
+		847DA2CC2663AE560069FF84 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 847DA2CB2663AE560069FF84 /* SwiftSoup */; };
 		847E5808266D297800EA6D87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5807266D297800EA6D87 /* ProfileViewController.swift */; };
 		847E580D266D2A3000EA6D87 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E580C266D2A3000EA6D87 /* ProfileInteractor.swift */; };
 		847E5812266D2B2F00EA6D87 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5811266D2B2F00EA6D87 /* ProfilePresenter.swift */; };
@@ -133,6 +138,11 @@
 		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews_GameNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842B0BAB267271C600FFD763 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
+		842B0BB02672724400FFD763 /* PlayVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayVideoViewController.storyboard; sourceTree = "<group>"; };
+		842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsRouter.swift; sourceTree = "<group>"; };
+		842B0BC62672948900FFD763 /* WebPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagesModel.swift; sourceTree = "<group>"; };
+		842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsWorker.swift; sourceTree = "<group>"; };
 		843391F326655057003089C3 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		843391F426655057003089C3 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8435B32F2647111E004CA045 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
@@ -240,16 +250,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843BE2272660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE22B2660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE2232660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE2252660DB1B004099C1 /* BuildFile in Frameworks */,
-				8436D69E266BA275001715B1 /* BuildFile in Frameworks */,
-				843BE21F2660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE2212660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE2292660DB1B004099C1 /* BuildFile in Frameworks */,
-				843BE22D2660DB1B004099C1 /* BuildFile in Frameworks */,
-				847DA2CC2663AE560069FF84 /* BuildFile in Frameworks */,
+				843BE2272660DB1B004099C1 /* FirebaseStorageSwift-Beta in Frameworks */,
+				843BE22B2660DB1B004099C1 /* FirebaseFunctions in Frameworks */,
+				843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */,
+				843BE2252660DB1B004099C1 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				8436D69E266BA275001715B1 /* Kingfisher in Frameworks */,
+				843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */,
+				843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */,
+				843BE2292660DB1B004099C1 /* FirebaseStorage in Frameworks */,
+				843BE22D2660DB1B004099C1 /* FirebaseAuth in Frameworks */,
+				847DA2CC2663AE560069FF84 /* SwiftSoup in Frameworks */,
 				5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +283,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842B0B98267270E100FFD763 /* PlayVideoScene */ = {
+			isa = PBXGroup;
+			children = (
+				842B0BAB267271C600FFD763 /* PlayVideoViewController.swift */,
+				842B0BB02672724400FFD763 /* PlayVideoViewController.storyboard */,
+			);
+			path = PlayVideoScene;
+			sourceTree = "<group>";
+		};
+		842B0BC52672945800FFD763 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				842B0BC62672948900FFD763 /* WebPagesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		843391F226654E4A003089C3 /* NewsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,11 +457,14 @@
 		847E57F8266D180D00EA6D87 /* ConfigureNewsScene */ = {
 			isa = PBXGroup;
 			children = (
+				842B0BC52672945800FFD763 /* Models */,
 				847E5860266D389C00EA6D87 /* ConfigureNewsCell */,
 				847E5840266D2F3300EA6D87 /* ConfigureNewsViewController.swift */,
 				847E5845266D2F4700EA6D87 /* ConfigureNewsInteractor.swift */,
 				847E584A266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift */,
 				847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */,
+				842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */,
+				842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */,
 			);
 			path = ConfigureNewsScene;
 			sourceTree = "<group>";
@@ -462,13 +492,14 @@
 		84813123264FB6FC00768A7F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				842B0B98267270E100FFD763 /* PlayVideoScene */,
 				843B3F9C266D74BB009F7C19 /* SelectedGameNewsViewController */,
 				843B3F2A266D4B1C009F7C19 /* VideosScene */,
 				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
 				847E5806266D295E00EA6D87 /* ProfileScene */,
 				847E57F8266D180D00EA6D87 /* ConfigureNewsScene */,
 				847062A4266BF92A003B40A3 /* TabBar */,
-				84E6DCBA264FBE420090226B /* HomeScene */,
+				84E6DCBA264FBE420090226B /* NewsScene */,
 				84E6DCB4264FBD6A0090226B /* LoginScene */,
 				84E6DCAE264FBD240090226B /* SignUpScene */,
 				84813124264FB76100768A7F /* WelcomeScene */,
@@ -624,7 +655,7 @@
 			path = LoginScene;
 			sourceTree = "<group>";
 		};
-		84E6DCBA264FBE420090226B /* HomeScene */ = {
+		84E6DCBA264FBE420090226B /* NewsScene */ = {
 			isa = PBXGroup;
 			children = (
 				84706271266BE697003B40A3 /* WebPageWorkers */,
@@ -637,7 +668,7 @@
 				847DA2BB2663ABE50069FF84 /* NewsRouter.swift */,
 				847DA2C52663AD6E0069FF84 /* NewsWorker.swift */,
 			);
-			path = HomeScene;
+			path = NewsScene;
 			sourceTree = "<group>";
 		};
 		C4137D38B3B42E03BCAEF85E /* Frameworks */ = {
@@ -660,7 +691,6 @@
 				37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */,
 				3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -684,16 +714,16 @@
 			);
 			name = GameNews;
 			packageProductDependencies = (
-				843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */,
-				843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */,
-				847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */,
-				8436D69D266BA275001715B1 /* SwiftPackageProductDependency */,
+				843BE21E2660DB1B004099C1 /* FirebaseFirestore */,
+				843BE2202660DB1B004099C1 /* FirebaseInstallations */,
+				843BE2222660DB1B004099C1 /* FirebaseDatabase */,
+				843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */,
+				843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */,
+				843BE2282660DB1B004099C1 /* FirebaseStorage */,
+				843BE22A2660DB1B004099C1 /* FirebaseFunctions */,
+				843BE22C2660DB1B004099C1 /* FirebaseAuth */,
+				847DA2CB2663AE560069FF84 /* SwiftSoup */,
+				8436D69D266BA275001715B1 /* Kingfisher */,
 			);
 			productName = GameNews;
 			productReference = 84894D852647279F000AF852 /* GameNews.app */;
@@ -770,9 +800,9 @@
 			);
 			mainGroup = 849B5F792646ABB70095C3E9;
 			packageReferences = (
-				843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */,
-				847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */,
-				8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */,
+				843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 849B5F792646ABB70095C3E9;
 			projectDirPath = "";
@@ -791,6 +821,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				849B5F952646ABBB0095C3E9 /* LaunchScreen.storyboard in Resources */,
+				842B0BB12672724400FFD763 /* PlayVideoViewController.storyboard in Resources */,
 				843B3F45266D4C06009F7C19 /* VideosViewController.storyboard in Resources */,
 				84E6DCB0264FBD4B0090226B /* SignUpViewController.storyboard in Resources */,
 				843B3FB7266D753D009F7C19 /* SelectedGameNewsViewController.storyboard in Resources */,
@@ -970,6 +1001,7 @@
 				844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */,
 				84894931266E7A3C00B8F94E /* SearchResultModel.swift in Sources */,
 				849B5F8A2646ABB70095C3E9 /* WelcomeViewController.swift in Sources */,
+				842B0BC12672907900FFD763 /* ConfigureNewsRouter.swift in Sources */,
 				843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */,
 				847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */,
 				849B5F862646ABB70095C3E9 /* AppDelegate.swift in Sources */,
@@ -985,6 +1017,7 @@
 				847E5812266D2B2F00EA6D87 /* ProfilePresenter.swift in Sources */,
 				844BF7BC265041D00099EADF /* NewsPresenter.swift in Sources */,
 				84AB7465266A635A00DE05D0 /* NewsModel.swift in Sources */,
+				842B0BC72672948900FFD763 /* WebPagesModel.swift in Sources */,
 				84CB3954266FE2F100E8DF99 /* GameNewsAppNewsModel.swift in Sources */,
 				84CB3946266F92C400E8DF99 /* GameNewsItemModel.swift in Sources */,
 				843B3F31266D4BCE009F7C19 /* VideosInteractor.swift in Sources */,
@@ -1011,6 +1044,7 @@
 				84593DFE26716B140064B2A1 /* VideoCellModel.swift in Sources */,
 				8435B3302647111E004CA045 /* FieldValidator.swift in Sources */,
 				8436D698266B972B001715B1 /* NewsCellModel.swift in Sources */,
+				842B0BD42672B1EF00FFD763 /* ConfigureNewsWorker.swift in Sources */,
 				844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */,
 				84CB3941266F915200E8DF99 /* GameNewsModel.swift in Sources */,
 				843B3F36266D4BD8009F7C19 /* VideosPresenter.swift in Sources */,
@@ -1019,6 +1053,7 @@
 				849B5FBC2646B26A0095C3E9 /* SignUpViewController.swift in Sources */,
 				8462FFDD2646F3970051280B /* ButtonsDesign.swift in Sources */,
 				84F63E9626516070006ED049 /* SignUpModel.swift in Sources */,
+				842B0BAC267271C600FFD763 /* PlayVideoViewController.swift in Sources */,
 				847DA2BC2663ABE50069FF84 /* NewsRouter.swift in Sources */,
 				843B3FA8266D750B009F7C19 /* SelectedGameNewsPresenter.swift in Sources */,
 				847510A9265018E400E0D1B0 /* SignUpInteractor.swift in Sources */,
@@ -1356,7 +1391,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */ = {
+		8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -1364,7 +1399,7 @@
 				minimumVersion = 6.3.0;
 			};
 		};
-		843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */ = {
+		843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1372,7 +1407,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */ = {
+		847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scinfu/SwiftSoup";
 			requirement = {
@@ -1383,54 +1418,54 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8436D69D266BA275001715B1 /* SwiftPackageProductDependency */ = {
+		8436D69D266BA275001715B1 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */;
+			package = 8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
-		843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE21E2660DB1B004099C1 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
-		843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE2202660DB1B004099C1 /* FirebaseInstallations */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseInstallations;
 		};
-		843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE2222660DB1B004099C1 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseFirestoreSwift-Beta";
 		};
-		843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageSwift-Beta";
 		};
-		843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE2282660DB1B004099C1 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
 		};
-		843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE22A2660DB1B004099C1 /* FirebaseFunctions */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFunctions;
 		};
-		843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
+		843BE22C2660DB1B004099C1 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
+			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */ = {
+		847DA2CB2663AE560069FF84 /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */;
+			package = 847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
 			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */

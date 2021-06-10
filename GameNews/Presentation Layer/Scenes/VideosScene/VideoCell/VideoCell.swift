@@ -12,10 +12,13 @@ class VideoCell: UITableViewCell {
 
     @IBOutlet weak var videoImageView: UIImageView!
     @IBOutlet weak var videoNameLabel: UILabel!
+    @IBOutlet weak var trailerImageView: UIImageView!
+    private var videoId: String!
+    weak var delegate: SelectedVideoDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        // Initialization code)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +29,8 @@ class VideoCell: UITableViewCell {
 
     func configure(with info: VideoCellModel) {
         videoNameLabel.text = info.fetchedVideosTitle
-
+        videoId = info.fetchedVideosId
+        
         let url = URL(string: info.fetchedVideosImgUrl)
         videoImageView.kf.setImage(
             with: url,
@@ -37,4 +41,9 @@ class VideoCell: UITableViewCell {
             ])
     }
 
+
+    @IBAction func playSelectedVideo(_ sender: Any) {
+        delegate?.getSelectedVideoToPlay(videoId)
+    }
+    
 }

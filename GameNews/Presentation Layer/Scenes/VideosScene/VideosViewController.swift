@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SelectedVideoDelegate: AnyObject {
+    func getSelectedVideoToPlay(_ videoId: String)
+}
+
 protocol VideosDisplayLogic: AnyObject {
     func display(data: [VideoCellModel])
 }
@@ -66,6 +70,12 @@ extension VideosViewController: VideosDisplayLogic {
     }
 }
 
+extension VideosViewController: SelectedVideoDelegate {
+    func getSelectedVideoToPlay(_ videoId: String) {
+        router?.navigateToPlayVideoForSelected(videoId: videoId)
+    }
+}
+
 extension VideosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedVideos.count
@@ -74,6 +84,7 @@ extension VideosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: VideoCell.self, for: indexPath)
         cell.configure(with: fetchedVideos[indexPath.row])
+        cell.delegate = self
         return cell
     }
 

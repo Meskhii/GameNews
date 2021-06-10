@@ -36,14 +36,9 @@ extension VideosInteractor: VideosBusinessLogic {
                                             fetchedVideosImgUrl: fetchedVideosImgUrls[index],
                                             fetchedVideosId: fetchedVideosIds[index]))
                 }
-                
+
                 self.presenter?.present(data: videoCellModel)
             }
-            
         }
-
-       
-
-        
     }
 }
