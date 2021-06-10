@@ -6,14 +6,12 @@
 //
 
 import UIKit
+import Kingfisher
 
 class VideoCell: UITableViewCell {
 
     @IBOutlet weak var videoImageView: UIImageView!
-    @IBOutlet weak var videoTimeLengthLabel: UILabel!
-    @IBOutlet weak var webPageLogoImage: UIImageView!
     @IBOutlet weak var videoNameLabel: UILabel!
-    @IBOutlet weak var webPageNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +22,19 @@ class VideoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(with info: VideoCellModel) {
+        videoNameLabel.text = info.fetchedVideosTitle
+
+        let url = URL(string: info.fetchedVideosImgUrl)
+        videoImageView.kf.setImage(
+            with: url,
+            placeholder: UIImage(named: "ImagePlaceHolder"),
+            options: [
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(0.7))
+            ])
     }
 
 }

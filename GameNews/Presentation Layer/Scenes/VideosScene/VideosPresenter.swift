@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+protocol VideosPresentationLogic {
+    func present(data: [VideoCellModel])
+}
+
+class VideosPresenter {
+    weak var videosViewController: VideosDisplayLogic?
+}
+
+extension VideosPresenter: VideosPresentationLogic {
+    func present(data: [VideoCellModel]) {
+        videosViewController?.display(data: data)
+    }
+}

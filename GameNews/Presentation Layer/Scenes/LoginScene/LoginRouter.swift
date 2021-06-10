@@ -23,7 +23,9 @@ extension LoginRouter: LoginRoutingLogic {
         let storyboard = UIStoryboard(name: VCIds.tabBarController, bundle: nil)
         guard let tabBarVC = storyboard.instantiateViewController(identifier: vcId) as? TabBarController else {return}
 
-        viewController?.navigationController?.pushViewController(tabBarVC, animated: true)
+        tabBarVC.modalPresentationStyle = .fullScreen
+
+        viewController?.present(tabBarVC, animated: true)
     }
 
 }

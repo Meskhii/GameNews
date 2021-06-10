@@ -49,6 +49,7 @@
 		844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7B62650400D0099EADF /* LoginRouter.swift */; };
 		844BF7BC265041D00099EADF /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7BB265041D00099EADF /* NewsPresenter.swift */; };
 		844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7C02650424C0099EADF /* NewsInteractor.swift */; };
+		84593DFE26716B140064B2A1 /* VideoCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84593DFD26716B140064B2A1 /* VideoCellModel.swift */; };
 		8462FFDD2646F3970051280B /* ButtonsDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462FFDC2646F3970051280B /* ButtonsDesign.swift */; };
 		84706273266BE6B5003B40A3 /* IgnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84706272266BE6B5003B40A3 /* IgnManager.swift */; };
 		847062B1266C2728003B40A3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847062B0266C2728003B40A3 /* TabBarController.swift */; };
@@ -70,6 +71,7 @@
 		847E5850266D2FA100EA6D87 /* ConfigureNewsController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */; };
 		847E586B266D38F400EA6D87 /* ConfigureNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5869266D38F400EA6D87 /* ConfigureNewsCell.swift */; };
 		847E586C266D38F400EA6D87 /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
+		8489281C26713EEE0042A7BF /* ChannelVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489281B26713EEE0042A7BF /* ChannelVideosModel.swift */; };
 		84894931266E7A3C00B8F94E /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84894930266E7A3C00B8F94E /* SearchResultModel.swift */; };
 		84894D8C26473512000AF852 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84894D8B26473512000AF852 /* GoogleService-Info.plist */; };
 		849AECE9266C3700006A2722 /* SitesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849AECE7266C3700006A2722 /* SitesCell.swift */; };
@@ -159,6 +161,7 @@
 		844BF7B62650400D0099EADF /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		844BF7BB265041D00099EADF /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
 		844BF7C02650424C0099EADF /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
+		84593DFD26716B140064B2A1 /* VideoCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCellModel.swift; sourceTree = "<group>"; };
 		8462FFDC2646F3970051280B /* ButtonsDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsDesign.swift; sourceTree = "<group>"; };
 		84706272266BE6B5003B40A3 /* IgnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnManager.swift; sourceTree = "<group>"; };
 		847062B0266C2728003B40A3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 		847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigureNewsController.storyboard; sourceTree = "<group>"; };
 		847E5869266D38F400EA6D87 /* ConfigureNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsCell.swift; sourceTree = "<group>"; };
 		847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureNewsCell.xib; sourceTree = "<group>"; };
+		8489281B26713EEE0042A7BF /* ChannelVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVideosModel.swift; sourceTree = "<group>"; };
 		84894930266E7A3C00B8F94E /* SearchResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultModel.swift; sourceTree = "<group>"; };
 		84894D852647279F000AF852 /* GameNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84894D8B26473512000AF852 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -300,6 +304,7 @@
 		843B3F2A266D4B1C009F7C19 /* VideosScene */ = {
 			isa = PBXGroup;
 			children = (
+				8489281A26713EA20042A7BF /* Models */,
 				843B3F49266D4D95009F7C19 /* VideoCell */,
 				843B3F2B266D4BA2009F7C19 /* VideosViewController.swift */,
 				843B3F30266D4BCE009F7C19 /* VideosInteractor.swift */,
@@ -316,6 +321,7 @@
 			children = (
 				843B3F4A266D4DB8009F7C19 /* VideoCell.swift */,
 				843B3F4B266D4DB8009F7C19 /* VideoCell.xib */,
+				84593DFD26716B140064B2A1 /* VideoCellModel.swift */,
 			);
 			path = VideoCell;
 			sourceTree = "<group>";
@@ -465,6 +471,14 @@
 			path = WelcomeScene;
 			sourceTree = "<group>";
 		};
+		8489281A26713EA20042A7BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8489281B26713EEE0042A7BF /* ChannelVideosModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8489492F266E7A2800B8F94E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -599,8 +613,8 @@
 				84706271266BE697003B40A3 /* WebPageWorkers */,
 				84AB7463266A634700DE05D0 /* Models */,
 				84339202266550A8003089C3 /* Cells */,
-				849B5FC52646B2900095C3E9 /* NewsViewController.swift */,
 				84E6DCBB264FBE680090226B /* NewsViewController.storyboard */,
+				849B5FC52646B2900095C3E9 /* NewsViewController.swift */,
 				844BF7BB265041D00099EADF /* NewsPresenter.swift */,
 				844BF7C02650424C0099EADF /* NewsInteractor.swift */,
 				847DA2BB2663ABE50069FF84 /* NewsRouter.swift */,
@@ -802,6 +816,7 @@
 				843B3F40266D4BF7009F7C19 /* VideosRouter.swift in Sources */,
 				84C8987326641C64006B8C91 /* UITableViewCell+Extension.swift in Sources */,
 				849B5F902646ABB70095C3E9 /* GameNews.xcdatamodeld in Sources */,
+				8489281C26713EEE0042A7BF /* ChannelVideosModel.swift in Sources */,
 				843B3F1C266D4AF9009F7C19 /* SteamSearchGameRouter.swift in Sources */,
 				843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */,
 				84F63E9B26518D94006ED049 /* SignUpWorker.swift in Sources */,
@@ -847,6 +862,7 @@
 				843B3F21266D4B06009F7C19 /* SteamSearchGameWorker.swift in Sources */,
 				847E5808266D297800EA6D87 /* ProfileViewController.swift in Sources */,
 				84C8986E26641C52006B8C91 /* UITableView+Extension.swift in Sources */,
+				84593DFE26716B140064B2A1 /* VideoCellModel.swift in Sources */,
 				8435B3302647111E004CA045 /* FieldValidator.swift in Sources */,
 				8436D698266B972B001715B1 /* NewsCellModel.swift in Sources */,
 				844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */,

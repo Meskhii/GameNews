@@ -21,7 +21,7 @@ extension SteamSearchGameRouter: SteamSearchGameRoutingLogic {
     func navigateToSelectedGameNews(with appId: String) {
         let storyboard = UIStoryboard(name: VCIds.selectedGameNewsVC, bundle: nil)
         guard let selectedGameNewsVC = storyboard.instantiateViewController(identifier: VCIds.selectedGameNewsVC) as? SelectedGameNewsViewController else {return}
-        
+
         selectedGameNewsVC.appId = appId
 
         viewController?.navigationController?.pushViewController(selectedGameNewsVC, animated: true)

@@ -43,6 +43,7 @@ class SteamSearchGameViewController: UIViewController {
         viewController.router = router
         router.viewController = viewController
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

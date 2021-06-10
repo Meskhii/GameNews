@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol SelectedGameNewsWorkerProtocol {
-    func fetchGameNews(appId: String, completion: @escaping ((GameNewsAppNewsModel) -> Void))
-}
-
 class SelectedGameNewsWorker {
 
     func fetchGameNews(appId: String, completion: @escaping ((GameNewsAppNewsModel) -> Void)) {

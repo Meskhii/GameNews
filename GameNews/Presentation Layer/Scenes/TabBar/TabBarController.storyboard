@@ -17,24 +17,23 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Za2-hh-6Oc" kind="relationship" relationship="viewControllers" id="h5a-ZJ-Dwb"/>
-                        <segue destination="W44-B3-S4Y" kind="relationship" relationship="viewControllers" id="E5W-PW-EZf"/>
-                        <segue destination="rMY-So-pIQ" kind="relationship" relationship="viewControllers" id="bOC-Nw-IpE"/>
+                        <segue destination="gAi-0C-fR1" kind="relationship" relationship="viewControllers" id="Aa5-am-AZv"/>
+                        <segue destination="W44-B3-S4Y" kind="relationship" relationship="viewControllers" id="0si-cN-yal"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFf-bq-xDW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-733" y="163"/>
         </scene>
-        <!--NewsViewController-->
-        <scene sceneID="ESz-FF-qqY">
+        <!--SteamSearchGameViewController-->
+        <scene sceneID="NfV-Eu-p4c">
             <objects>
-                <viewControllerPlaceholder storyboardName="NewsViewController" referencedIdentifier="NewsViewController" id="rMY-So-pIQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="H0l-24-4XF"/>
+                <viewControllerPlaceholder storyboardName="SteamSearchGameViewController" referencedIdentifier="SteamSearchGameViewController" id="gAi-0C-fR1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xk6-cy-5A4"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GPN-pV-aWi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VON-J8-FF8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="267"/>
+            <point key="canvasLocation" x="22" y="76"/>
         </scene>
         <!--VideosViewController-->
         <scene sceneID="EzF-Uk-7ik">
@@ -44,17 +43,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VxQ-SC-VoF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22" y="163"/>
-        </scene>
-        <!--SteamSearchGameViewController-->
-        <scene sceneID="Jht-ne-XmK">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SteamSearchGameViewController" referencedIdentifier="SteamSearchGameViewController" id="Za2-hh-6Oc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0J4-4F-mGr"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A0t-id-Ug6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-44" y="84"/>
+            <point key="canvasLocation" x="-30" y="163"/>
         </scene>
     </scenes>
 </document>
