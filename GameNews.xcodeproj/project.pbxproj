@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
+		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
 		843391F526655057003089C3 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843391F326655057003089C3 /* NewsCell.swift */; };
 		843391F626655057003089C3 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843391F426655057003089C3 /* NewsCell.xib */; };
 		8435B3302647111E004CA045 /* FieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8435B32F2647111E004CA045 /* FieldValidator.swift */; };
 		8436D698266B972B001715B1 /* NewsCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8436D697266B972B001715B1 /* NewsCellModel.swift */; };
-		8436D69E266BA275001715B1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8436D69D266BA275001715B1 /* Kingfisher */; };
+		8436D69E266BA275001715B1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 8436D69D266BA275001715B1 /* SwiftPackageProductDependency */; };
 		8436D6A6266BAE86001715B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8436D6A5266BAE86001715B1 /* Assets.xcassets */; };
 		843B3F0A266D4AB6009F7C19 /* SteamSearchGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F09266D4AB6009F7C19 /* SteamSearchGameViewController.swift */; };
 		843B3F12266D4ADB009F7C19 /* SteamSearchGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3F11266D4ADB009F7C19 /* SteamSearchGameInteractor.swift */; };
@@ -36,14 +38,14 @@
 		843B3FB7266D753D009F7C19 /* SelectedGameNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FB6266D753D009F7C19 /* SelectedGameNewsViewController.storyboard */; };
 		843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B3FBC266D764A009F7C19 /* SelectedGameNewsCell.swift */; };
 		843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 843B3FBD266D764A009F7C19 /* SelectedGameNewsCell.xib */; };
-		843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* FirebaseFirestore */; };
-		843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* FirebaseInstallations */; };
-		843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* FirebaseDatabase */; };
-		843BE2252660DB1B004099C1 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */; };
-		843BE2272660DB1B004099C1 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */; };
-		843BE2292660DB1B004099C1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2282660DB1B004099C1 /* FirebaseStorage */; };
-		843BE22B2660DB1B004099C1 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22A2660DB1B004099C1 /* FirebaseFunctions */; };
-		843BE22D2660DB1B004099C1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22C2660DB1B004099C1 /* FirebaseAuth */; };
+		843BE21F2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE2212660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE2232660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE2252660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE2272660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE2292660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE22B2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */; };
+		843BE22D2660DB1B004099C1 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */; };
 		844BF7AD26503F2D0099EADF /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7AC26503F2D0099EADF /* LoginPresenter.swift */; };
 		844BF7B226503FD20099EADF /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7B126503FD20099EADF /* LoginInteractor.swift */; };
 		844BF7B72650400D0099EADF /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BF7B62650400D0099EADF /* LoginRouter.swift */; };
@@ -59,7 +61,7 @@
 		847510AE265018F400E0D1B0 /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847510AD265018F400E0D1B0 /* SignUpRouter.swift */; };
 		847DA2BC2663ABE50069FF84 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DA2BB2663ABE50069FF84 /* NewsRouter.swift */; };
 		847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DA2C52663AD6E0069FF84 /* NewsWorker.swift */; };
-		847DA2CC2663AE560069FF84 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 847DA2CB2663AE560069FF84 /* SwiftSoup */; };
+		847DA2CC2663AE560069FF84 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */; };
 		847E5808266D297800EA6D87 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5807266D297800EA6D87 /* ProfileViewController.swift */; };
 		847E580D266D2A3000EA6D87 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E580C266D2A3000EA6D87 /* ProfileInteractor.swift */; };
 		847E5812266D2B2F00EA6D87 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5811266D2B2F00EA6D87 /* ProfilePresenter.swift */; };
@@ -106,6 +108,7 @@
 		84E6DCC2264FBE9F0090226B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6DCC1264FBE9F0090226B /* Constants.swift */; };
 		84F63E9626516070006ED049 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63E9526516070006ED049 /* SignUpModel.swift */; };
 		84F63E9B26518D94006ED049 /* SignUpWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F63E9A26518D94006ED049 /* SignUpWorker.swift */; };
+		E46024E831EABD620FFDA6CE /* Pods_GameNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +129,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
+		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews_GameNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		843391F326655057003089C3 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		843391F426655057003089C3 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		8435B32F2647111E004CA045 /* FieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidator.swift; sourceTree = "<group>"; };
@@ -221,6 +228,11 @@
 		84E6DCC1264FBE9F0090226B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84F63E9526516070006ED049 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		84F63E9A26518D94006ED049 /* SignUpWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWorker.swift; sourceTree = "<group>"; };
+		8AF75057B79C70F6DDDFA478 /* Pods-GameNews-GameNewsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews-GameNewsUITests.release.xcconfig"; path = "Target Support Files/Pods-GameNews-GameNewsUITests/Pods-GameNews-GameNewsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A8E6ED2682FF37EA41CEAB7 /* Pods-GameNews-GameNewsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews-GameNewsUITests.debug.xcconfig"; path = "Target Support Files/Pods-GameNews-GameNewsUITests/Pods-GameNews-GameNewsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3E2C66DBA0831B6CBB382F1 /* Pods-GameNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.debug.xcconfig"; path = "Target Support Files/Pods-GameNews/Pods-GameNews.debug.xcconfig"; sourceTree = "<group>"; };
+		F88556BBF2043537FC0B744C /* Pods-GameNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNews.release.xcconfig"; path = "Target Support Files/Pods-GameNews/Pods-GameNews.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,16 +240,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				843BE2272660DB1B004099C1 /* FirebaseStorageSwift-Beta in Frameworks */,
-				843BE22B2660DB1B004099C1 /* FirebaseFunctions in Frameworks */,
-				843BE2232660DB1B004099C1 /* FirebaseDatabase in Frameworks */,
-				843BE2252660DB1B004099C1 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				8436D69E266BA275001715B1 /* Kingfisher in Frameworks */,
-				843BE21F2660DB1B004099C1 /* FirebaseFirestore in Frameworks */,
-				843BE2212660DB1B004099C1 /* FirebaseInstallations in Frameworks */,
-				843BE2292660DB1B004099C1 /* FirebaseStorage in Frameworks */,
-				843BE22D2660DB1B004099C1 /* FirebaseAuth in Frameworks */,
-				847DA2CC2663AE560069FF84 /* SwiftSoup in Frameworks */,
+				843BE2272660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE22B2660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE2232660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE2252660DB1B004099C1 /* BuildFile in Frameworks */,
+				8436D69E266BA275001715B1 /* BuildFile in Frameworks */,
+				843BE21F2660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE2212660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE2292660DB1B004099C1 /* BuildFile in Frameworks */,
+				843BE22D2660DB1B004099C1 /* BuildFile in Frameworks */,
+				847DA2CC2663AE560069FF84 /* BuildFile in Frameworks */,
+				5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E46024E831EABD620FFDA6CE /* Pods_GameNewsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +511,8 @@
 				84894D852647279F000AF852 /* GameNews.app */,
 				843BE21B2660D943004099C1 /* GameNewsTests.xctest */,
 				843BE21C2660D943004099C1 /* GameNewsUITests.xctest */,
+				F84C517567A40DE88D844D9D /* Pods */,
+				C4137D38B3B42E03BCAEF85E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -623,6 +640,30 @@
 			path = HomeScene;
 			sourceTree = "<group>";
 		};
+		C4137D38B3B42E03BCAEF85E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */,
+				7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */,
+				22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F84C517567A40DE88D844D9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E2C66DBA0831B6CBB382F1 /* Pods-GameNews.debug.xcconfig */,
+				F88556BBF2043537FC0B744C /* Pods-GameNews.release.xcconfig */,
+				9A8E6ED2682FF37EA41CEAB7 /* Pods-GameNews-GameNewsUITests.debug.xcconfig */,
+				8AF75057B79C70F6DDDFA478 /* Pods-GameNews-GameNewsUITests.release.xcconfig */,
+				37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */,
+				3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -630,10 +671,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849B5FAF2646ABBB0095C3E9 /* Build configuration list for PBXNativeTarget "GameNews" */;
 			buildPhases = (
+				0DF519E594B2177A5E793838 /* [CP] Check Pods Manifest.lock */,
 				846C98EA264BC29C00133E0D /* ShellScript */,
 				849B5F7E2646ABB70095C3E9 /* Sources */,
 				849B5F7F2646ABB70095C3E9 /* Frameworks */,
 				849B5F802646ABB70095C3E9 /* Resources */,
+				E7FD98CC1959438BD0CF59FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -641,16 +684,16 @@
 			);
 			name = GameNews;
 			packageProductDependencies = (
-				843BE21E2660DB1B004099C1 /* FirebaseFirestore */,
-				843BE2202660DB1B004099C1 /* FirebaseInstallations */,
-				843BE2222660DB1B004099C1 /* FirebaseDatabase */,
-				843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */,
-				843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */,
-				843BE2282660DB1B004099C1 /* FirebaseStorage */,
-				843BE22A2660DB1B004099C1 /* FirebaseFunctions */,
-				843BE22C2660DB1B004099C1 /* FirebaseAuth */,
-				847DA2CB2663AE560069FF84 /* SwiftSoup */,
-				8436D69D266BA275001715B1 /* Kingfisher */,
+				843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */,
+				843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */,
+				847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */,
+				8436D69D266BA275001715B1 /* SwiftPackageProductDependency */,
 			);
 			productName = GameNews;
 			productReference = 84894D852647279F000AF852 /* GameNews.app */;
@@ -660,6 +703,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849B5FB22646ABBB0095C3E9 /* Build configuration list for PBXNativeTarget "GameNewsTests" */;
 			buildPhases = (
+				FA4EEC8784E34EF12D3275E8 /* [CP] Check Pods Manifest.lock */,
 				849B5F972646ABBB0095C3E9 /* Sources */,
 				849B5F982646ABBB0095C3E9 /* Frameworks */,
 				849B5F992646ABBB0095C3E9 /* Resources */,
@@ -678,9 +722,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849B5FB52646ABBB0095C3E9 /* Build configuration list for PBXNativeTarget "GameNewsUITests" */;
 			buildPhases = (
+				293225D036D1C9C92FA8F73B /* [CP] Check Pods Manifest.lock */,
 				849B5FA22646ABBB0095C3E9 /* Sources */,
 				849B5FA32646ABBB0095C3E9 /* Frameworks */,
 				849B5FA42646ABBB0095C3E9 /* Resources */,
+				2CC692007F7AC836FAEB44EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -724,9 +770,9 @@
 			);
 			mainGroup = 849B5F792646ABB70095C3E9;
 			packageReferences = (
-				843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
-				8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */,
+				847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */,
+				8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 849B5F792646ABB70095C3E9;
 			projectDirPath = "";
@@ -783,6 +829,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DF519E594B2177A5E793838 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNews-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		293225D036D1C9C92FA8F73B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNews-GameNewsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CC692007F7AC836FAEB44EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNews-GameNewsUITests/Pods-GameNews-GameNewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNews-GameNewsUITests/Pods-GameNews-GameNewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameNews-GameNewsUITests/Pods-GameNews-GameNewsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		846C98EA264BC29C00133E0D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -800,6 +907,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		E7FD98CC1959438BD0CF59FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameNews/Pods-GameNews-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA4EEC8784E34EF12D3275E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GameNewsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1048,6 +1194,7 @@
 		};
 		849B5FB02646ABBB0095C3E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E2C66DBA0831B6CBB382F1 /* Pods-GameNews.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1066,6 +1213,7 @@
 		};
 		849B5FB12646ABBB0095C3E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F88556BBF2043537FC0B744C /* Pods-GameNews.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1084,6 +1232,7 @@
 		};
 		849B5FB32646ABBB0095C3E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1105,6 +1254,7 @@
 		};
 		849B5FB42646ABBB0095C3E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1126,6 +1276,7 @@
 		};
 		849B5FB62646ABBB0095C3E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A8E6ED2682FF37EA41CEAB7 /* Pods-GameNews-GameNewsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1145,6 +1296,7 @@
 		};
 		849B5FB72646ABBB0095C3E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AF75057B79C70F6DDDFA478 /* Pods-GameNews-GameNewsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1204,7 +1356,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
@@ -1212,7 +1364,7 @@
 				minimumVersion = 6.3.0;
 			};
 		};
-		843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1220,7 +1372,7 @@
 				minimumVersion = 8.0.0;
 			};
 		};
-		847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+		847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scinfu/SwiftSoup";
 			requirement = {
@@ -1231,54 +1383,54 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		8436D69D266BA275001715B1 /* Kingfisher */ = {
+		8436D69D266BA275001715B1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8436D69C266BA275001715B1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = 8436D69C266BA275001715B1 /* RemoteSwiftPackageReference */;
 			productName = Kingfisher;
 		};
-		843BE21E2660DB1B004099C1 /* FirebaseFirestore */ = {
+		843BE21E2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseFirestore;
 		};
-		843BE2202660DB1B004099C1 /* FirebaseInstallations */ = {
+		843BE2202660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseInstallations;
 		};
-		843BE2222660DB1B004099C1 /* FirebaseDatabase */ = {
+		843BE2222660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseDatabase;
 		};
-		843BE2242660DB1B004099C1 /* FirebaseFirestoreSwift-Beta */ = {
+		843BE2242660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = "FirebaseFirestoreSwift-Beta";
 		};
-		843BE2262660DB1B004099C1 /* FirebaseStorageSwift-Beta */ = {
+		843BE2262660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = "FirebaseStorageSwift-Beta";
 		};
-		843BE2282660DB1B004099C1 /* FirebaseStorage */ = {
+		843BE2282660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseStorage;
 		};
-		843BE22A2660DB1B004099C1 /* FirebaseFunctions */ = {
+		843BE22A2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseFunctions;
 		};
-		843BE22C2660DB1B004099C1 /* FirebaseAuth */ = {
+		843BE22C2660DB1B004099C1 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 843BE21D2660DB1B004099C1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 843BE21D2660DB1B004099C1 /* RemoteSwiftPackageReference */;
 			productName = FirebaseAuth;
 		};
-		847DA2CB2663AE560069FF84 /* SwiftSoup */ = {
+		847DA2CB2663AE560069FF84 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 847DA2CA2663AE560069FF84 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			package = 847DA2CA2663AE560069FF84 /* RemoteSwiftPackageReference */;
 			productName = SwiftSoup;
 		};
 /* End XCSwiftPackageProductDependency section */

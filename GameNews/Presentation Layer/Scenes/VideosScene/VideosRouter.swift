@@ -5,4 +5,16 @@
 //  Created by Admin on 06.06.2021.
 //
 
-import Foundation
+import UIKit
+
+protocol VideosRoutingLogic {
+
+}
+
+class VideosRouter {
+    weak var viewController: UIViewController?
+}
+
+extension VideosRouter: VideosRoutingLogic {
+
+}
