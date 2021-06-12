@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142B500D2673EA4A00813147 /* GameInformerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B500C2673EA4A00813147 /* GameInformerManager.swift */; };
+		14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
 		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
 		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
 		842B0BAC267271C600FFD763 /* PlayVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BAB267271C600FFD763 /* PlayVideoViewController.swift */; };
 		842B0BB12672724400FFD763 /* PlayVideoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842B0BB02672724400FFD763 /* PlayVideoViewController.storyboard */; };
-		842B0BC12672907900FFD763 /* ConfigureNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */; };
 		842B0BC72672948900FFD763 /* WebPagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BC62672948900FFD763 /* WebPagesModel.swift */; };
 		842B0BD42672B1EF00FFD763 /* ConfigureNewsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */; };
 		843391F526655057003089C3 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843391F326655057003089C3 /* NewsCell.swift */; };
@@ -75,9 +76,8 @@
 		847E5841266D2F3300EA6D87 /* ConfigureNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5840266D2F3300EA6D87 /* ConfigureNewsViewController.swift */; };
 		847E5846266D2F4700EA6D87 /* ConfigureNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5845266D2F4700EA6D87 /* ConfigureNewsInteractor.swift */; };
 		847E584B266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E584A266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift */; };
-		847E5850266D2FA100EA6D87 /* ConfigureNewsController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */; };
+		847E5850266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847E584F266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard */; };
 		847E586B266D38F400EA6D87 /* ConfigureNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E5869266D38F400EA6D87 /* ConfigureNewsCell.swift */; };
-		847E586C266D38F400EA6D87 /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
 		8489281C26713EEE0042A7BF /* ChannelVideosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489281B26713EEE0042A7BF /* ChannelVideosModel.swift */; };
 		84894931266E7A3C00B8F94E /* SearchResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84894930266E7A3C00B8F94E /* SearchResultModel.swift */; };
 		84894D8C26473512000AF852 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84894D8B26473512000AF852 /* GoogleService-Info.plist */; };
@@ -134,13 +134,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		142B500C2673EA4A00813147 /* GameInformerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInformerManager.swift; sourceTree = "<group>"; };
 		22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNews_GameNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		842B0BAB267271C600FFD763 /* PlayVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoViewController.swift; sourceTree = "<group>"; };
 		842B0BB02672724400FFD763 /* PlayVideoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayVideoViewController.storyboard; sourceTree = "<group>"; };
-		842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsRouter.swift; sourceTree = "<group>"; };
 		842B0BC62672948900FFD763 /* WebPagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPagesModel.swift; sourceTree = "<group>"; };
 		842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsWorker.swift; sourceTree = "<group>"; };
 		843391F326655057003089C3 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		847E5840266D2F3300EA6D87 /* ConfigureNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsViewController.swift; sourceTree = "<group>"; };
 		847E5845266D2F4700EA6D87 /* ConfigureNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsInteractor.swift; sourceTree = "<group>"; };
 		847E584A266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsPresenter.swift; sourceTree = "<group>"; };
-		847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigureNewsController.storyboard; sourceTree = "<group>"; };
+		847E584F266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfigureNewsViewController.storyboard; sourceTree = "<group>"; };
 		847E5869266D38F400EA6D87 /* ConfigureNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNewsCell.swift; sourceTree = "<group>"; };
 		847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureNewsCell.xib; sourceTree = "<group>"; };
 		8489281B26713EEE0042A7BF /* ChannelVideosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVideosModel.swift; sourceTree = "<group>"; };
@@ -433,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				84706272266BE6B5003B40A3 /* IgnManager.swift */,
+				142B500C2673EA4A00813147 /* GameInformerManager.swift */,
 			);
 			path = WebPageWorkers;
 			sourceTree = "<group>";
@@ -462,8 +463,7 @@
 				847E5840266D2F3300EA6D87 /* ConfigureNewsViewController.swift */,
 				847E5845266D2F4700EA6D87 /* ConfigureNewsInteractor.swift */,
 				847E584A266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift */,
-				847E584F266D2FA100EA6D87 /* ConfigureNewsController.storyboard */,
-				842B0BC02672907900FFD763 /* ConfigureNewsRouter.swift */,
+				847E584F266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard */,
 				842B0BD32672B1EF00FFD763 /* ConfigureNewsWorker.swift */,
 			);
 			path = ConfigureNewsScene;
@@ -492,16 +492,16 @@
 		84813123264FB6FC00768A7F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				842B0B98267270E100FFD763 /* PlayVideoScene */,
-				843B3F9C266D74BB009F7C19 /* SelectedGameNewsViewController */,
-				843B3F2A266D4B1C009F7C19 /* VideosScene */,
-				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
-				847E5806266D295E00EA6D87 /* ProfileScene */,
 				847E57F8266D180D00EA6D87 /* ConfigureNewsScene */,
-				847062A4266BF92A003B40A3 /* TabBar */,
-				84E6DCBA264FBE420090226B /* NewsScene */,
 				84E6DCB4264FBD6A0090226B /* LoginScene */,
+				84E6DCBA264FBE420090226B /* NewsScene */,
+				842B0B98267270E100FFD763 /* PlayVideoScene */,
+				847E5806266D295E00EA6D87 /* ProfileScene */,
+				843B3F9C266D74BB009F7C19 /* SelectedGameNewsViewController */,
 				84E6DCAE264FBD240090226B /* SignUpScene */,
+				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
+				847062A4266BF92A003B40A3 /* TabBar */,
+				843B3F2A266D4B1C009F7C19 /* VideosScene */,
 				84813124264FB76100768A7F /* WelcomeScene */,
 			);
 			path = Scenes;
@@ -550,16 +550,16 @@
 		849B5F842646ABB70095C3E9 /* GameNews */ = {
 			isa = PBXGroup;
 			children = (
+				846C98F4264BD3D300133E0D /* Classes */,
+				84C8986C26641A34006B8C91 /* Extensions */,
+				8462FFDB2646F35E0051280B /* Helpers */,
 				84CB3938266F908300E8DF99 /* Infrastructure Layer */,
 				8470627A266BEA16003B40A3 /* Presentation Layer */,
-				84C8986C26641A34006B8C91 /* Extensions */,
-				846C98F4264BD3D300133E0D /* Classes */,
-				8462FFDB2646F35E0051280B /* Helpers */,
 				849B5F932646ABBB0095C3E9 /* LaunchScreen.storyboard */,
-				8436D6A5266BAE86001715B1 /* Assets.xcassets */,
 				849B5F962646ABBB0095C3E9 /* Info.plist */,
 				84894D8B26473512000AF852 /* GoogleService-Info.plist */,
 				849B5F8E2646ABB70095C3E9 /* GameNews.xcdatamodeld */,
+				8436D6A5266BAE86001715B1 /* Assets.xcassets */,
 			);
 			path = GameNews;
 			sourceTree = "<group>";
@@ -831,11 +831,11 @@
 				84E6DCBC264FBE680090226B /* NewsViewController.storyboard in Resources */,
 				8436D6A6266BAE86001715B1 /* Assets.xcassets in Resources */,
 				84894D8C26473512000AF852 /* GoogleService-Info.plist in Resources */,
-				847E586C266D38F400EA6D87 /* ConfigureNewsCell.xib in Resources */,
 				843B3F83266D7008009F7C19 /* SearchResultCell.xib in Resources */,
 				84E6DCB6264FBD8A0090226B /* LoginViewController.storyboard in Resources */,
+				14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */,
 				847E5822266D2CBC00EA6D87 /* TabBarController.storyboard in Resources */,
-				847E5850266D2FA100EA6D87 /* ConfigureNewsController.storyboard in Resources */,
+				847E5850266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard in Resources */,
 				843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */,
 				849B5F8D2646ABB70095C3E9 /* MainViewController.storyboard in Resources */,
 				847E5817266D2B9300EA6D87 /* ProfileViewController.storyboard in Resources */,
@@ -1001,7 +1001,6 @@
 				844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */,
 				84894931266E7A3C00B8F94E /* SearchResultModel.swift in Sources */,
 				849B5F8A2646ABB70095C3E9 /* WelcomeViewController.swift in Sources */,
-				842B0BC12672907900FFD763 /* ConfigureNewsRouter.swift in Sources */,
 				843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */,
 				847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */,
 				849B5F862646ABB70095C3E9 /* AppDelegate.swift in Sources */,
@@ -1011,6 +1010,7 @@
 				843B3FAD266D7519009F7C19 /* SelectedGameNewsWorker.swift in Sources */,
 				847510AE265018F400E0D1B0 /* SignUpRouter.swift in Sources */,
 				847510A4265018D500E0D1B0 /* SignUpPresenter.swift in Sources */,
+				142B500D2673EA4A00813147 /* GameInformerManager.swift in Sources */,
 				84C8987D26641C8A006B8C91 /* UICollectionViewCell+Extension.swift in Sources */,
 				849B5F882646ABB70095C3E9 /* SceneDelegate.swift in Sources */,
 				84CB3959266FEBAD00E8DF99 /* SelectedGameNewsRouter.swift in Sources */,

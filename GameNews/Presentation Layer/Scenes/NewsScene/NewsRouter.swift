@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 
 protocol NewsRoutingLogic {
-    func openSelectedNewsInWebView(articleURL: String)
+    func openSelectedNewsInWebView(defaultURL: String, articleURL: String)
     func openConfigureNewsViewController()
 }
 
@@ -21,8 +21,7 @@ class NewsRouter {
 
 extension NewsRouter: NewsRoutingLogic {
 
-    func openSelectedNewsInWebView(articleURL: String) {
-        let defaultURL = "https://ign.com/"
+    func openSelectedNewsInWebView(defaultURL: String, articleURL: String) {
         let selectedArticleURL = URL(string: defaultURL + articleURL) ?? URL(string: defaultURL)!
         let safariVC = SFSafariViewController(url: selectedArticleURL)
 
@@ -30,6 +29,10 @@ extension NewsRouter: NewsRoutingLogic {
     }
 
     func openConfigureNewsViewController() {
+        let storyboard = UIStoryboard(name: "ConfigureNewsViewController", bundle: nil)
+        let configureNewsVC = storyboard.instantiateViewController(withIdentifier: "ConfigureNewsViewController") as! ConfigureNewsViewController// swiftlint:disable:this force_cast
+        configureNewsVC.delegate = viewController.self as? NewsCollectionViewDataDelegate
+        viewController?.present(configureNewsVC, animated: true)
     }
 
 }

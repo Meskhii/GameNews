@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TbA-Fr-pfD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TbA-Fr-pfD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7eN-zl-2nq">
-                                <rect key="frame" x="20" y="54" width="374" height="80"/>
+                                <rect key="frame" x="20" y="54" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="chX-hZ-rM2"/>
+                                    <constraint firstAttribute="height" constant="50" id="chX-hZ-rM2"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gzK-OV-Afa">
                                     <size key="itemSize" width="128" height="128"/>
@@ -31,7 +31,7 @@
                                 <cells/>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OxB-Mf-9II">
-                                <rect key="frame" x="0.0" y="154" width="414" height="742"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
                                 <color key="backgroundColor" name="TableViewBackground"/>
                             </tableView>
                         </subviews>
@@ -40,14 +40,16 @@
                         <constraints>
                             <constraint firstItem="7eN-zl-2nq" firstAttribute="leading" secondItem="ouB-z5-paO" secondAttribute="leading" constant="20" id="1oU-H9-hRB"/>
                             <constraint firstAttribute="bottom" secondItem="OxB-Mf-9II" secondAttribute="bottom" id="7bs-e1-aL8"/>
-                            <constraint firstItem="OxB-Mf-9II" firstAttribute="top" secondItem="7eN-zl-2nq" secondAttribute="bottom" constant="20" id="K1Y-gD-gHG"/>
+                            <constraint firstItem="OxB-Mf-9II" firstAttribute="top" secondItem="7eN-zl-2nq" secondAttribute="bottom" constant="10" id="K1Y-gD-gHG"/>
                             <constraint firstItem="OxB-Mf-9II" firstAttribute="leading" secondItem="ouB-z5-paO" secondAttribute="leading" id="WUa-Ei-gia"/>
                             <constraint firstItem="OxB-Mf-9II" firstAttribute="trailing" secondItem="ouB-z5-paO" secondAttribute="trailing" id="ghB-GC-g2E"/>
                             <constraint firstItem="ouB-z5-paO" firstAttribute="trailing" secondItem="7eN-zl-2nq" secondAttribute="trailing" constant="20" id="mlw-Vj-lWr"/>
                             <constraint firstItem="7eN-zl-2nq" firstAttribute="top" secondItem="ouB-z5-paO" secondAttribute="top" constant="10" id="y9r-E6-Do1"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="RtR-mI-hW6"/>
                     <navigationItem key="navigationItem" title="NEWS" id="t6i-ta-F6x"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="horizontalMenuCollectionView" destination="7eN-zl-2nq" id="VKZ-oi-A5U"/>
                         <outlet property="newsTableView" destination="OxB-Mf-9II" id="iuJ-rz-tde"/>
@@ -59,6 +61,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
         <namedColor name="TableViewBackground">
             <color red="0.1289999932050705" green="0.13699999451637268" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

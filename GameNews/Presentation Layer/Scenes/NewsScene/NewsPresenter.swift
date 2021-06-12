@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NewsPresentationLogic: AnyObject {
-    func present(data: NewsModel)
+    func present(data: [NewsModel])
 }
 
 class NewsPresenter {
@@ -17,15 +17,22 @@ class NewsPresenter {
 
 // MARK: - Presentation logic
 extension NewsPresenter: NewsPresentationLogic {
-    func present(data: NewsModel) {
+    func present(data: [NewsModel]) {
         var newCellModel = [NewsCellModel]()
-
-        for index in 0..<data.titles.count {
-            newCellModel.append(NewsCellModel(title: data.titles[index],
-                                              imgURL: data.imgURLs[index],
-                                              postTime: data.postTimes[index],
-                                              hrefURL: data.hrefURLs[index]))
+        
+        for news in data {
+            for index in 0..<news.titles.count {
+                newCellModel.append(NewsCellModel(title: news.titles[index],
+                                                  imgURL: news.imgURLs[index],
+                                                  postTime: news.postTimes[index],
+                                                  hrefURL: news.hrefURLs[index],
+                                                  webPageLogo: news.webPageLogo,
+                                                  webPageName: news.webPageName,
+                                                  webPageURL: news.webPageURL))
+            }
         }
+
+        
         newsViewController?.display(data: newCellModel)
     }
 }

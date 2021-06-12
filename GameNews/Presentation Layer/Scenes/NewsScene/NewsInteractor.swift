@@ -15,20 +15,27 @@ class NewsInteractor {
     // MARK: - Variables
     var presenter: NewsPresentationLogic?
     var ignManager: IgnManager!
+    var gameInformerManager: GameInformerManager!
 }
 
 // MARK: - Business logic
 extension NewsInteractor: NewsBusinessLogic {
     func fetchNews() {
-        var fetchedNews: NewsModel?
+        var fetchedNews = [NewsModel]()
         ignManager = IgnManager()
+        gameInformerManager = GameInformerManager()
 
-        ignManager.fetchNews { ignNews in
-            fetchedNews = ignNews
+        ignManager.fetchNews { news in
+            fetchedNews.append(news)
         }
+        
+        gameInformerManager.fetchNews { news in
+            fetchedNews.append(news)
+        }
+        
 
-        if let news = fetchedNews {
-            presenter?.present(data: news)
+        if !fetchedNews.isEmpty {
+            presenter?.present(data: fetchedNews)
         }
     }
 }

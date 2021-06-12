@@ -37,10 +37,10 @@ class NewsCell: UITableViewCell {
 
     func configure(data: NewsCellModel) {
         newsTitleLabel.text = data.title
-        newsDateLabel.text = "\(data.postTime ?? "days") ago"
+        newsDateLabel.text = data.postTime
 
-        webPageImageView.image = UIImage(named: "IgnLogo")
-        webPageNameLabel.text = "IGN"
+        webPageImageView.image = UIImage(named: data.webPageLogo)
+        webPageNameLabel.text = data.webPageName
 
         let url = URL(string: data.imgURL ?? "")
         newsImageView.kf.setImage(

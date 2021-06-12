@@ -19,6 +19,4 @@ extension ConfigureNewsPresenter: ConfigureNewsPresentationLogic {
     func presentWebPages(data: [WebPagesModel]) {
         configureNewsViewController?.displayWebPageOptions(data: data)
     }
-    
-    
 }

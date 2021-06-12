@@ -12,4 +12,7 @@ struct NewsModel: Codable {
     let imgURLs: [String]
     let postTimes: [String]
     let hrefURLs: [String]
+    let webPageLogo: String
+    let webPageName: String
+    let webPageURL: String
 }

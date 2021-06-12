@@ -10,5 +10,5 @@ import UIKit
 struct WebPagesModel {
     let webPageLogo: String
     let webPageName: String
-    let isWebPageCheck: Bool
+    let isWebPageChecked: Bool
 }

@@ -49,6 +49,8 @@ class SelectedGameNewsViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = false
 
         configureTableView()
         interactor?.fetchSelectedGameNews(appId: appId ?? "")

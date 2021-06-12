@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewsCollectionViewDataDelegate {
+    func updateWebSitesImages(checkedLogo: String, checked: Bool)
+}
+
 protocol NewsDisplayLogic: AnyObject {
     func display(data: [NewsCellModel])
 }
@@ -22,7 +26,7 @@ class NewsViewController: UIViewController {
     private var interactor: NewsBusinessLogic?
     private(set) var router: NewsRoutingLogic?
 
-    private var webSitesImages = ["ic_add", "ic_ign", "ic_ign", "ic_ign", "ic_ign", "ic_ign", "ic_ign", "ic_ign", "ic_ign"]
+    private var webSitesImages = ["ic_add", "ign_logo", "gameinformer_logo", "eurogamer_logo", "gamespot_logo", "pcgamer_logo"]
 
     private var news = [NewsCellModel]()
 
@@ -84,8 +88,26 @@ class NewsViewController: UIViewController {
 // MARK: - Display logic
 extension NewsViewController: NewsDisplayLogic {
     func display(data: [NewsCellModel]) {
-        self.news = data
+        data.forEach { newsModel in
+            self.news.append(newsModel)
+        }
+        news.shuffle()
         newsTableView.reloadData()
+    }
+}
+
+extension NewsViewController: NewsCollectionViewDataDelegate {
+    func updateWebSitesImages(checkedLogo: String, checked: Bool) {
+        if checked {
+            if !webSitesImages.contains(checkedLogo) {
+                webSitesImages.append(checkedLogo)
+            }
+        } else {
+            while let index = webSitesImages.firstIndex(of: checkedLogo) {
+                webSitesImages.remove(at: index)
+            }
+        }
+        horizontalMenuCollectionView.reloadData()
     }
 }
 
@@ -106,26 +128,21 @@ extension NewsViewController: UICollectionViewDataSource {
 // MARK: - UICollection View Delegate
 extension NewsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            router?.openConfigureNewsViewController()
+        }
         collectionView.deselectItem(at: indexPath, animated: false)
     }
 }
 
 // MARK: - UICollectionView Flow Layout
 extension NewsViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-           guard let cell: SitesCell = Bundle.main.loadNibNamed("SitesCell",
-                                                                         owner: self,
-                                                                         options: nil)?.first as? SitesCell else {
-               return CGSize.zero
-           }
-        cell.configure(with: webSitesImages[indexPath.row])
-        cell.setNeedsLayout()
-        cell.layoutIfNeeded()
-        let size: CGSize = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize)
-           return CGSize(width: size.width, height: 50)
-       }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 50, height: 50)
+    }
+    
+    
 }
 
 // MARK: - UITableView Data Source
@@ -139,7 +156,6 @@ extension NewsViewController: UITableViewDataSource {
         cell.configure(data: news[indexPath.row])
         return cell
     }
-
 }
 
 // MARK: - UITableView Delegate
@@ -147,6 +163,6 @@ extension NewsViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        router?.openSelectedNewsInWebView(articleURL: news[indexPath.row].hrefURL ?? "")
+        router?.openSelectedNewsInWebView(defaultURL: news[indexPath.row].webPageURL, articleURL: news[indexPath.row].hrefURL ?? "")
     }
 }

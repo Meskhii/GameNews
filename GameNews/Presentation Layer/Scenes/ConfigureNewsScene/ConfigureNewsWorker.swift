@@ -13,37 +13,25 @@ class ConfigureNewsWorker {
 
         var mockData = [WebPagesModel]()
         
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page One",
-                                       isWebPageCheck: true))
+        mockData.append(WebPagesModel(webPageLogo: "ign_logo",
+                                       webPageName: "IGN News",
+                                       isWebPageChecked: true))
 
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Two",
-                                       isWebPageCheck: true))
+        mockData.append(WebPagesModel(webPageLogo: "eurogamer_logo",
+                                       webPageName: "Eurogamer",
+                                       isWebPageChecked: true))
 
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Three",
-                                       isWebPageCheck: true))
+        mockData.append(WebPagesModel(webPageLogo: "gameinformer_logo",
+                                       webPageName: "Gameinformer",
+                                       isWebPageChecked: true))
 
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Four",
-                                       isWebPageCheck: true))
+        mockData.append(WebPagesModel(webPageLogo: "gamespot_logo",
+                                       webPageName: "Gamespot",
+                                       isWebPageChecked: true))
 
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Five",
-                                       isWebPageCheck: true))
-
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Six",
-                                       isWebPageCheck: true))
-
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                       webPageName: "Page Seven",
-                                       isWebPageCheck: true))
-
-        mockData.append(WebPagesModel(webPageLogo: "ignLogo",
-                                  webPageName: "Page Eight",
-                                  isWebPageCheck: true))
+        mockData.append(WebPagesModel(webPageLogo: "pcgamer_logo",
+                                       webPageName: "PCGamer",
+                                       isWebPageChecked: true))
 
         return mockData
     }

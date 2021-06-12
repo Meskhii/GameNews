@@ -12,4 +12,7 @@ struct NewsCellModel {
     let imgURL: String?
     let postTime: String?
     let hrefURL: String?
+    let webPageLogo: String
+    let webPageName: String
+    let webPageURL: String
 }
