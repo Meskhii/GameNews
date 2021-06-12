@@ -88,10 +88,4 @@ extension NewsWorker {
         }
         return nil
     }
-
-    private func splitAtFirst(str: String, delimiter: String) -> String? {
-        guard let lowerIndex = (str.range(of: delimiter)?.lowerBound) else { return str }
-        let firstPart: String = .init(str.prefix(upTo: lowerIndex))
-        return firstPart
-    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		142B500D2673EA4A00813147 /* GameInformerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B500C2673EA4A00813147 /* GameInformerManager.swift */; };
+		142B500F2675570E00813147 /* GamespotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B500E2675570E00813147 /* GamespotManager.swift */; };
 		14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
 		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
 		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
@@ -135,6 +136,7 @@
 
 /* Begin PBXFileReference section */
 		142B500C2673EA4A00813147 /* GameInformerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInformerManager.swift; sourceTree = "<group>"; };
+		142B500E2675570E00813147 /* GamespotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamespotManager.swift; sourceTree = "<group>"; };
 		22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 			children = (
 				84706272266BE6B5003B40A3 /* IgnManager.swift */,
 				142B500C2673EA4A00813147 /* GameInformerManager.swift */,
+				142B500E2675570E00813147 /* GamespotManager.swift */,
 			);
 			path = WebPageWorkers;
 			sourceTree = "<group>";
@@ -1000,6 +1003,7 @@
 				84C8987826641C75006B8C91 /* UICollectionView+Extension.swift in Sources */,
 				844BF7C12650424C0099EADF /* NewsInteractor.swift in Sources */,
 				84894931266E7A3C00B8F94E /* SearchResultModel.swift in Sources */,
+				142B500F2675570E00813147 /* GamespotManager.swift in Sources */,
 				849B5F8A2646ABB70095C3E9 /* WelcomeViewController.swift in Sources */,
 				843B3F82266D7008009F7C19 /* SearchResultCell.swift in Sources */,
 				847DA2C62663AD6E0069FF84 /* NewsWorker.swift in Sources */,

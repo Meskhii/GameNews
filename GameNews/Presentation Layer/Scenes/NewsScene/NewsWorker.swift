@@ -49,5 +49,24 @@ class NewsWorker {
             completion(.failure(error))
         }
     }
+    
+    func getGamespotNews<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
+
+        guard let url = URL(string: url) else {return}
+
+        do {
+            let htmlString = try String(contentsOf: url, encoding: .utf8)
+            let htmlContent = htmlString
+
+            do {
+                let doc = try SwiftSoup.parse(htmlContent)
+                let fetchData = fetchLogicForGamespot(doc: doc)
+
+                completion(.success(fetchData as! T)) // swiftlint:disable:this force_cast
+            }
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
 }
 

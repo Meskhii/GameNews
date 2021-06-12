@@ -31,6 +31,7 @@ class NewsViewController: UIViewController {
 
     private var news = [NewsCellModel]()
     private var webPages = [WebPagesModel]()
+    private var tempAllNews = [NewsCellModel]()
 
     // MARK: - Inits
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -94,6 +95,9 @@ extension NewsViewController: NewsDisplayLogic {
             self.news.append(newsModel)
         }
         news.shuffle()
+        if tempAllNews.isEmpty {
+            tempAllNews = news
+        }
         newsTableView.reloadData()
     }
 }
@@ -135,16 +139,30 @@ extension NewsViewController: UICollectionViewDataSource {
 
 // MARK: - UICollection View Delegate
 extension NewsViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             router?.openConfigureNewsViewController(with: webPages)
             collectionView.deselectItem(at: indexPath, animated: false)
         }
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        let item = collectionView.cellForItem(at: indexPath)
         
-        var tempAllNews = news
-        
-        
-        
+        if item?.isSelected ?? false {
+            collectionView.deselectItem(at: indexPath, animated: true)
+            news = tempAllNews
+            newsTableView.reloadData()
+        } else {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+            news.removeAll()
+            interactor?.fetchNews(webPageNames: [webSitesImages[indexPath.row]])
+            return true
+        }
+
+        return false
     }
 }
 

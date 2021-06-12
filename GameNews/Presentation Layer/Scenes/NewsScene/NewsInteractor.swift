@@ -16,6 +16,7 @@ class NewsInteractor {
     var presenter: NewsPresentationLogic?
     var ignManager: IgnManager!
     var gameInformerManager: GameInformerManager!
+    var gamespotManager: GamespotManager!
 }
 
 // MARK: - Business logic
@@ -24,6 +25,7 @@ extension NewsInteractor: NewsBusinessLogic {
         var fetchedNews = [NewsModel]()
         ignManager = IgnManager()
         gameInformerManager = GameInformerManager()
+        gamespotManager = GamespotManager()
 
         if webPageNames.contains("ign_logo") {
             ignManager.fetchNews { news in
@@ -33,6 +35,12 @@ extension NewsInteractor: NewsBusinessLogic {
         
         if webPageNames.contains("gameinformer_logo") {
             gameInformerManager.fetchNews { news in
+                fetchedNews.append(news)
+            }
+        }
+        
+        if webPageNames.contains("gamespot_logo") {
+            gamespotManager.fetchNews { news in
                 fetchedNews.append(news)
             }
         }
