@@ -9,6 +9,7 @@ import UIKit
 
 protocol NewsCollectionViewDataDelegate {
     func updateWebSitesImages(checkedLogo: String, checked: Bool)
+    func getUpdatedWebPages(webPages: [WebPagesModel])
 }
 
 protocol NewsDisplayLogic: AnyObject {
@@ -29,6 +30,7 @@ class NewsViewController: UIViewController {
     private var webSitesImages = ["ic_add", "ign_logo", "gameinformer_logo", "eurogamer_logo", "gamespot_logo", "pcgamer_logo"]
 
     private var news = [NewsCellModel]()
+    private var webPages = [WebPagesModel]()
 
     // MARK: - Inits
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -57,7 +59,7 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        interactor?.fetchNews()
+        interactor?.fetchNews(webPageNames: webSitesImages)
 
         navigationController?.navigationBar.isHidden = true
 
@@ -97,6 +99,10 @@ extension NewsViewController: NewsDisplayLogic {
 }
 
 extension NewsViewController: NewsCollectionViewDataDelegate {
+    func getUpdatedWebPages(webPages: [WebPagesModel]) {
+        self.webPages = webPages
+    }
+    
     func updateWebSitesImages(checkedLogo: String, checked: Bool) {
         if checked {
             if !webSitesImages.contains(checkedLogo) {
@@ -107,6 +113,8 @@ extension NewsViewController: NewsCollectionViewDataDelegate {
                 webSitesImages.remove(at: index)
             }
         }
+        news.removeAll()
+        interactor?.fetchNews(webPageNames: webSitesImages)
         horizontalMenuCollectionView.reloadData()
     }
 }
@@ -129,9 +137,14 @@ extension NewsViewController: UICollectionViewDataSource {
 extension NewsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            router?.openConfigureNewsViewController()
+            router?.openConfigureNewsViewController(with: webPages)
+            collectionView.deselectItem(at: indexPath, animated: false)
         }
-        collectionView.deselectItem(at: indexPath, animated: false)
+        
+        var tempAllNews = news
+        
+        
+        
     }
 }
 
@@ -153,7 +166,9 @@ extension NewsViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: NewsCell.self, for: indexPath)
-        cell.configure(data: news[indexPath.row])
+        if !news.isEmpty {
+            cell.configure(data: news[indexPath.row])
+        }
         return cell
     }
 }

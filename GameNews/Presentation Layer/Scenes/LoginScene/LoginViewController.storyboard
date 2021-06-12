@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,24 +14,24 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H42-6S-aa8" customClass="LoginViewController" customModule="GameNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fq0-YZ-GZf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="PQq-yq-iSL">
-                                <rect key="frame" x="42" y="333.5" width="516" height="224.5"/>
+                                <rect key="frame" x="42" y="595.5" width="330" height="224.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HQY-R4-etA">
-                                        <rect key="frame" x="0.0" y="0.0" width="516" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nhg-yr-Ev8">
-                                        <rect key="frame" x="0.0" y="68" width="516" height="50"/>
+                                        <rect key="frame" x="0.0" y="68" width="330" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oi-cE-lZa">
-                                        <rect key="frame" x="0.0" y="136" width="516" height="50"/>
+                                        <rect key="frame" x="0.0" y="136" width="330" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="x66-so-LbS"/>
                                         </constraints>
@@ -39,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whq-hq-xaB">
-                                        <rect key="frame" x="0.0" y="204" width="516" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="204" width="330" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,12 +52,21 @@
                                     <constraint firstItem="0Oi-cE-lZa" firstAttribute="height" secondItem="HQY-R4-etA" secondAttribute="height" id="GJl-Vj-vyX"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_art" translatesAutoresizingMaskIntoConstraints="NO" id="tUM-ik-afQ">
+                                <rect key="frame" x="0.0" y="164" width="414" height="305"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305" id="fjP-pQ-Xcs"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eQd-PM-F9l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eQd-PM-F9l" firstAttribute="bottom" secondItem="PQq-yq-iSL" secondAttribute="bottom" constant="42" id="2XI-sc-8Ch"/>
+                            <constraint firstItem="tUM-ik-afQ" firstAttribute="leading" secondItem="eQd-PM-F9l" secondAttribute="leading" id="MvW-bK-GBD"/>
+                            <constraint firstItem="tUM-ik-afQ" firstAttribute="trailing" secondItem="eQd-PM-F9l" secondAttribute="trailing" id="XrN-jU-qnp"/>
                             <constraint firstItem="PQq-yq-iSL" firstAttribute="leading" secondItem="eQd-PM-F9l" secondAttribute="leading" constant="42" id="mqd-Oa-UoI"/>
+                            <constraint firstItem="tUM-ik-afQ" firstAttribute="top" secondItem="eQd-PM-F9l" secondAttribute="top" constant="120" id="sUy-Wp-D36"/>
                             <constraint firstItem="eQd-PM-F9l" firstAttribute="trailing" secondItem="PQq-yq-iSL" secondAttribute="trailing" constant="42" id="tKc-6z-ZBp"/>
                         </constraints>
                     </view>
@@ -69,10 +80,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pck-n9-PJ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1854" y="467"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="466.74107142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="login_art" width="3710" height="3710"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -38,6 +38,8 @@ class WelcomeViewController: UIViewController {
     // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = true
 
         setUpElements()
 

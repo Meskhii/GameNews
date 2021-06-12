@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSY-9v-WUB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VSY-9v-WUB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,13 +42,36 @@
                                     <constraint firstItem="Dkh-bu-342" firstAttribute="height" secondItem="xcX-Nf-5NO" secondAttribute="height" id="52O-eY-Ehy"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_text" translatesAutoresizingMaskIntoConstraints="NO" id="HsB-6i-BGC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="282" id="aZn-R8-aSN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vFR-6z-ZJ1">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_art" translatesAutoresizingMaskIntoConstraints="NO" id="qwV-g5-QoB">
+                                <rect key="frame" x="0.0" y="326" width="414" height="294"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="294" id="hek-c5-X2q"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HsB-6i-BGC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="41M-mP-czt"/>
+                            <constraint firstItem="qwV-g5-QoB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FqA-wG-AUB"/>
+                            <constraint firstItem="HsB-6i-BGC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Pc6-Ww-XDX"/>
+                            <constraint firstItem="qwV-g5-QoB" firstAttribute="top" secondItem="HsB-6i-BGC" secondAttribute="bottom" id="Vx3-cz-1nx"/>
+                            <constraint firstItem="qwV-g5-QoB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d1i-en-4bH"/>
                             <constraint firstItem="Ez3-18-2Yd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="ndN-uM-Tcf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ez3-18-2Yd" secondAttribute="bottom" constant="42" id="piR-oK-Gh2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ez3-18-2Yd" secondAttribute="trailing" constant="42" id="w9S-Bz-2C0"/>
+                            <constraint firstItem="HsB-6i-BGC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yDV-Hr-m6r"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qrp-lT-2Kd"/>
@@ -59,15 +82,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="117"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="116.51785714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8uI-fZ-Mi3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VSY-9v-WUB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="VSY-9v-WUB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZhL-Mc-k4v">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -81,6 +103,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="welcome_art" width="2760" height="1840"/>
+        <image name="welcome_text" width="3000" height="2000"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

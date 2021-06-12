@@ -8,7 +8,7 @@
 import Foundation
 
 protocol NewsBusinessLogic {
-    func fetchNews()
+    func fetchNews(webPageNames: [String])
 }
 
 class NewsInteractor {
@@ -20,20 +20,23 @@ class NewsInteractor {
 
 // MARK: - Business logic
 extension NewsInteractor: NewsBusinessLogic {
-    func fetchNews() {
+    func fetchNews(webPageNames: [String]) {
         var fetchedNews = [NewsModel]()
         ignManager = IgnManager()
         gameInformerManager = GameInformerManager()
 
-        ignManager.fetchNews { news in
-            fetchedNews.append(news)
+        if webPageNames.contains("ign_logo") {
+            ignManager.fetchNews { news in
+                fetchedNews.append(news)
+            }
         }
         
-        gameInformerManager.fetchNews { news in
-            fetchedNews.append(news)
+        if webPageNames.contains("gameinformer_logo") {
+            gameInformerManager.fetchNews { news in
+                fetchedNews.append(news)
+            }
         }
         
-
         if !fetchedNews.isEmpty {
             presenter?.present(data: fetchedNews)
         }

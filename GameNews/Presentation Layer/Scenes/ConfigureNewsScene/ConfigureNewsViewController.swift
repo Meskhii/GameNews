@@ -20,7 +20,7 @@ class ConfigureNewsViewController: UIViewController {
     private var interactor: ConfigureNewsBusinessLogic?
     var delegate: NewsCollectionViewDataDelegate?
     
-    private var webPageOptions = [WebPagesModel]()
+    var webPageOptions = [WebPagesModel]()
     @IBOutlet weak var collectionView: UICollectionView!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -45,9 +45,10 @@ class ConfigureNewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interactor?.fetchWebPagesOptions()
-        
-
+        if webPageOptions.isEmpty {
+            interactor?.fetchWebPagesOptions()
+        }
+    
         setupCollectionView()
     }
     
@@ -55,6 +56,14 @@ class ConfigureNewsViewController: UIViewController {
         collectionView.registerNib(class: ConfigureNewsCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    private func updateWebPages(webPage: String, checked: Bool) {
+        for (index, _) in webPageOptions.enumerated() {
+            if webPageOptions[index].webPageLogo.contains(webPage) {
+                webPageOptions[index].isWebPageChecked = checked
+            }
+        }
     }
 }
 
@@ -67,6 +76,8 @@ extension ConfigureNewsViewController: ConfigureNewsDisplayLogic {
 
 extension ConfigureNewsViewController: ConfigureCheckedNewsLogic {
     func configureDataAfterUserInteraction(checkedLogo: String, checked: Bool) {
+        updateWebPages(webPage: checkedLogo, checked: checked)
+        delegate?.getUpdatedWebPages(webPages: webPageOptions)
         delegate?.updateWebSitesImages(checkedLogo: checkedLogo, checked: checked)
     }
 }

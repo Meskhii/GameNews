@@ -11,7 +11,7 @@ import SafariServices
 
 protocol NewsRoutingLogic {
     func openSelectedNewsInWebView(defaultURL: String, articleURL: String)
-    func openConfigureNewsViewController()
+    func openConfigureNewsViewController(with webPages: [WebPagesModel])
 }
 
 class NewsRouter {
@@ -28,10 +28,11 @@ extension NewsRouter: NewsRoutingLogic {
         viewController?.present(safariVC, animated: true)
     }
 
-    func openConfigureNewsViewController() {
+    func openConfigureNewsViewController(with webPages: [WebPagesModel]) {
         let storyboard = UIStoryboard(name: "ConfigureNewsViewController", bundle: nil)
         let configureNewsVC = storyboard.instantiateViewController(withIdentifier: "ConfigureNewsViewController") as! ConfigureNewsViewController// swiftlint:disable:this force_cast
         configureNewsVC.delegate = viewController.self as? NewsCollectionViewDataDelegate
+        configureNewsVC.webPageOptions = webPages
         viewController?.present(configureNewsVC, animated: true)
     }
 

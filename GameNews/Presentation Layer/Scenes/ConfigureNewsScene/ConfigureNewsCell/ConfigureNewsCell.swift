@@ -11,6 +11,7 @@ class ConfigureNewsCell: UICollectionViewCell {
 
     @IBOutlet weak var webPageLogoImage: UIImageView!
     @IBOutlet weak var webPageNameLabel: UILabel!
+    @IBOutlet weak var isWebPageChecked: UIButton!
     private var isChecked = true
     private var webPageLogoName = String()
     var delegate: ConfigureCheckedNewsLogic?
@@ -24,7 +25,13 @@ class ConfigureNewsCell: UICollectionViewCell {
         webPageLogoName = data.webPageLogo
         webPageLogoImage.image = UIImage(named: webPageLogoName)
         webPageNameLabel.text = data.webPageName
-      //  isChecked = data.isWebPageChecked
+        isChecked = data.isWebPageChecked
+       
+        if isChecked{
+            isWebPageChecked.setImage(UIImage(named: "ic_checkmark_checked"), for: .normal)
+        } else {
+            isWebPageChecked.setImage(UIImage(named: "ic_checkmark_unchecked"), for: .normal)
+        }
     }
     
     @IBAction func checkMarkClicked(_ sender: UIButton) {

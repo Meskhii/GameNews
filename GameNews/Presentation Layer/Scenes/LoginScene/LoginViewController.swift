@@ -49,6 +49,8 @@ class LoginViewController: UIViewController {
     // MARK: - view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.isHidden = false
 
         setUpElements()
     }

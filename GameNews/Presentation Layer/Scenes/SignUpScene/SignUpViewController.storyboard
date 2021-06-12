@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,11 +64,20 @@
                                     <constraint firstItem="Qeq-Fd-iJk" firstAttribute="height" secondItem="kgs-Fm-b3o" secondAttribute="height" id="ogp-UI-4uv"/>
                                 </constraints>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signup_art" translatesAutoresizingMaskIntoConstraints="NO" id="wVX-cO-uYt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="340"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="fuN-hG-ubz"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mRi-mI-pDH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wVX-cO-uYt" firstAttribute="trailing" secondItem="mRi-mI-pDH" secondAttribute="trailing" id="0cl-vN-dEg"/>
                             <constraint firstItem="mRi-mI-pDH" firstAttribute="bottom" secondItem="9nd-s5-npY" secondAttribute="bottom" constant="42" id="1Db-ie-IQL"/>
+                            <constraint firstItem="wVX-cO-uYt" firstAttribute="leading" secondItem="mRi-mI-pDH" secondAttribute="leading" id="53x-9v-G11"/>
+                            <constraint firstItem="wVX-cO-uYt" firstAttribute="top" secondItem="mRi-mI-pDH" secondAttribute="top" id="axY-Rq-huL"/>
                             <constraint firstItem="9nd-s5-npY" firstAttribute="leading" secondItem="mRi-mI-pDH" secondAttribute="leading" constant="42" id="kfW-nL-WHe"/>
                             <constraint firstItem="mRi-mI-pDH" firstAttribute="trailing" secondItem="9nd-s5-npY" secondAttribute="trailing" constant="42" id="wTJ-BX-eQI"/>
                         </constraints>
@@ -85,10 +94,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jle-k0-jHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="-216"/>
+            <point key="canvasLocation" x="1853.6231884057972" y="-216.29464285714286"/>
         </scene>
     </scenes>
     <resources>
+        <image name="signup_art" width="3710" height="3710"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -60,6 +60,7 @@
             </constraints>
             <size key="customSize" width="238" height="196"/>
             <connections>
+                <outlet property="isWebPageChecked" destination="TLR-3L-5EN" id="eyN-FE-Tmr"/>
                 <outlet property="webPageLogoImage" destination="069-Ow-9gF" id="RUA-eY-3eU"/>
                 <outlet property="webPageNameLabel" destination="HmV-zx-XJT" id="3gU-4Q-XJK"/>
             </connections>

@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,16 +25,21 @@
                             <constraint firstAttribute="height" constant="200" id="QD5-3K-TiO"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AeT-UM-VLX">
+                        <rect key="frame" x="20" y="10" width="280" height="200"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQT-YH-eHO">
                         <rect key="frame" x="26" y="230" width="258" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-OG-F0e">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMb-OG-F0e">
                         <rect key="frame" x="20" y="10" width="280" height="200"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                        <state key="normal" title="PLAY">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <state key="normal" image="ic_play">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
@@ -46,12 +52,16 @@
                     <constraint firstAttribute="bottomMargin" secondItem="vQT-YH-eHO" secondAttribute="bottom" constant="10" id="07g-ha-dGg"/>
                     <constraint firstItem="GMb-OG-F0e" firstAttribute="width" secondItem="liE-lx-Rxc" secondAttribute="width" id="2Dg-Tv-fdY"/>
                     <constraint firstItem="vQT-YH-eHO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="3AN-vS-uf9"/>
+                    <constraint firstItem="AeT-UM-VLX" firstAttribute="bottom" secondItem="liE-lx-Rxc" secondAttribute="bottom" id="AaY-8o-At1"/>
                     <constraint firstAttribute="trailing" secondItem="liE-lx-Rxc" secondAttribute="trailing" constant="20" id="Fbj-Of-L3v"/>
                     <constraint firstItem="GMb-OG-F0e" firstAttribute="trailing" secondItem="liE-lx-Rxc" secondAttribute="trailing" id="KX1-rY-Nqk"/>
                     <constraint firstItem="liE-lx-Rxc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Klo-Kt-ToU"/>
+                    <constraint firstItem="AeT-UM-VLX" firstAttribute="leading" secondItem="liE-lx-Rxc" secondAttribute="leading" id="Vz2-V8-HIG"/>
                     <constraint firstItem="GMb-OG-F0e" firstAttribute="leading" secondItem="liE-lx-Rxc" secondAttribute="leading" id="Wom-Zf-5Pe"/>
+                    <constraint firstItem="AeT-UM-VLX" firstAttribute="trailing" secondItem="liE-lx-Rxc" secondAttribute="trailing" id="dBD-Mg-wkB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vQT-YH-eHO" secondAttribute="trailing" constant="20" id="iNz-VQ-Lc4"/>
                     <constraint firstItem="liE-lx-Rxc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oHC-GM-r5E"/>
+                    <constraint firstItem="AeT-UM-VLX" firstAttribute="top" secondItem="liE-lx-Rxc" secondAttribute="top" id="puD-xi-9ie"/>
                     <constraint firstItem="GMb-OG-F0e" firstAttribute="height" secondItem="liE-lx-Rxc" secondAttribute="height" id="sSP-hm-iNQ"/>
                     <constraint firstItem="GMb-OG-F0e" firstAttribute="top" secondItem="liE-lx-Rxc" secondAttribute="top" id="sUk-NS-BkH"/>
                     <constraint firstItem="vQT-YH-eHO" firstAttribute="top" secondItem="liE-lx-Rxc" secondAttribute="bottom" constant="20" id="tDa-T6-hJE"/>
@@ -67,8 +77,12 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="ic_play" width="64" height="64"/>
         <namedColor name="CellBackground">
             <color red="0.14499999582767487" green="0.15700000524520874" blue="0.21600000560283661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
