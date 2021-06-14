@@ -19,7 +19,6 @@ protocol NewsDisplayLogic: AnyObject {
 class NewsViewController: UIViewController {
 
     // MARK: - Outlets
-
     @IBOutlet weak var horizontalMenuCollectionView: UICollectionView!
     @IBOutlet weak var newsTableView: UITableView!
 

@@ -11,6 +11,13 @@
 		142B500F2675570E00813147 /* GamespotManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B500E2675570E00813147 /* GamespotManager.swift */; };
 		142B501126760D2C00813147 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501026760D2C00813147 /* ProfileRouter.swift */; };
 		142B50132676377500813147 /* ProfileWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B50122676377500813147 /* ProfileWorker.swift */; };
+		142B50162677809500813147 /* BookmarksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B50152677809500813147 /* BookmarksViewController.swift */; };
+		142B5018267780C000813147 /* BookmarksViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142B5017267780C000813147 /* BookmarksViewController.storyboard */; };
+		142B501A267780CE00813147 /* BookmarksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B5019267780CE00813147 /* BookmarksInteractor.swift */; };
+		142B501C267780DC00813147 /* BookmarksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501B267780DC00813147 /* BookmarksPresenter.swift */; };
+		142B501E267780E700813147 /* BookmarksWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501D267780E700813147 /* BookmarksWorker.swift */; };
+		142B5020267780FE00813147 /* BookmarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501F267780FE00813147 /* BookmarksModel.swift */; };
+		142B50222677810D00813147 /* BookmarksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B50212677810D00813147 /* BookmarksRouter.swift */; };
 		14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
 		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
 		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
@@ -141,6 +148,13 @@
 		142B500E2675570E00813147 /* GamespotManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamespotManager.swift; sourceTree = "<group>"; };
 		142B501026760D2C00813147 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		142B50122676377500813147 /* ProfileWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWorker.swift; sourceTree = "<group>"; };
+		142B50152677809500813147 /* BookmarksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksViewController.swift; sourceTree = "<group>"; };
+		142B5017267780C000813147 /* BookmarksViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookmarksViewController.storyboard; sourceTree = "<group>"; };
+		142B5019267780CE00813147 /* BookmarksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksInteractor.swift; sourceTree = "<group>"; };
+		142B501B267780DC00813147 /* BookmarksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksPresenter.swift; sourceTree = "<group>"; };
+		142B501D267780E700813147 /* BookmarksWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksWorker.swift; sourceTree = "<group>"; };
+		142B501F267780FE00813147 /* BookmarksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksModel.swift; sourceTree = "<group>"; };
+		142B50212677810D00813147 /* BookmarksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksRouter.swift; sourceTree = "<group>"; };
 		22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +303,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142B50142677803F00813147 /* BookmarksScene */ = {
+			isa = PBXGroup;
+			children = (
+				142B50152677809500813147 /* BookmarksViewController.swift */,
+				142B5017267780C000813147 /* BookmarksViewController.storyboard */,
+				142B5019267780CE00813147 /* BookmarksInteractor.swift */,
+				142B501B267780DC00813147 /* BookmarksPresenter.swift */,
+				142B501D267780E700813147 /* BookmarksWorker.swift */,
+				142B501F267780FE00813147 /* BookmarksModel.swift */,
+				142B50212677810D00813147 /* BookmarksRouter.swift */,
+			);
+			path = BookmarksScene;
+			sourceTree = "<group>";
+		};
 		842B0B98267270E100FFD763 /* PlayVideoScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +540,7 @@
 				843B3F08266D4A88009F7C19 /* SteamSearchGameScene */,
 				843B3F9C266D74BB009F7C19 /* SelectedGameNewsScene */,
 				847E5806266D295E00EA6D87 /* ProfileScene */,
+				142B50142677803F00813147 /* BookmarksScene */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -838,6 +867,7 @@
 				847E5822266D2CBC00EA6D87 /* TabBarController.storyboard in Resources */,
 				847E5850266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard in Resources */,
 				843B3FBF266D764A009F7C19 /* SelectedGameNewsCell.xib in Resources */,
+				142B5018267780C000813147 /* BookmarksViewController.storyboard in Resources */,
 				849B5F8D2646ABB70095C3E9 /* WelcomeViewController.storyboard in Resources */,
 				847E5817266D2B9300EA6D87 /* ProfileViewController.storyboard in Resources */,
 				849AECEA266C3700006A2722 /* WebPagesCell.xib in Resources */,
@@ -990,10 +1020,12 @@
 				847E584B266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift in Sources */,
 				847E586B266D38F400EA6D87 /* ConfigureNewsCell.swift in Sources */,
 				849B5FC12646B2820095C3E9 /* LoginViewController.swift in Sources */,
+				142B501C267780DC00813147 /* BookmarksPresenter.swift in Sources */,
 				843B3F4C266D4DB8009F7C19 /* VideoCell.swift in Sources */,
 				843B3F40266D4BF7009F7C19 /* VideosRouter.swift in Sources */,
 				84C8987326641C64006B8C91 /* UITableViewCell+Extension.swift in Sources */,
 				849B5F902646ABB70095C3E9 /* GameNews.xcdatamodeld in Sources */,
+				142B50162677809500813147 /* BookmarksViewController.swift in Sources */,
 				8489281C26713EEE0042A7BF /* ChannelVideosModel.swift in Sources */,
 				843B3F1C266D4AF9009F7C19 /* SteamSearchGameRouter.swift in Sources */,
 				843B3FBE266D764A009F7C19 /* SelectedGameNewsCell.swift in Sources */,
@@ -1018,6 +1050,7 @@
 				84CB3959266FEBAD00E8DF99 /* SelectedGameNewsRouter.swift in Sources */,
 				847E5812266D2B2F00EA6D87 /* ProfilePresenter.swift in Sources */,
 				844BF7BC265041D00099EADF /* NewsPresenter.swift in Sources */,
+				142B501A267780CE00813147 /* BookmarksInteractor.swift in Sources */,
 				84AB7465266A635A00DE05D0 /* NewsModel.swift in Sources */,
 				842B0BC72672948900FFD763 /* WebPagesModel.swift in Sources */,
 				84CB3954266FE2F100E8DF99 /* GameNewsAppNewsModel.swift in Sources */,
@@ -1030,6 +1063,7 @@
 				847E5841266D2F3300EA6D87 /* ConfigureNewsViewController.swift in Sources */,
 				84E6DCC2264FBE9F0090226B /* Constants.swift in Sources */,
 				84C9A93C2652FBCC00BBC1CD /* LoginModel.swift in Sources */,
+				142B50222677810D00813147 /* BookmarksRouter.swift in Sources */,
 				84D6A21E266EB35B00E64A58 /* SearchResultCellModel.swift in Sources */,
 				843B3F2C266D4BA2009F7C19 /* VideosViewController.swift in Sources */,
 				844BF7AD26503F2D0099EADF /* LoginPresenter.swift in Sources */,
@@ -1039,6 +1073,7 @@
 				849B5FC62646B2900095C3E9 /* NewsViewController.swift in Sources */,
 				84CB393B266F90A200E8DF99 /* NetworkManager.swift in Sources */,
 				843B3F0A266D4AB6009F7C19 /* SteamSearchGameViewController.swift in Sources */,
+				142B501E267780E700813147 /* BookmarksWorker.swift in Sources */,
 				84706273266BE6B5003B40A3 /* IgnManager.swift in Sources */,
 				843B3F21266D4B06009F7C19 /* SteamSearchGameWorker.swift in Sources */,
 				847E5808266D297800EA6D87 /* ProfileViewController.swift in Sources */,
@@ -1055,6 +1090,7 @@
 				843B3F3B266D4BE4009F7C19 /* VideosWorker.swift in Sources */,
 				843B3F9E266D74F3009F7C19 /* SelectedGameNewsViewController.swift in Sources */,
 				849B5FBC2646B26A0095C3E9 /* SignUpViewController.swift in Sources */,
+				142B5020267780FE00813147 /* BookmarksModel.swift in Sources */,
 				8462FFDD2646F3970051280B /* ButtonsDesign.swift in Sources */,
 				84F63E9626516070006ED049 /* SignUpModel.swift in Sources */,
 				842B0BAC267271C600FFD763 /* PlayVideoViewController.swift in Sources */,
