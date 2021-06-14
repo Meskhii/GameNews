@@ -8,7 +8,7 @@
 import Foundation
 
 struct VCIds {
-    static let mainVC = "MainViewController"
+    static let welcomeVC = "WelcomeViewController"
     static let signUpVC = "SignUpViewController"
     static let loginVC = "LoginViewController"
     static let tabBarController = "TabBarController"

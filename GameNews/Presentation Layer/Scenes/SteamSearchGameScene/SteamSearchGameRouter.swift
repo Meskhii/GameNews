@@ -12,10 +12,10 @@ protocol SteamSearchGameRoutingLogic {
 }
 
 class SteamSearchGameRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
-
+// MARK: - Routing Logic
 extension SteamSearchGameRouter: SteamSearchGameRoutingLogic {
 
     func navigateToSelectedGameNews(with appId: String) {

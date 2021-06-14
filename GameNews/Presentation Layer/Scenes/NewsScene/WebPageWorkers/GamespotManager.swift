@@ -13,6 +13,7 @@ protocol GamespotManagerProtocol {
 }
 
 class GamespotManager: GamespotManagerProtocol {
+    // MARK: - Fetch News
     func fetchNews(completion: @escaping (NewsModel) -> Void) {
         let urlString = "https://www.gamespot.com/news/"
 
@@ -26,19 +27,21 @@ class GamespotManager: GamespotManagerProtocol {
         }
     }
 }
-
+// MARK: - Fetch Logic
 extension NewsWorker {
 
      func fetchLogicForGamespot(doc: Document) -> NewsModel? {
 
         let gamespotNewsModel: NewsModel?
-
+        
+        // MARK: - Setup HTML Tags
         do {
             let titles = try doc.getElementsByClass("card-item__title ")
             let times = try doc.getElementsByClass("card-metadata ")
             let imgURLS = try doc.getElementsByClass("card-item__img overflow--hidden card-image-overlay order--one card-item__img--margin-right ")
             let items = try doc.getElementsByClass("card-item__content inner-space-top-small-rem inner-space-bottom-small-rem ")
 
+            // MARK: - Try Web Scraping
             do {
                 var titlesArray = [String]()
                 var timesArray = [String]()
@@ -69,6 +72,7 @@ extension NewsWorker {
                     
                 }
 
+                // MARK: - Prepare Parsed Data
                 gamespotNewsModel = NewsModel(titles: titlesArray,
                                              imgURLs: imgURLSArray,
                                              postTimes: timesArray,

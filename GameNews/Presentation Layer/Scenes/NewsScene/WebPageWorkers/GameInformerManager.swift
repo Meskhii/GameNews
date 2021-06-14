@@ -13,6 +13,7 @@ protocol GameInformerManagerProtocol {
 }
 
 class GameInformerManager: GameInformerManagerProtocol {
+    // MARK: - Fetch News
     func fetchNews(completion: @escaping (NewsModel) -> Void) {
         let urlString = "https://www.gameinformer.com/news"
 
@@ -26,19 +27,20 @@ class GameInformerManager: GameInformerManagerProtocol {
         }
     }
 }
-
+// MARK: - Fetch Logic
 extension NewsWorker {
 
      func fetchLogicForGameInformer(doc: Document) -> NewsModel? {
 
         let gameInformerNewsModel: NewsModel?
-
+        
+        // MARK: - Setup HTML Tags
         do {
             let titles = try doc.getElementsByClass("field field--name-title field--type-string field--label-hidden")
             let times = try doc.getElementsByClass("field field--name-created field--type-created field--label-hidden")
-         //   let imgURLS = try doc.select("img")
             let items = try doc.getElementsByClass("promo-img-thumb")
 
+            // MARK: - Try Web Scraping
             do {
                 var titlesArray = [String]()
                 var timesArray = [String]()
@@ -63,14 +65,16 @@ extension NewsWorker {
                 
                 for href in items {
                     let tag = try href.select("a")
+                    
                     hrefsArray.append(try tag.attr("href"))
                     
                 }
                 
+                // MARK: - Prepare Parsed Data
+                
                 // drop first useless items
                 imgURLSArray.removeFirst()
                 hrefsArray.removeFirst()
-
 
                 gameInformerNewsModel = NewsModel(titles: titlesArray,
                                              imgURLs: imgURLSArray,

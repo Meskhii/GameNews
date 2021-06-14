@@ -12,6 +12,7 @@ protocol SignUpPresentationLogic: AnyObject {
 }
 
 class SignUpPresenter {
+    // MARK: - Variables
     weak var viewController: SignUpDisplayLogic?
 }
 

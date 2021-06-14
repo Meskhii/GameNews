@@ -8,7 +8,7 @@
 import Foundation
 
 class SelectedGameNewsWorker {
-
+    // MARK: - Fetch News
     func fetchGameNews(appId: String, completion: @escaping ((GameNewsAppNewsModel) -> Void)) {
         let url = "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=\(appId)"
         NetworkManager.shared.get(url: url) { (result: Result<GameNewsAppNewsModel, Error>) in

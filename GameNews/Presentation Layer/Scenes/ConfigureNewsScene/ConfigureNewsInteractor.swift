@@ -12,9 +12,11 @@ protocol ConfigureNewsBusinessLogic {
 }
 
 class ConfigureNewsInteractor {
+    // MARK: - Variables
     var presenter: ConfigureNewsPresentationLogic?
 }
 
+// MARK: - Business Logic
 extension ConfigureNewsInteractor: ConfigureNewsBusinessLogic {
     func fetchWebPagesOptions() {
         var worker: ConfigureNewsWorker?

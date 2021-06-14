@@ -12,6 +12,7 @@ protocol LoginPresentationLogic: AnyObject {
 }
 
 class LoginPresenter {
+    // MARK: - Variables
     weak var viewController: LoginDisplayLogic?
 }
 

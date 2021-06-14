@@ -9,6 +9,7 @@ import Foundation
 
 class ConfigureNewsWorker {
     
+    // MARK: - Mocked Data
     func mockFetchedWebPages() -> [WebPagesModel] {
 
         var mockData = [WebPagesModel]()

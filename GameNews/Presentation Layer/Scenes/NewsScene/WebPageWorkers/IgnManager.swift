@@ -13,6 +13,7 @@ protocol IgnManagerProtocol {
 }
 
 class IgnManager: IgnManagerProtocol {
+    // MARK: - Fetch News
     func fetchNews(completion: @escaping (NewsModel) -> Void) {
         let urlString = "https://www.ign.com/pc?filter=articles"
 
@@ -27,17 +28,20 @@ class IgnManager: IgnManagerProtocol {
     }
 }
 
+// MARK: - Fetch Logic
 extension NewsWorker {
 
      func fetchLogicForIgn(doc: Document) -> NewsModel? {
 
         let ignNewsModel: NewsModel?
 
+        // MARK: - Setup HTML Tags
         do {
             let timeAgos = try doc.getElementsByClass("item-timeago")
             let imgURLS = try doc.select("img")
             let items = try doc.getElementsByClass("item-body")
 
+            // MARK: - Try Web Scraping
             do {
                 var titlesArray = [String]()
                 var timeAgosArray = [String]()
@@ -62,6 +66,8 @@ extension NewsWorker {
                 for href in items {
                     hrefsArray.append(try href.attr("href"))
                 }
+                
+                // MARK: - Prepare Parsed Data
 
                 // Removing extra fetched data
                 timeAgosArray.removeSubrange(0...4)
@@ -84,6 +90,7 @@ extension NewsWorker {
         return nil
     }
 
+    // MARK: - Helper Function
     private func splitAtFirst(str: String, delimiter: String) -> String? {
         guard let lowerIndex = (str.range(of: delimiter)?.lowerBound) else { return str }
         let firstPart: String = .init(str.prefix(upTo: lowerIndex))

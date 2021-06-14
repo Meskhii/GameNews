@@ -13,7 +13,7 @@ protocol SignUpRoutingLogic {
 }
 
 class SignUpRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
 

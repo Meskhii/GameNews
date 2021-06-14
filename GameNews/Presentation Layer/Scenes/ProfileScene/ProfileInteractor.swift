@@ -6,3 +6,16 @@
 //
 
 import Foundation
+
+protocol ProfileBusinessLogic {
+    
+}
+
+class ProfileInteractor {
+    // MARK: - Variables
+    var presenter: ProfilePresentationLogic?
+}
+// MARK: - Business Logic
+extension ProfileInteractor: ProfileBusinessLogic {
+    
+}

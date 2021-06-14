@@ -15,10 +15,11 @@ protocol NewsRoutingLogic {
 }
 
 class NewsRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
 
+// MARK: - Routing Logic
 extension NewsRouter: NewsRoutingLogic {
 
     func openSelectedNewsInWebView(defaultURL: String, articleURL: String) {

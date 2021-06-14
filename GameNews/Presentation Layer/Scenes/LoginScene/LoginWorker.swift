@@ -12,7 +12,7 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class LoginWorker {
-
+    // MARK: - Login Method
     func login(email: String, password: String) -> Bool {
 
         var loginSucceed = true

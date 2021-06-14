@@ -17,12 +17,15 @@ protocol ConfigureNewsDisplayLogic: AnyObject {
 
 class ConfigureNewsViewController: UIViewController {
     
+    // MARK: - Variables
     private var interactor: ConfigureNewsBusinessLogic?
     var delegate: NewsCollectionViewDataDelegate?
-    
     var webPageOptions = [WebPagesModel]()
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: - Setup Scene
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -42,6 +45,7 @@ class ConfigureNewsViewController: UIViewController {
         viewController.interactor = interactor
     }
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,12 +56,14 @@ class ConfigureNewsViewController: UIViewController {
         setupCollectionView()
     }
     
+    // MARK: - Setuper
     private func setupCollectionView() {
         collectionView.registerNib(class: ConfigureNewsCell.self)
         collectionView.delegate = self
         collectionView.dataSource = self
     }
     
+    // MARK: - Page Updater
     private func updateWebPages(webPage: String, checked: Bool) {
         for (index, _) in webPageOptions.enumerated() {
             if webPageOptions[index].webPageLogo.contains(webPage) {
@@ -67,6 +73,7 @@ class ConfigureNewsViewController: UIViewController {
     }
 }
 
+// MARK: - Display Logic
 extension ConfigureNewsViewController: ConfigureNewsDisplayLogic {
     func displayWebPageOptions(data: [WebPagesModel]) {
         webPageOptions = data
@@ -74,6 +81,7 @@ extension ConfigureNewsViewController: ConfigureNewsDisplayLogic {
     }
 }
 
+// MARK: - Checked News Logic
 extension ConfigureNewsViewController: ConfigureCheckedNewsLogic {
     func configureDataAfterUserInteraction(checkedLogo: String, checked: Bool) {
         updateWebPages(webPage: checkedLogo, checked: checked)
@@ -82,6 +90,7 @@ extension ConfigureNewsViewController: ConfigureCheckedNewsLogic {
     }
 }
 
+// MARK: - UICollection View Data Source & Delegate
 extension ConfigureNewsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return webPageOptions.count
@@ -95,6 +104,7 @@ extension ConfigureNewsViewController: UICollectionViewDataSource, UICollectionV
     }
 }
 
+// MARK: - UICollection View Delegate Flow Layout
 extension ConfigureNewsViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

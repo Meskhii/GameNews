@@ -17,15 +17,16 @@ protocol SelectedGameNewsDisplayLogic: AnyObject {
 
 class SelectedGameNewsViewController: UIViewController {
 
-    @IBOutlet weak var tableView: UITableView!
-
     // MARK: - Variables
     private var interactor: SelectedGameNewsBusinessLogic?
     private var selectedGameNews = [GameNewsModel]()
     private(set) var router: SelectedGameNewsRoutingLogic?
     var appId: String?
+    
+    // MARK: - IBOutlet
+    @IBOutlet weak var tableView: UITableView!
 
-    // MARK: - Inits
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -47,6 +48,8 @@ class SelectedGameNewsViewController: UIViewController {
         viewController.router = router
         router.viewController = viewController
     }
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,6 +59,7 @@ class SelectedGameNewsViewController: UIViewController {
         interactor?.fetchSelectedGameNews(appId: appId ?? "")
     }
 
+    // MARK: - Table View Configuration
     private func configureTableView() {
         self.tableView.registerNib(class: SelectedGameNewsCell.self)
         self.tableView.delegate = self
@@ -64,6 +68,7 @@ class SelectedGameNewsViewController: UIViewController {
     }
 }
 
+// MARK: - Display Logic
 extension SelectedGameNewsViewController: SelectedGameNewsDisplayLogic {
     func display(data: [GameNewsModel]) {
           self.selectedGameNews = data
@@ -71,6 +76,7 @@ extension SelectedGameNewsViewController: SelectedGameNewsDisplayLogic {
     }
 }
 
+// MARK: - UITableView Data Source & Delegate
 extension SelectedGameNewsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedGameNews.count
@@ -84,7 +90,7 @@ extension SelectedGameNewsViewController: UITableViewDataSource, UITableViewDele
     }
 
 }
-
+// MARK: - News Cell Delegate
 extension SelectedGameNewsViewController: SelectedGameNewsCellDelegate {
     func readFullArticleTappedFor(_ articleURL: String) {
         router?.openSelectedGameNewsInSafariView(using: articleURL)

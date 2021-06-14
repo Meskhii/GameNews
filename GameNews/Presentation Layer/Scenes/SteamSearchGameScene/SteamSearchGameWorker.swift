@@ -12,6 +12,7 @@ class SteamSearchGameWorker {
 
     static let shared = SteamSearchGameWorker()
 
+    // MARK: - Search Game
     func searchForGames(searchWord: String, completion: @escaping (SearchResultModel?) -> Void) {
         var searchResultModel: SearchResultModel!
         let steamSearchResultURLString = "https://store.steampowered.com/search/?term=\(searchWord)"
@@ -36,6 +37,7 @@ class SteamSearchGameWorker {
 
 extension SteamSearchGameWorker {
 
+    // MARK: - Fetch Search Result
     func fetchSearchResult(doc: Document) -> SearchResultModel? {
 
         var titlesArray = [String]()
@@ -44,15 +46,15 @@ extension SteamSearchGameWorker {
         var appIdsArray = [String]()
         var gamePricesArray = [String]()
 
+        // MARK: - Setup HTML Tags
         do {
-
             let imgURLS = try doc.select("img")
             let titles = try doc.getElementsByClass("title")
             let releaseDates = try doc.getElementsByClass("col search_released responsive_secondrow")
             let gamePrices = try doc.getElementsByClass("col search_price  responsive_secondrow")
 
+            // MARK: - Try Web Scraping
             do {
-
                 for date in releaseDates {
                     let releaseDate = try date.text()
                     if !releaseDate.isEmpty {
@@ -84,6 +86,8 @@ extension SteamSearchGameWorker {
                         gamePricesArray.append("Coming Soon")
                     }
                 }
+                
+                // MARK: - Return Parsed Data
 
                 return SearchResultModel(titles: titlesArray,
                                          imgURLs: imgURLSArray,
@@ -98,6 +102,7 @@ extension SteamSearchGameWorker {
         }
     }
 
+    // MARK: - Helper Methods
     func getSteamGameAppId(from stringURL: String) -> String {
         if let range = stringURL.range(of: "apps/") {
             let upperBound = stringURL[range.upperBound...]

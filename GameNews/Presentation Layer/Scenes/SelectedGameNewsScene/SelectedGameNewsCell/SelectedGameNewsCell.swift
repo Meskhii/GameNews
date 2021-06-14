@@ -8,25 +8,26 @@
 import UIKit
 
 class SelectedGameNewsCell: UITableViewCell {
+    
+    // MARK: - Variables
+    private var fullArticleHref: String?
+    weak var delegate: SelectedGameNewsCellDelegate?
 
+    // MARK: - IBOutlets
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
 
-    private var fullArticleHref: String?
-    weak var delegate: SelectedGameNewsCellDelegate?
-
+    // MARK: - View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    // MARK: - Cell Configuration
     func configure(with data: GameNewsModel) {
 
         self.titleLabel.text = data.title
@@ -39,6 +40,7 @@ class SelectedGameNewsCell: UITableViewCell {
         self.fullArticleHref = data.url
     }
 
+    // MARK: - IBAction
     @IBAction func readFullArticle(_ sender: Any) {
         delegate?.readFullArticleTappedFor(fullArticleHref ?? "")
     }

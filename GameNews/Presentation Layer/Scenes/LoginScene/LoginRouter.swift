@@ -13,12 +13,12 @@ protocol LoginRoutingLogic {
 }
 
 class LoginRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
 
+// MARK: - Routing Logic
 extension LoginRouter: LoginRoutingLogic {
-
     func navigateToNews(vcId: String) {
         let storyboard = UIStoryboard(name: VCIds.tabBarController, bundle: nil)
         guard let tabBarVC = storyboard.instantiateViewController(identifier: vcId) as? TabBarController else {return}

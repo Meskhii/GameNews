@@ -12,16 +12,17 @@ protocol SteamSearchGameDisplayLogic: AnyObject {
 }
 
 class SteamSearchGameViewController: UIViewController {
-
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
-
+    
     // MARK: - Variables
     private var interactor: SteamSearchGameBusinessLogic?
     private(set) var router: SteamSearchGameRoutingLogic?
     private var searchResults = [SearchResultCellModel]()
 
-    // MARK: - Inits
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -44,6 +45,7 @@ class SteamSearchGameViewController: UIViewController {
         router.viewController = viewController
     }
 
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -59,7 +61,8 @@ class SteamSearchGameViewController: UIViewController {
         super.viewWillAppear(true)
         self.navigationController?.navigationBar.isHidden = true
     }
-
+    
+    // MARK: - Table View Configuration
     private func configureTableView() {
         tableView.registerNib(class: SearchResultCell.self)
         tableView.delegate = self
@@ -67,14 +70,14 @@ class SteamSearchGameViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
     }
 }
-
+// MARK: - Display Logic
 extension SteamSearchGameViewController: SteamSearchGameDisplayLogic {
     func display(data: [SearchResultCellModel]) {
         self.searchResults = data
         tableView.reloadData()
     }
 }
-
+// MARK: - UITableView Data Source
 extension SteamSearchGameViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchResults.count
@@ -87,7 +90,7 @@ extension SteamSearchGameViewController: UITableViewDataSource {
     }
 
 }
-
+// MARK: - UITableView Delegate
 extension SteamSearchGameViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
@@ -98,7 +101,7 @@ extension SteamSearchGameViewController: UITableViewDelegate {
         router?.navigateToSelectedGameNews(with: searchResults[indexPath.row].appId ?? "")
     }
 }
-
+// MARK: - Search Bar Delegate
 extension SteamSearchGameViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         interactor?.fetchSearchedGame(by: searchText)

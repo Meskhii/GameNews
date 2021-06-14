@@ -33,7 +33,7 @@ class NewsViewController: UIViewController {
     private var webPages = [WebPagesModel]()
     private var tempAllNews = [NewsCellModel]()
 
-    // MARK: - Inits
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -68,8 +68,9 @@ class NewsViewController: UIViewController {
         configureTableView()
     }
 
+    // MARK: - Collection View Configuration
     private func configureCollectionView() {
-        horizontalMenuCollectionView.registerNib(class: SitesCell.self)
+        horizontalMenuCollectionView.registerNib(class: WebPagesCell.self)
         horizontalMenuCollectionView.delegate = self
         horizontalMenuCollectionView.dataSource = self
         horizontalMenuCollectionView.backgroundColor = UIColor(named: "ViewBackground")
@@ -80,6 +81,7 @@ class NewsViewController: UIViewController {
         }
     }
 
+    // MARK: - Table View Configuration
     private func configureTableView() {
         newsTableView.registerNib(class: NewsCell.self)
         newsTableView.delegate = self
@@ -102,6 +104,7 @@ extension NewsViewController: NewsDisplayLogic {
     }
 }
 
+// MARK: - CollectionView Data Delegate
 extension NewsViewController: NewsCollectionViewDataDelegate {
     func getUpdatedWebPages(webPages: [WebPagesModel]) {
         self.webPages = webPages
@@ -123,14 +126,14 @@ extension NewsViewController: NewsCollectionViewDataDelegate {
     }
 }
 
-// MARK: - UICollectionView Data Source & Delegate
+// MARK: - UICollectionView Data Source
 extension NewsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return webSitesImages.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.deque(SitesCell.self, for: indexPath)
+        let cell = collectionView.deque(WebPagesCell.self, for: indexPath)
         cell.configure(with: webSitesImages[indexPath.row])
         return cell
     }

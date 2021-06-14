@@ -8,10 +8,7 @@
 import Foundation
 
 enum Login {
-
     struct Request {
-        var firstName: String?
-        var lastName: String?
         var email: String?
         var password: String?
     }

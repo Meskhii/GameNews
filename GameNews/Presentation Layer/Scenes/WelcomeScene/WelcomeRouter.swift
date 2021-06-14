@@ -14,10 +14,11 @@ protocol WelcomeRoutingLogic {
 }
 
 class WelcomeRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
 
+// MARK: - Routing Logic
 extension WelcomeRouter: WelcomeRoutingLogic {
 
     func navigateToSignUp(vcId: String) {

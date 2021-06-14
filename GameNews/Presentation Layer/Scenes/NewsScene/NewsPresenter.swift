@@ -12,6 +12,7 @@ protocol NewsPresentationLogic: AnyObject {
 }
 
 class NewsPresenter {
+    // MARK: - Variables
     weak var newsViewController: NewsDisplayLogic?
 }
 

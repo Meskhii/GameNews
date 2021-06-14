@@ -7,21 +7,71 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+protocol ProfileDisplayLogic: AnyObject {
+    func displaySignOutError()
+}
 
+class ProfileViewController: UIViewController {
+    
+    // MARK: - Variables
+    private var interactor: ProfileBusinessLogic?
+    private(set) var router: ProfileRoutingLogic?
+    private var worker: ProfileWorker?
+    
+    // MARK: Scene Setup
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setup()
+    }
+
+    private func setup() {
+        let viewController = self
+        let presenter = ProfilePresenter()
+        let interactor = ProfileInteractor()
+        let router = ProfileRouter()
+        let worker = ProfileWorker()
+        interactor.presenter = presenter
+        presenter.profileViewController = viewController
+        viewController.interactor = interactor
+        viewController.router = router
+        viewController.worker = worker
+        router.viewController = viewController
+    }
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    // MARK: - IBActions
+    @IBAction func openBookmarksVC(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func requestNewsWebPage(_ sender: Any) {
+        router?.openMailSender(with: "Request News Page")
+    }
+    
+    @IBAction func requestFeature(_ sender: Any) {
+        router?.openMailSender(with: "Request Feature")
+    }
+    
+    @IBAction func logoutUser(_ sender: Any) {
+        if ((worker?.signOut()) != nil) {
+            router?.moveUserToWelcomePage()
+        } else {
+            displaySignOutError()
+        }
+    }
+    
+}
+// MARK: - Display Logic
+extension ProfileViewController: ProfileDisplayLogic {
+    func displaySignOutError() {
+        print("SignOut Error")
+    }
 }

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
 
-    // MARK: - Inits
+    // MARK: - Setup Scene
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         router.viewController = viewController
     }
 
-    // MARK: - view life cycle
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
         setUpElements()
     }
 
-    // MARK: - Login
+    // MARK: - Login User
     @IBAction func loginClicked(_ sender: Any) {
         login()
     }

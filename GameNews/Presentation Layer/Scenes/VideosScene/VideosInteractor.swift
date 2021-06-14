@@ -12,10 +12,12 @@ protocol VideosBusinessLogic {
 }
 
 class VideosInteractor {
+    // MARK: - Variables
     var presenter: VideosPresentationLogic?
     var worker: VideosWorker?
 }
 
+// MARK: - Business Logic
 extension VideosInteractor: VideosBusinessLogic {
     func fetchVideosList() {
         var fetchedVideosTitles = [String]()

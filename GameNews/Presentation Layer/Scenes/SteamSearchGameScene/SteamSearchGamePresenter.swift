@@ -12,6 +12,7 @@ protocol SteamSearchGamePresentationLogic: AnyObject {
 }
 
 class SteamSearchGamePresenter {
+    // MARK: - Variables
     weak var steamSearchGameViewController: SteamSearchGameDisplayLogic?
 }
 

@@ -9,24 +9,25 @@ import UIKit
 import Kingfisher
 
 class VideoCell: UITableViewCell {
-
-    @IBOutlet weak var videoImageView: UIImageView!
-    @IBOutlet weak var videoNameLabel: UILabel!
-    @IBOutlet weak var trailerImageView: UIImageView!
+    
+    // MARK: - Variables
     private var videoId: String!
     weak var delegate: SelectedVideoDelegate?
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var videoImageView: UIImageView!
+    @IBOutlet weak var videoNameLabel: UILabel!
+    @IBOutlet weak var trailerImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    // MARK: - Cell Configuration
     func configure(with info: VideoCellModel) {
         videoNameLabel.text = info.fetchedVideosTitle
         videoId = info.fetchedVideosId
@@ -41,7 +42,7 @@ class VideoCell: UITableViewCell {
             ])
     }
 
-
+    // MARK: - IBAction
     @IBAction func playSelectedVideo(_ sender: Any) {
         delegate?.getSelectedVideoToPlay(videoId)
     }

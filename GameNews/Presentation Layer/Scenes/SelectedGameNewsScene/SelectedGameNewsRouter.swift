@@ -13,10 +13,10 @@ protocol SelectedGameNewsRoutingLogic {
 }
 
 class SelectedGameNewsRouter {
-
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
-
+// MARK: - Routing Logic
 extension SelectedGameNewsRouter: SelectedGameNewsRoutingLogic {
 
     func openSelectedGameNewsInSafariView(using url: String) {

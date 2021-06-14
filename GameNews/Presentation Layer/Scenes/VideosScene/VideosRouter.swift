@@ -12,9 +12,11 @@ protocol VideosRoutingLogic {
 }
 
 class VideosRouter {
+    // MARK: - Variables
     weak var viewController: UIViewController?
 }
 
+// MARK: - Routing Logic
 extension VideosRouter: VideosRoutingLogic {
     func navigateToPlayVideoForSelected(videoId: String) {
         let storyboard = UIStoryboard(name: "PlayVideoViewController", bundle: nil)

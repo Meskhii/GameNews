@@ -13,13 +13,11 @@ protocol SignUpDisplayLogic: AnyObject {
 
 class SignUpViewController: UIViewController {
 
-    // MARK: - External vars
+    // MARK: - Variables
     private(set) var router: SignUpRoutingLogic?
-
-    // MARK: - Internal vars
     private var interactor: SignUpBusinessLogic?
 
-    // MARK: - Outlets
+    // MARK: - IBOutlets
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -27,8 +25,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
 
-    // MARK: - Inits
-
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -59,12 +56,7 @@ class SignUpViewController: UIViewController {
 
     }
 
-    func setUpElements() {
-        errorLabel.alpha = 0
-
-        ButtonsDesign.styleFilledButton(signUpButton)
-    }
-
+    // MARK: - Sign Up User
     @IBAction func signUpTapped(_ sender: Any) {
         signUp()
     }
@@ -78,14 +70,18 @@ class SignUpViewController: UIViewController {
         interactor?.signUp(request: request)
     }
 
+    // MARK: - Helper Methods
+    private func setUpElements() {
+        errorLabel.alpha = 0
+
+        ButtonsDesign.styleFilledButton(signUpButton)
+    }
+    
     private func showError(message: String) {
         errorLabel.alpha = 1
         errorLabel.text = message
     }
 
-    private func validatePassword() {
-
-    }
 }
 
 // MARK: - Display logic

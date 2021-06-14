@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,7 +27,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ig-99-5bp">
                                 <rect key="frame" x="20" y="246" width="335" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="77P-45-ets">
@@ -38,33 +38,57 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="wuQ-6e-kaa"/>
                                         </constraints>
-                                        <state key="normal" title="Switch To Light Mode"/>
+                                        <state key="normal" title="Bookmarks">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openBookmarksVC:" destination="opJ-Ue-zDK" eventType="touchUpInside" id="7zh-PN-xdJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1W-ZE-dqd">
                                         <rect key="frame" x="0.0" y="52" width="335" height="52"/>
-                                        <state key="normal" title="News Alerts"/>
+                                        <state key="normal" title="News Alerts">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf9-oj-g3c">
                                         <rect key="frame" x="0.0" y="104" width="335" height="52"/>
-                                        <state key="normal" title="Request News Web Site"/>
+                                        <state key="normal" title="Request News Web Page">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="requestNewsWebPage:" destination="opJ-Ue-zDK" eventType="touchUpInside" id="R6P-dl-iKF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGr-aW-ARw">
                                         <rect key="frame" x="0.0" y="156" width="335" height="52"/>
-                                        <state key="normal" title="Request Feature"/>
+                                        <state key="normal" title="Request Feature">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="requestFeature:" destination="opJ-Ue-zDK" eventType="touchUpInside" id="rue-Ho-Wen"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-DG-87j">
                                         <rect key="frame" x="0.0" y="208" width="335" height="52"/>
-                                        <state key="normal" title="Rate The App"/>
+                                        <state key="normal" title="Rate The App">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evi-dy-cAG">
                                         <rect key="frame" x="0.0" y="260" width="335" height="52"/>
-                                        <state key="normal" title="Logout"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutUser:" destination="opJ-Ue-zDK" eventType="touchUpInside" id="T5Z-fk-f8g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P8P-0o-XuE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="ViewBackground"/>
                         <constraints>
                             <constraint firstItem="P8P-0o-XuE" firstAttribute="bottom" secondItem="77P-45-ets" secondAttribute="bottom" constant="20" id="9yo-tm-Kjh"/>
                             <constraint firstItem="77P-45-ets" firstAttribute="top" secondItem="9ig-99-5bp" secondAttribute="bottom" constant="20" id="Ccx-3s-8UX"/>
@@ -88,8 +112,8 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="ViewBackground">
+            <color red="0.12200000137090683" green="0.11400000005960464" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -12,7 +12,7 @@ protocol SignUpBusinessLogic {
 }
 
 class SignUpInteractor {
-    // MARK: - External vars
+    // MARK: - Variables
     var presenter: SignUpPresentationLogic?
 }
 

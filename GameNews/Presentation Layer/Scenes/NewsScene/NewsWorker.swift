@@ -7,11 +7,29 @@
 
 import Foundation
 import SwiftSoup
+import Firebase
 
 class NewsWorker {
 
     static let shared = NewsWorker()
+    
+    // MARK: - Bookmark News
+    func bookmarkNewsInFirebase(title: String, image: String, newsUrl: String) {
+        let database = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
+        
+        database.collection("users").document(uid!).collection("bookmarks").document(title).setData(["news_title" : title, "news_image" : image, "news_url" : newsUrl])
+        
+    }
+    
+    func deleteNewsForUserFromFirebase(title: String) {
+        let database = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
+        
+        database.collection("users").document(uid!).collection("bookmarks").document(title).delete()
+    }
 
+    // MARK: - IGN Worker
     func getIgnNews<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
 
         guard let url = URL(string: url) else {return}
@@ -31,6 +49,7 @@ class NewsWorker {
         }
     }
     
+    // MARK: - Game Informer Worker
     func getGameInformerNews<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
 
         guard let url = URL(string: url) else {return}
@@ -50,6 +69,7 @@ class NewsWorker {
         }
     }
     
+    // MARK: - Gamespot Worker
     func getGamespotNews<T: Codable>(url: String, completion: @escaping (Result<T, Error>) -> Void) {
 
         guard let url = URL(string: url) else {return}

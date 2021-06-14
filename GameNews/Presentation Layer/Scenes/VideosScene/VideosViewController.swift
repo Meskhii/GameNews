@@ -24,7 +24,8 @@ class VideosViewController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    // MARK: - Inits
+    
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -47,6 +48,7 @@ class VideosViewController: UIViewController {
         router.viewController = viewController
     }
 
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,6 +57,7 @@ class VideosViewController: UIViewController {
         configureTableView()
     }
 
+    // MARK: - Table View Configuration
     private func configureTableView() {
         tableView.registerNib(class: VideoCell.self)
         tableView.delegate = self
@@ -62,20 +65,20 @@ class VideosViewController: UIViewController {
         tableView.tableFooterView = UIView(frame: .zero)
     }
 }
-
+// MARK: - Display Logic
 extension VideosViewController: VideosDisplayLogic {
     func display(data: [VideoCellModel]) {
         self.fetchedVideos = data
         tableView.reloadData()
     }
 }
-
+// MARK: - Video Delegate
 extension VideosViewController: SelectedVideoDelegate {
     func getSelectedVideoToPlay(_ videoId: String) {
         router?.navigateToPlayVideoForSelected(videoId: videoId)
     }
 }
-
+// MARK: - UITable View Data Source & Delegate
 extension VideosViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedVideos.count

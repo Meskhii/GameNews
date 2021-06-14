@@ -12,9 +12,10 @@ protocol ConfigureNewsPresentationLogic {
 }
 
 class ConfigureNewsPresenter {
+    // MARK: - Variables
     weak var configureNewsViewController: ConfigureNewsDisplayLogic?
 }
-
+// MARK: - Presentation Logic
 extension ConfigureNewsPresenter: ConfigureNewsPresentationLogic {
     func presentWebPages(data: [WebPagesModel]) {
         configureNewsViewController?.displayWebPageOptions(data: data)

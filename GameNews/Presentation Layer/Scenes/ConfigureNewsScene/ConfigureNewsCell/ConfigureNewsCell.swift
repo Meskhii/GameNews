@@ -8,19 +8,24 @@
 import UIKit
 
 class ConfigureNewsCell: UICollectionViewCell {
-
-    @IBOutlet weak var webPageLogoImage: UIImageView!
-    @IBOutlet weak var webPageNameLabel: UILabel!
-    @IBOutlet weak var isWebPageChecked: UIButton!
+    
+    // MARK: - Variables
     private var isChecked = true
     private var webPageLogoName = String()
     var delegate: ConfigureCheckedNewsLogic?
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var webPageLogoImage: UIImageView!
+    @IBOutlet weak var webPageNameLabel: UILabel!
+    @IBOutlet weak var isWebPageChecked: UIButton!
+    
+    // MARK: - View Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    // MARK: - Cell Configuration
     func configure(with data: WebPagesModel) {
         webPageLogoName = data.webPageLogo
         webPageLogoImage.image = UIImage(named: webPageLogoName)
@@ -34,6 +39,7 @@ class ConfigureNewsCell: UICollectionViewCell {
         }
     }
     
+    // MARK: - IBAction
     @IBAction func checkMarkClicked(_ sender: UIButton) {
         let imageName = isChecked ? "ic_checkmark_unchecked" : "ic_checkmark_checked"
                 

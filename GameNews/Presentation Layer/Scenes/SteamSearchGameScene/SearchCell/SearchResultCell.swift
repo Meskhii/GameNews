@@ -10,20 +10,22 @@ import Kingfisher
 
 class SearchResultCell: UITableViewCell {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var gameImageView: UIImageView!
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var gameReleaseDateLabel: UILabel!
     @IBOutlet weak var gamePriceLabel: UILabel!
 
+    // MARK: - View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
+    // MARK: - Cell Configuration
     func configure(searchResult: SearchResultCellModel) {
 
         let url = URL(string: searchResult.imgURL ?? "")

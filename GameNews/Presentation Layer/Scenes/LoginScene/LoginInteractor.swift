@@ -12,7 +12,7 @@ protocol LoginBusinessLogic {
 }
 
 class LoginInteractor {
-    // MARK: - External vars
+    // MARK: - Variables
     var presenter: LoginPresentationLogic?
 }
 

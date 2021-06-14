@@ -16,8 +16,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
 
-    // MARK: - Inits
-
+    // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         setup()
@@ -45,7 +44,7 @@ class WelcomeViewController: UIViewController {
 
     }
 
-    // MARK: - Button methods
+    // MARK: - IBAction Methods
     @IBAction func onSignUp(_ sender: Any) {
         router?.navigateToSignUp(vcId: "SignUpViewController")
     }
@@ -53,6 +52,7 @@ class WelcomeViewController: UIViewController {
         router?.navigateToLogin(vcId: "LoginViewController")
     }
 
+    // MARK: - Helper Methods
     func setUpElements() {
         ButtonsDesign.styleFilledButton(signUpButton)
         ButtonsDesign.styleHollowButton(loginButton)
