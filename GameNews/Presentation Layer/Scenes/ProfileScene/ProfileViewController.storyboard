@@ -38,12 +38,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="52" id="wuQ-6e-kaa"/>
                                         </constraints>
-                                        <state key="normal" title="Bookmarks">
+                                        <state key="normal" title="Change Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="openBookmarksVC:" destination="opJ-Ue-zDK" eventType="touchUpInside" id="7zh-PN-xdJ"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1W-ZE-dqd">
                                         <rect key="frame" x="0.0" y="52" width="335" height="52"/>

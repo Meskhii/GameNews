@@ -50,7 +50,7 @@ class NewsCell: UITableViewCell {
         
         newsTitle = data.title
         newsImage = data.imgURL
-        newsHref = data.hrefURL ?? ""
+        newsHref = data.hrefURL
         
         newsTitleLabel.text = newsTitle
         newsDateLabel.text = data.postTime
@@ -73,7 +73,7 @@ class NewsCell: UITableViewCell {
 
     // MARK: - IBActions
     @IBAction func shareNews(_ sender: Any) {
-
+        
     }
 
     @IBAction func bookmarkNews(_ sender: UIButton) {

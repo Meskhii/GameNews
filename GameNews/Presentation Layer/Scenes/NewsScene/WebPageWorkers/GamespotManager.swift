@@ -39,7 +39,7 @@ extension NewsWorker {
             let titles = try doc.getElementsByClass("card-item__title ")
             let times = try doc.getElementsByClass("card-metadata ")
             let imgURLS = try doc.getElementsByClass("card-item__img overflow--hidden card-image-overlay order--one card-item__img--margin-right ")
-            let items = try doc.getElementsByClass("card-item__content inner-space-top-small-rem inner-space-bottom-small-rem ")
+            let items = try doc.getElementsByClass("card-item card-item--horizontal width-100 flexbox-row flexbox-align-center border-bottom-grayscale--thin ")
 
             // MARK: - Try Web Scraping
             do {
@@ -65,8 +65,7 @@ extension NewsWorker {
                 
                 
                 for href in items {
-                    let tag = try href.select("a")
-                    let url = try tag.select("href")
+                    let url = try href.select("a")
                     let fullUrl = "https://www.gamespot.com/\(try url.attr("href"))"
                     hrefsArray.append(fullUrl)
                     

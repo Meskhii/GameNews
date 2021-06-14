@@ -64,7 +64,7 @@ extension NewsWorker {
                 }
 
                 for href in items {
-                    hrefsArray.append(try href.attr("href"))
+                    hrefsArray.append("https://www.ign.com/\(try href.attr("href"))")
                 }
                 
                 // MARK: - Prepare Parsed Data

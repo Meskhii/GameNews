@@ -49,8 +49,6 @@ class ProfileViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func openBookmarksVC(_ sender: Any) {
-    }
     
     @IBAction func requestNewsWebPage(_ sender: Any) {
         router?.openMailSender(with: "Request News Page")

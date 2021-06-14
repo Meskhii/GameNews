@@ -66,7 +66,7 @@ extension NewsWorker {
                 for href in items {
                     let tag = try href.select("a")
                     
-                    hrefsArray.append(try tag.attr("href"))
+                    hrefsArray.append("https://www.gameinformer.com/\(try tag.attr("href"))")
                     
                 }
                 

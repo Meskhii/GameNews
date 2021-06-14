@@ -18,6 +18,8 @@
 		142B501E267780E700813147 /* BookmarksWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501D267780E700813147 /* BookmarksWorker.swift */; };
 		142B5020267780FE00813147 /* BookmarksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B501F267780FE00813147 /* BookmarksModel.swift */; };
 		142B50222677810D00813147 /* BookmarksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B50212677810D00813147 /* BookmarksRouter.swift */; };
+		142B502626778BC900813147 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142B502426778BC900813147 /* BookmarkCell.swift */; };
+		142B502726778BC900813147 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 142B502526778BC900813147 /* BookmarkCell.xib */; };
 		14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E586A266D38F400EA6D87 /* ConfigureNewsCell.xib */; };
 		4B436CCD936F6B8BDB9FA9D3 /* Pods_GameNews_GameNewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7857B9245D1F804D6AE06D59 /* Pods_GameNews_GameNewsUITests.framework */; };
 		5C2E9B5569589B0F1CA58FB6 /* Pods_GameNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B567DEC44AF74AFEB20443E1 /* Pods_GameNews.framework */; };
@@ -155,6 +157,8 @@
 		142B501D267780E700813147 /* BookmarksWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksWorker.swift; sourceTree = "<group>"; };
 		142B501F267780FE00813147 /* BookmarksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksModel.swift; sourceTree = "<group>"; };
 		142B50212677810D00813147 /* BookmarksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksRouter.swift; sourceTree = "<group>"; };
+		142B502426778BC900813147 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		142B502526778BC900813147 /* BookmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		22B84FB1D6493BB69811C528 /* Pods_GameNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3171FC66AFF9165D36A01B6E /* Pods-GameNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.release.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		37BB459C4B7008E689D3F8A0 /* Pods-GameNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameNewsTests.debug.xcconfig"; path = "Target Support Files/Pods-GameNewsTests/Pods-GameNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 		142B50142677803F00813147 /* BookmarksScene */ = {
 			isa = PBXGroup;
 			children = (
+				142B502326778BAF00813147 /* BookmarkCell */,
 				142B50152677809500813147 /* BookmarksViewController.swift */,
 				142B5017267780C000813147 /* BookmarksViewController.storyboard */,
 				142B5019267780CE00813147 /* BookmarksInteractor.swift */,
@@ -315,6 +320,15 @@
 				142B50212677810D00813147 /* BookmarksRouter.swift */,
 			);
 			path = BookmarksScene;
+			sourceTree = "<group>";
+		};
+		142B502326778BAF00813147 /* BookmarkCell */ = {
+			isa = PBXGroup;
+			children = (
+				142B502426778BC900813147 /* BookmarkCell.swift */,
+				142B502526778BC900813147 /* BookmarkCell.xib */,
+			);
+			path = BookmarkCell;
 			sourceTree = "<group>";
 		};
 		842B0B98267270E100FFD763 /* PlayVideoScene */ = {
@@ -863,6 +877,7 @@
 				84894D8C26473512000AF852 /* GoogleService-Info.plist in Resources */,
 				843B3F83266D7008009F7C19 /* SearchResultCell.xib in Resources */,
 				84E6DCB6264FBD8A0090226B /* LoginViewController.storyboard in Resources */,
+				142B502726778BC900813147 /* BookmarkCell.xib in Resources */,
 				14CA809C2673A4DD0044EF0E /* ConfigureNewsCell.xib in Resources */,
 				847E5822266D2CBC00EA6D87 /* TabBarController.storyboard in Resources */,
 				847E5850266D2FA100EA6D87 /* ConfigureNewsViewController.storyboard in Resources */,
@@ -1017,6 +1032,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				843B3F17266D4AEA009F7C19 /* SteamSearchGamePresenter.swift in Sources */,
+				142B502626778BC900813147 /* BookmarkCell.swift in Sources */,
 				847E584B266D2F5E00EA6D87 /* ConfigureNewsPresenter.swift in Sources */,
 				847E586B266D38F400EA6D87 /* ConfigureNewsCell.swift in Sources */,
 				849B5FC12646B2820095C3E9 /* LoginViewController.swift in Sources */,

@@ -8,5 +8,7 @@
 import Foundation
 
 struct BookmarksModel {
-    
+    var newsImage: String
+    var newsTitle: String
+    var newsUrl: String
 }

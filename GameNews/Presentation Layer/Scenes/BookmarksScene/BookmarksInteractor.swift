@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BookmarksBusinessLogic {
-    
+    func fetchBookmarkedNews()
 }
 
 class BookmarksInteractor {
@@ -17,5 +17,17 @@ class BookmarksInteractor {
 }
 // MARK: - Business Logic
 extension BookmarksInteractor: BookmarksBusinessLogic {
-    
+    func fetchBookmarkedNews() {
+        
+        var bookmarksDict = [[String : Any]]()
+        let bookmarksWorker = BookmarksWorker()
+        
+        bookmarksWorker.fetchBookmarkedNews() { bookmarkedData in
+            bookmarksDict = bookmarkedData
+            DispatchQueue.main.async {
+                self.presenter?.present(bookmarks: bookmarksDict)
+            }
+        }
+        
+    }
 }

@@ -47,7 +47,7 @@
                             <constraint firstItem="7eN-zl-2nq" firstAttribute="top" secondItem="ouB-z5-paO" secondAttribute="top" constant="10" id="y9r-E6-Do1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="newspaper" catalog="system" id="RtR-mI-hW6"/>
+                    <tabBarItem key="tabBarItem" title="News" id="RtR-mI-hW6"/>
                     <navigationItem key="navigationItem" title="NEWS" id="t6i-ta-F6x"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -61,7 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="newspaper" catalog="system" width="128" height="108"/>
         <namedColor name="TableViewBackground">
             <color red="0.1289999932050705" green="0.13699999451637268" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -23,7 +23,7 @@ class NewsRouter {
 extension NewsRouter: NewsRoutingLogic {
 
     func openSelectedNewsInWebView(defaultURL: String, articleURL: String) {
-        let selectedArticleURL = URL(string: defaultURL + articleURL) ?? URL(string: defaultURL)!
+        let selectedArticleURL = URL(string: articleURL) ?? URL(string: defaultURL)!
         let safariVC = SFSafariViewController(url: selectedArticleURL)
 
         viewController?.present(safariVC, animated: true)

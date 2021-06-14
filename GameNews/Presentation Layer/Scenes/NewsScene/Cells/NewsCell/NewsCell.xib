@@ -31,14 +31,17 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wdo-xr-UnW">
                                 <rect key="frame" x="20" y="65" width="374" height="314"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="News Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TG-74-ju5">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TG-74-ju5">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-PV-zLY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-PV-zLY">
                                         <rect key="frame" x="0.0" y="31.5" width="374" height="32.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32.5" id="lwc-lx-JJd"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -51,8 +54,11 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="UjW-PV-zLY" firstAttribute="leading" secondItem="Wdo-xr-UnW" secondAttribute="leading" id="06R-sa-pG4"/>
                                     <constraint firstItem="gZ2-bh-Xti" firstAttribute="top" secondItem="UjW-PV-zLY" secondAttribute="bottom" constant="10" id="7CS-4W-UX9"/>
+                                    <constraint firstAttribute="trailing" secondItem="UjW-PV-zLY" secondAttribute="trailing" id="P22-rw-Spr"/>
                                     <constraint firstAttribute="bottom" secondItem="gZ2-bh-Xti" secondAttribute="bottom" id="Z4z-cF-xCk"/>
+                                    <constraint firstItem="UjW-PV-zLY" firstAttribute="top" secondItem="0TG-74-ju5" secondAttribute="bottom" constant="10" id="eXE-hq-U0y"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EK9-al-wxx">

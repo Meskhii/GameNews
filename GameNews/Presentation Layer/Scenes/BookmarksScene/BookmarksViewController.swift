@@ -7,15 +7,23 @@
 
 import UIKit
 
+protocol BookmarksDelegate: AnyObject {
+    func readFullArticleUsing(url: String)
+}
+
 protocol BookmarksDisplayLogic: AnyObject {
-    
+    func displayBookmarks(data: [BookmarksModel])
 }
 
 class BookmarksViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - Variables
     private var interactor: BookmarksBusinessLogic?
     private(set) var router: BookmarksRoutingLogic?
+    private var bookmarkedNews = [BookmarksModel]()
     
     // MARK: - Scene Setup
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -44,10 +52,48 @@ class BookmarksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        interactor?.fetchBookmarkedNews()
     }
 
-}
-
-extension BookmarksViewController: BookmarksDisplayLogic {
+    // MARK: - Table View Configuration
+    private func configureTableView() {
+        tableView.registerNib(class: BookmarkCell.self)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView(frame: .zero)
+    }
     
+}
+// MARK: - Display Logic
+extension BookmarksViewController: BookmarksDisplayLogic {
+    func displayBookmarks(data: [BookmarksModel]) {
+        bookmarkedNews = data
+        tableView.reloadData()
+    }
+}
+// MARK: - UITableView Data Source
+extension BookmarksViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return bookmarkedNews.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.deque(class: BookmarkCell.self, for: indexPath)
+        if !bookmarkedNews.isEmpty {
+            cell.configure(with: bookmarkedNews[indexPath.row])
+        }
+        return cell
+    }
+    
+}
+// MARK: - UITableView Delegate
+extension BookmarksViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
 }
