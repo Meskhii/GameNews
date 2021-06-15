@@ -14,6 +14,9 @@ class BookmarkCell: UITableViewCell {
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
     
+    private var newsUrl = String()
+    var bookmarksDelegate: BookmarksDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -25,6 +28,7 @@ class BookmarkCell: UITableViewCell {
     func configure(with data: BookmarksModel) {
         
         newsTitle.text = data.newsTitle
+        newsUrl = data.newsUrl
         
         let url = URL(string: data.newsImage)
         newsImageView.kf.setImage(
@@ -37,5 +41,11 @@ class BookmarkCell: UITableViewCell {
     }
     
     @IBAction func readFullArticle(_ sender: Any) {
+        bookmarksDelegate?.readFullArticleUsing(url: newsUrl)
     }
+    
+    @IBAction func removeNewsFromBookmarks(_ sender: Any) {
+        bookmarksDelegate?.removeBookmarkedNews(using: newsTitle.text!)
+    }
+    
 }

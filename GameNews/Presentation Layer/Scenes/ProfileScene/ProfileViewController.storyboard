@@ -17,8 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-10-fzr">
-                                <rect key="frame" x="107.5" y="60" width="160" height="160"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swift" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wKx-10-fzr">
+                                <rect key="frame" x="107.5" y="61" width="160" height="157.5"/>
+                                <color key="tintColor" red="0.95294117647058818" green="0.2627450980392157" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="czA-Bb-rBx"/>
                                     <constraint firstAttribute="height" constant="160" id="xOk-Sx-Jko"/>
@@ -109,6 +110,7 @@
     </scenes>
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="swift" catalog="system" width="128" height="106"/>
         <namedColor name="ViewBackground">
             <color red="0.12200000137090683" green="0.11400000005960464" blue="0.16899999976158142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -51,15 +51,18 @@ class SteamSearchGameViewController: UIViewController {
         
         interactor?.fetchSearchedGame(by: "")
 
-        
         self.searchBar.delegate = self
 
         configureTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
         self.navigationController?.navigationBar.isHidden = true
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
     
     // MARK: - Table View Configuration

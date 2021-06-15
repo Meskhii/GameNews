@@ -19,7 +19,7 @@ class ConfigureNewsViewController: UIViewController {
     
     // MARK: - Variables
     private var interactor: ConfigureNewsBusinessLogic?
-    var delegate: NewsCollectionViewDataDelegate?
+    var delegate: NewsDelegate?
     var webPageOptions = [WebPagesModel]()
     
     // MARK: - IBOutlets

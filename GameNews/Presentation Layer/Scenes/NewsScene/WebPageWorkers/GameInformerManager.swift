@@ -59,7 +59,8 @@ extension NewsWorker {
                 }
 
                 for title in titles {
-                    titlesArray.append(try title.text())
+                    let title = try title.text()
+                    titlesArray.append(title)
                 }
                 
                 

@@ -24,7 +24,14 @@ class BookmarksWorker {
                 }
                 completion(documentData)
             }
+            
         }
+    }
+    // MARK: - Delete Bookmarked News
+    func deleteNewsForUserFromFirebase(title: String) {
+        let database = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
         
+        database.collection("users").document(uid!).collection("bookmarks").document(title).delete()
     }
 }

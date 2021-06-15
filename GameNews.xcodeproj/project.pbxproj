@@ -603,8 +603,6 @@
 			isa = PBXGroup;
 			children = (
 				846C98F4264BD3D300133E0D /* Classes */,
-				84C8986C26641A34006B8C91 /* Extensions */,
-				8462FFDB2646F35E0051280B /* Helpers */,
 				84CB3938266F908300E8DF99 /* Infrastructure Layer */,
 				8470627A266BEA16003B40A3 /* Presentation Layer */,
 				849B5F932646ABBB0095C3E9 /* LaunchScreen.storyboard */,
@@ -648,6 +646,8 @@
 		84CB3938266F908300E8DF99 /* Infrastructure Layer */ = {
 			isa = PBXGroup;
 			children = (
+				84C8986C26641A34006B8C91 /* Extensions */,
+				8462FFDB2646F35E0051280B /* Helpers */,
 				84CB3939266F908B00E8DF99 /* NetworkManager */,
 			);
 			path = "Infrastructure Layer";

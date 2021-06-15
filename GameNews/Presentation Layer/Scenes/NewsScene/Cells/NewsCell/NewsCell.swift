@@ -22,11 +22,13 @@ class NewsCell: UITableViewCell {
     @IBOutlet private weak var shareButton: UIButton!
     @IBOutlet private weak var bookmarkButton: UIButton!
     
+    // MARK: - Variables
     private var newsTitle: String?
     private var newsImage: String?
     private var newsHref: String?
     private var isBookmarked = false
-
+    var delegate: NewsDelegate?
+    
     // MARK: - View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,13 +53,12 @@ class NewsCell: UITableViewCell {
         newsTitle = data.title
         newsImage = data.imgURL
         newsHref = data.hrefURL
-        
+
         newsTitleLabel.text = newsTitle
         newsDateLabel.text = data.postTime
 
         webPageImageView.image = UIImage(named: data.webPageLogo)
         webPageNameLabel.text = data.webPageName
-        
 
         let url = URL(string: newsImage ?? "")
         newsImageView.kf.setImage(
@@ -68,11 +69,15 @@ class NewsCell: UITableViewCell {
                 .transition(.fade(0.7)),
                 .cacheOriginalImage
             ])
-
     }
 
     // MARK: - IBActions
     @IBAction func shareNews(_ sender: Any) {
+        
+        let defaultImage = "https://www.gamespot.com/a/uploads/screen_kubrick/123/1239113/3320903-thumb.jpg"
+        guard let image = newsImageView.image, let url = URL(string: newsHref ?? defaultImage) else {return}
+        
+        delegate?.presentShareSheet(using: image, url: url)
         
     }
 
@@ -93,4 +98,5 @@ class NewsCell: UITableViewCell {
         
         isBookmarked.toggle()
     }
+    
 }

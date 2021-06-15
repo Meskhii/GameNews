@@ -48,6 +48,14 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     // MARK: - IBActions
     
     @IBAction func requestNewsWebPage(_ sender: Any) {

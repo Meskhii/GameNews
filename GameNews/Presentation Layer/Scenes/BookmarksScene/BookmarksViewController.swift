@@ -8,6 +8,7 @@
 import UIKit
 
 protocol BookmarksDelegate: AnyObject {
+    func removeBookmarkedNews(using title: String)
     func readFullArticleUsing(url: String)
 }
 
@@ -23,6 +24,7 @@ class BookmarksViewController: UIViewController {
     // MARK: - Variables
     private var interactor: BookmarksBusinessLogic?
     private(set) var router: BookmarksRoutingLogic?
+    private var worker: BookmarksWorker?
     private var bookmarkedNews = [BookmarksModel]()
     
     // MARK: - Scene Setup
@@ -41,6 +43,7 @@ class BookmarksViewController: UIViewController {
         let presenter = BookmarksPresenter()
         let interactor = BookmarksInteractor()
         let router = BookmarksRouter()
+        worker = BookmarksWorker()
         interactor.presenter = presenter
         presenter.bookmarksViewController = viewController
         viewController.interactor = interactor
@@ -58,6 +61,11 @@ class BookmarksViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         interactor?.fetchBookmarkedNews()
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
     }
 
     // MARK: - Table View Configuration
@@ -76,6 +84,19 @@ extension BookmarksViewController: BookmarksDisplayLogic {
         tableView.reloadData()
     }
 }
+// MARK: - Bookmarks Delegate
+extension BookmarksViewController: BookmarksDelegate {
+    func removeBookmarkedNews(using title: String) {
+        worker?.deleteNewsForUserFromFirebase(title: title)
+        interactor?.fetchBookmarkedNews()
+        tableView.reloadData()
+    }
+    
+    func readFullArticleUsing(url: String) {
+        router?.openSelectedNewsInWebView(articleURL: url)
+    }
+}
+
 // MARK: - UITableView Data Source
 extension BookmarksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -87,6 +108,7 @@ extension BookmarksViewController: UITableViewDataSource {
         if !bookmarkedNews.isEmpty {
             cell.configure(with: bookmarkedNews[indexPath.row])
         }
+        cell.bookmarksDelegate = self
         return cell
     }
     

@@ -22,11 +22,31 @@ class NewsWorker {
         
     }
     
+    // MARK: - Delete Bookmarked News
     func deleteNewsForUserFromFirebase(title: String) {
         let database = Firestore.firestore()
         let uid = Auth.auth().currentUser?.uid
         
         database.collection("users").document(uid!).collection("bookmarks").document(title).delete()
+    }
+    
+    // MARK: - Check If News Bookmarked
+    func checkIfNewsBookmarked(title: String, completion: @escaping (Bool) -> Void) {
+        let database = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
+                
+        database.collection("users").document(uid!).collection("bookmarks").document(title).getDocument { document, error in
+                if error == nil {
+                    if document != nil && document!.exists {
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                } else {
+                    completion(false)
+                }
+        }
+            
     }
 
     // MARK: - IGN Worker

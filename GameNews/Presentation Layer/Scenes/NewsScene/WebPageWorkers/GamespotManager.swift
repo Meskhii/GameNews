@@ -47,6 +47,7 @@ extension NewsWorker {
                 var timesArray = [String]()
                 var imgURLSArray = [String]()
                 var hrefsArray = [String]()
+                var isBookmarkedArray = [Bool]()
 
                 for time in times {
                     let tag = try time.select("time")
@@ -60,7 +61,8 @@ extension NewsWorker {
                 }
 
                 for title in titles {
-                    titlesArray.append(try title.text())
+                    let title = try title.text()
+                    titlesArray.append(title)
                 }
                 
                 

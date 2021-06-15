@@ -7,9 +7,10 @@
 
 import UIKit
 
-protocol NewsCollectionViewDataDelegate {
+protocol NewsDelegate {
     func updateWebSitesImages(checkedLogo: String, checked: Bool)
     func getUpdatedWebPages(webPages: [WebPagesModel])
+    func presentShareSheet(using image: UIImage, url: URL)
 }
 
 protocol NewsDisplayLogic: AnyObject {
@@ -66,6 +67,17 @@ class NewsViewController: UIViewController {
         configureCollectionView()
         configureTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        newsTableView.reloadData()
+        setNeedsStatusBarAppearanceUpdate()
+    }
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
 
     // MARK: - Collection View Configuration
     private func configureCollectionView() {
@@ -103,8 +115,12 @@ extension NewsViewController: NewsDisplayLogic {
     }
 }
 
-// MARK: - CollectionView Data Delegate
-extension NewsViewController: NewsCollectionViewDataDelegate {
+// MARK: - News Delegate
+extension NewsViewController: NewsDelegate {
+    func presentShareSheet(using image: UIImage, url: URL) {
+        router?.presentShareSheetForNews(image: image, url: url)
+    }
+    
     func getUpdatedWebPages(webPages: [WebPagesModel]) {
         self.webPages = webPages
     }
@@ -121,6 +137,7 @@ extension NewsViewController: NewsCollectionViewDataDelegate {
         }
         news.removeAll()
         interactor?.fetchNews(webPageNames: webSitesImages)
+        newsTableView.reloadData()
         horizontalMenuCollectionView.reloadData()
     }
 }
@@ -188,6 +205,7 @@ extension NewsViewController: UITableViewDataSource {
         let cell = tableView.deque(class: NewsCell.self, for: indexPath)
         if !news.isEmpty {
             cell.configure(data: news[indexPath.row])
+            cell.delegate = self
         }
         return cell
     }

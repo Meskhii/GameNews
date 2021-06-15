@@ -60,7 +60,8 @@ extension NewsWorker {
                 }
 
                 for title in items {
-                    titlesArray.append(try title.attr("aria-label"))
+                    let title = try title.attr("aria-label")
+                    titlesArray.append(title)
                 }
 
                 for href in items {
@@ -69,18 +70,20 @@ extension NewsWorker {
                 
                 // MARK: - Prepare Parsed Data
 
-                // Removing extra fetched data
+                
+                    // Removing extra fetched data
                 timeAgosArray.removeSubrange(0...4)
                 imgURLSArray.removeSubrange(0...2)
-
+                    
                 ignNewsModel = NewsModel(titles: titlesArray,
-                                             imgURLs: imgURLSArray,
-                                             postTimes: timeAgosArray,
-                                             hrefURLs: hrefsArray,
-                                             webPageLogo: "ign_logo",
-                                             webPageName: "IGN News",
-                                             webPageURL: "https://www.ign.com/")
+                                        imgURLs: imgURLSArray,
+                                        postTimes: timeAgosArray,
+                                        hrefURLs: hrefsArray,
+                                        webPageLogo: "ign_logo",
+                                        webPageName: "IGN News",
+                                        webPageURL: "https://www.ign.com/")
                 return ignNewsModel
+                
             } catch {
                 print("error")
             }
@@ -90,7 +93,7 @@ extension NewsWorker {
         return nil
     }
 
-    // MARK: - Helper Function
+    // MARK: - Helper Methods
     private func splitAtFirst(str: String, delimiter: String) -> String? {
         guard let lowerIndex = (str.range(of: delimiter)?.lowerBound) else { return str }
         let firstPart: String = .init(str.prefix(upTo: lowerIndex))

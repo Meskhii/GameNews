@@ -12,6 +12,7 @@ import SafariServices
 protocol NewsRoutingLogic {
     func openSelectedNewsInWebView(defaultURL: String, articleURL: String)
     func openConfigureNewsViewController(with webPages: [WebPagesModel])
+    func presentShareSheetForNews(image: UIImage, url: URL)
 }
 
 class NewsRouter {
@@ -32,9 +33,21 @@ extension NewsRouter: NewsRoutingLogic {
     func openConfigureNewsViewController(with webPages: [WebPagesModel]) {
         let storyboard = UIStoryboard(name: "ConfigureNewsViewController", bundle: nil)
         let configureNewsVC = storyboard.instantiateViewController(withIdentifier: "ConfigureNewsViewController") as! ConfigureNewsViewController// swiftlint:disable:this force_cast
-        configureNewsVC.delegate = viewController.self as? NewsCollectionViewDataDelegate
+        configureNewsVC.delegate = viewController.self as? NewsDelegate
         configureNewsVC.webPageOptions = webPages
         viewController?.present(configureNewsVC, animated: true)
+    }
+    
+    func presentShareSheetForNews(image: UIImage, url: URL) {
+        
+        let shareSheetVC = UIActivityViewController(
+            activityItems:[
+                image,
+                url
+            ],
+            applicationActivities: nil)
+        
+        viewController?.present(shareSheetVC, animated: true)
     }
 
 }

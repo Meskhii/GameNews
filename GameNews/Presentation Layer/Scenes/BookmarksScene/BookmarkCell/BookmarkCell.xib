@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -32,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-TN-dKI">
-                        <rect key="frame" x="247" y="65" width="63" height="30"/>
+                        <rect key="frame" x="182" y="65" width="63" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="LqC-BO-PPj"/>
                         </constraints>
@@ -48,6 +49,15 @@
                             <constraint firstAttribute="height" constant="10" id="jxv-sr-cFk"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sz-5y-X8i">
+                        <rect key="frame" x="265" y="65" width="45" height="30"/>
+                        <state key="normal" title="Delete">
+                            <color key="titleColor" systemColor="systemRedColor"/>
+                        </state>
+                        <connections>
+                            <action selector="removeNewsFromBookmarks:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="joO-I4-4pL"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" name="CellBackground"/>
                 <constraints>
@@ -55,10 +65,12 @@
                     <constraint firstAttribute="trailing" secondItem="0cw-bd-uuc" secondAttribute="trailing" id="Awd-Xz-fNy"/>
                     <constraint firstAttribute="trailing" secondItem="9iW-uh-bIg" secondAttribute="trailing" constant="10" id="FYi-lS-nHh"/>
                     <constraint firstItem="ecs-TN-dKI" firstAttribute="top" secondItem="9iW-uh-bIg" secondAttribute="bottom" constant="10" id="Gyl-Qd-pwW"/>
-                    <constraint firstAttribute="trailing" secondItem="ecs-TN-dKI" secondAttribute="trailing" constant="10" id="R09-lm-FkO"/>
                     <constraint firstItem="fHG-4x-nIs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="TEt-f5-C4q"/>
                     <constraint firstItem="ecs-TN-dKI" firstAttribute="bottom" secondItem="fHG-4x-nIs" secondAttribute="bottom" id="Yg0-UZ-wDo"/>
+                    <constraint firstItem="9Sz-5y-X8i" firstAttribute="leading" secondItem="ecs-TN-dKI" secondAttribute="trailing" constant="20" id="bD2-fu-419"/>
+                    <constraint firstAttribute="trailing" secondItem="9Sz-5y-X8i" secondAttribute="trailing" constant="10" id="bb3-ir-Ns1"/>
                     <constraint firstAttribute="bottom" secondItem="0cw-bd-uuc" secondAttribute="bottom" id="lQq-9Y-t8b"/>
+                    <constraint firstItem="0cw-bd-uuc" firstAttribute="top" secondItem="9Sz-5y-X8i" secondAttribute="bottom" constant="5" id="p5X-X2-XQK"/>
                     <constraint firstItem="9iW-uh-bIg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tcz-Ew-4r0"/>
                     <constraint firstItem="fHG-4x-nIs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="wzT-MA-scn"/>
                     <constraint firstItem="0cw-bd-uuc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yrW-i1-e9F"/>
@@ -79,5 +91,8 @@
         <namedColor name="TableViewBackground">
             <color red="0.1289999932050705" green="0.13699999451637268" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

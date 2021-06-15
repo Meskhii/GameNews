@@ -56,6 +56,14 @@ class VideosViewController: UIViewController {
 
         configureTableView()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
 
     // MARK: - Table View Configuration
     private func configureTableView() {

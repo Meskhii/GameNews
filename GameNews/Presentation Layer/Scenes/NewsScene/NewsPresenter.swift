@@ -33,7 +33,6 @@ extension NewsPresenter: NewsPresentationLogic {
             }
         }
 
-        
         newsViewController?.display(data: newCellModel)
     }
 }

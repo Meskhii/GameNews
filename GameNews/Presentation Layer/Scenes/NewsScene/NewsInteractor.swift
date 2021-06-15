@@ -46,7 +46,8 @@ extension NewsInteractor: NewsBusinessLogic {
         }
         
         if !fetchedNews.isEmpty {
-            presenter?.present(data: fetchedNews)
+            self.presenter?.present(data: fetchedNews)
         }
+       
     }
 }
